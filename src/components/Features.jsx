@@ -1,0 +1,139 @@
+import React from 'react';
+import { Cpu, BarChart3, Headphones, ArrowRight } from 'lucide-react';
+
+export default function Features() {
+  const items = [
+    {
+      title: "Seamless API Integration",
+      description: "Our software connects your business with third-party services through robust API integrations. Built with enterprise-grade reliability to ensure every connection works flawlessly.",
+      icon: Cpu,
+      badge: "Fast Setup"
+    },
+    {
+      title: "Business Dashboard",
+      description: "Access real-time data and analytics through our intuitive dashboard. Monitor activity, track performance, and generate reports to make informed business decisions.",
+      icon: BarChart3,
+      badge: "Real-time"
+    },
+    {
+      title: "Dedicated Support Team",
+      description: "Our technical support team is available around the clock to assist with integration, troubleshooting, and optimizing your use of our software platform.",
+      icon: Headphones,
+      badge: "24/7 Support"
+    }
+  ];
+
+  const steps = [
+    { num: "01", name: "Connect API", desc: "Link your backend application using our structured developer documentations and tools." },
+    { num: "02", name: "Route Transactions", desc: "Transactions and service requests are routed securely and instantly via Mocard core." },
+    { num: "03", name: "Scale Instantly", desc: "Monitor traffic, track metrics, and scale your business without worrying about infrastructure." }
+  ];
+
+  return (
+    <section className="bg-white py-20 md:py-28 scroll-mt-24" id="feat">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto mb-20 space-y-4 group/head cursor-pointer">
+          <span className="text-xs md:text-sm font-bold tracking-widest text-slate-500 group-hover/head:text-pp-blue uppercase font-outfit transition-colors duration-300">
+            Why Use Mocard?
+          </span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black font-outfit text-pp-black tracking-tight leading-tight">
+            Integrated Solutions Built <br className="hidden sm:inline" />
+            for Enterprise Growth
+          </h2>
+          <p className="text-slate-650 font-sans text-base md:text-lg">
+            We simplify complex tech pipelines so your teams can focus on customer retention, product features, and business expansion.
+          </p>
+        </div>
+
+        {/* Feature Grid */}
+        <div className="grid md:grid-cols-3 gap-8 mb-24">
+          {items.map((feat, idx) => (
+            <div 
+              key={idx} 
+              className="group bg-white hover:bg-pp-bg-warm rounded-3xl p-8 border border-slate-200 hover:border-slate-350 hover:shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer"
+            >
+              <div className="space-y-6">
+                
+                {/* Header info / Badge */}
+                <div className="flex justify-between items-center">
+                  <div className="w-12 h-12 rounded-2xl bg-slate-100 group-hover:bg-pp-blue/10 text-slate-700 group-hover:text-pp-blue flex items-center justify-center transition-colors duration-350">
+                    <feat.icon className="w-6 h-6" />
+                  </div>
+                  <span className="text-[10px] font-bold bg-slate-100 group-hover:bg-white text-slate-600 px-3 py-1 rounded-full uppercase tracking-wider font-outfit">
+                    {feat.badge}
+                  </span>
+                </div>
+
+                {/* Content */}
+                <div className="space-y-3">
+                  <h3 className="text-xl font-bold font-outfit text-pp-black group-hover:text-pp-blue transition-colors duration-350">
+                    {feat.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm md:text-[15px] leading-relaxed font-sans font-light">
+                    {feat.description}
+                  </p>
+                </div>
+              </div>
+
+              {/* Action arrow */}
+              <div className="pt-6">
+                <a 
+                  href="#contact" 
+                  className="inline-flex items-center space-x-2 text-xs font-bold text-pp-black group-hover:text-pp-blue hover:underline font-outfit transition-colors"
+                >
+                  <span>Learn more</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Flow Diagram Banner */}
+        <div className="bg-pp-black rounded-3xl p-8 md:p-12 text-white relative overflow-hidden group/banner cursor-pointer">
+          {/* Subtle background glow */}
+          <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-pp-blue/0 group-hover/banner:bg-pp-blue/10 blur-3xl pointer-events-none transition-all duration-700" />
+          
+          <div className="grid lg:grid-cols-12 gap-8 items-center relative z-10">
+            
+            {/* Left promo */}
+            <div className="lg:col-span-5 space-y-4 text-center lg:text-left">
+              <span className="text-[11px] font-bold text-slate-400 group-hover/banner:text-pp-blue tracking-widest uppercase font-outfit transition-colors duration-300">
+                Simple Workflow
+              </span>
+              <h3 className="text-2xl md:text-3xl font-black font-outfit leading-tight">
+                Integrate in Three <br className="hidden sm:inline" />
+                Easy Steps
+              </h3>
+              <p className="text-slate-400 text-sm font-sans font-light">
+                Connect your business with major third-party services in under an hour. No complex config matrices or long onboarding pipelines.
+              </p>
+            </div>
+
+            {/* Right steps list */}
+            <div className="lg:col-span-7 grid sm:grid-cols-3 gap-6">
+              {steps.map((step, idx) => (
+                <div key={idx} className="bg-white/5 border border-white/10 rounded-2xl p-5 space-y-4 group cursor-pointer hover:border-white/20 transition-all">
+                  <div className="flex items-center justify-between">
+                    <span className="text-2xl font-black text-slate-400 group-hover:text-pp-blue font-outfit leading-none transition-colors duration-300">
+                      {step.num}
+                    </span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-slate-500 group-hover:bg-pp-blue transition-colors duration-300" />
+                  </div>
+                  <div className="space-y-1.5">
+                    <h4 className="font-bold text-slate-100 text-sm font-outfit">{step.name}</h4>
+                    <p className="text-slate-400 text-xs leading-relaxed font-sans font-light">{step.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+}

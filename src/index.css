@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pp-black: #000000;
+  --color-pp-dark: #121214;
+  --color-pp-blue: #0070e0;
+  --color-pp-blue-light: #0070e0;
+  --color-pp-blue-dark: #003087;
+  --color-pp-bg-warm: #f5f7fa;
+  --color-pp-border: #e2e8f0;
+
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-outfit: "Outfit", "Inter", sans-serif;
+}
+
+/* Base styles and smoothing */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #ffffff;
+  color: #000000;
+  overflow-x: hidden;
+}
+
+/* Micro-interaction helper utilities */
+.btn-transition {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 3s ease-in-out infinite;
+}
