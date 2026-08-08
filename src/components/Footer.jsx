@@ -82,17 +82,7 @@ export default function Footer() {
             &copy; {currentYear} Mocard. All rights reserved. Business Integration Software, Rwanda.
           </div>
           
-          {/* Flag/Region Selector */}
-          <div className="flex items-center space-x-4">
-            <button className="flex items-center space-x-2 px-3 py-1.5 rounded-lg border border-slate-300 hover:border-slate-400 bg-white text-xs font-semibold text-slate-600 hover:text-pp-black transition duration-200 font-outfit">
-              <span>🇷🇼</span>
-              <span>Rwanda (English)</span>
-            </button>
-            <button className="flex items-center space-x-1.5 text-slate-500 hover:text-slate-600 hover:text-slate-800 text-xs">
-              <Globe2 className="w-3.5 h-3.5" />
-              <span>Change Region</span>
-            </button>
-          </div>
+
         </div>
 
       </div>

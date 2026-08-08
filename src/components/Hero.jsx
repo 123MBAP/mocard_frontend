@@ -41,7 +41,7 @@ export default function Hero() {
             </div>
             <div className="flex items-center space-x-2 group/item cursor-pointer">
               <CheckCircle2 className="w-4.5 h-4.5 text-slate-400 group-hover/item:text-pp-blue transition-colors duration-300" />
-              <span className="group-hover/item:text-pp-black transition-colors duration-300">Dedicated Support Team</span>
+              <span className="group-hover/item:text-pp-black transition-colors duration-300">Business Dashboard</span>
             </div>
           </div>
 

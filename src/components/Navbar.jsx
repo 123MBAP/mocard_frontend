@@ -76,13 +76,6 @@ export default function Navbar() {
                       >
                         Business Dashboard
                       </a>
-                      <a 
-                        href="#feat" 
-                        onClick={() => setActiveDropdown(null)} 
-                        className="px-5 py-2.5 text-slate-700 hover:bg-slate-50 hover:text-pp-blue transition-colors font-medium"
-                      >
-                        Dedicated Support Team
-                      </a>
                     </div>
                   </div>
                 )}

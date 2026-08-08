@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cpu, BarChart3, Headphones, ArrowRight } from 'lucide-react';
+import { Cpu, BarChart3, ArrowRight } from 'lucide-react';
 
 export default function Features() {
   const items = [
@@ -14,12 +14,6 @@ export default function Features() {
       description: "Access real-time data and analytics through our intuitive dashboard. Monitor activity, track performance, and generate reports to make informed business decisions.",
       icon: BarChart3,
       badge: "Real-time"
-    },
-    {
-      title: "Dedicated Support Team",
-      description: "Our technical support team is available around the clock to assist with integration, troubleshooting, and optimizing your use of our software platform.",
-      icon: Headphones,
-      badge: "24/7 Support"
     }
   ];
 
@@ -48,7 +42,7 @@ export default function Features() {
         </div>
 
         {/* Feature Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-24">
+        <div className="grid md:grid-cols-2 gap-8 mb-24 max-w-5xl mx-auto">
           {items.map((feat, idx) => (
             <div 
               key={idx} 
