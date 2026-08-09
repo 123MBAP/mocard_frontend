@@ -1,65 +1,28 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Features from './components/Features';
-import CardTransfer from './components/CardTransfer';
-import WhoUsesMocard from './components/WhoUsesMocard';
-import Clients from './components/Clients';
-import FAQ from './components/FAQ';
-import GetStartedSection from './components/GetStartedSection';
-import ActionBanner from './components/ActionBanner';
-import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
+import Home from './pages/Home';
+import FeaturesPage from './pages/FeaturesPage';
+import SolutionsPage from './pages/SolutionsPage';
+import DeveloperPage from './pages/DeveloperPage';
+import PricingPage from './pages/PricingPage';
+import CompanyPage from './pages/CompanyPage';
+import ContactPage from './pages/ContactPage';
 import Login from './components/Login';
-
-
-
-
-// Landing Page Wrapper
-function Home() {
-  return (
-    <>
-      {/* Navbar Section */}
-      <Navbar />
-
-      {/* Hero Section */}
-      <Hero />
-
-
-
-      {/* Core Features Section */}
-      <Features />
-
-      {/* Card to Mobile Money Transfer Section */}
-      <CardTransfer />
-
-      {/* Who Uses Mocard Section */}
-      <WhoUsesMocard />
-
-      {/* Clients Ecosystem Section */}
-      <Clients />
-
-      {/* Frequently Asked Questions */}
-      <FAQ />
-
-      {/* Get Started Section */}
-      <GetStartedSection />
-
-      {/* Bottom CTA Block */}
-      <ActionBanner />
-
-      {/* Structured Footer */}
-      <Footer />
-    </>
-  );
-}
 
 export default function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="relative min-h-screen bg-white">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/features" element={<FeaturesPage />} />
+          <Route path="/solutions" element={<SolutionsPage />} />
+          <Route path="/developers" element={<DeveloperPage />} />
+          <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/company" element={<CompanyPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="/login" element={<Login />} />
           {/* Fallback path */}
           <Route path="*" element={<Home />} />
@@ -68,4 +31,5 @@ export default function App() {
     </Router>
   );
 }
+
 

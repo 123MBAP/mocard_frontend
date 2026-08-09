@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown, Activity, Shield, Users, Layers, ExternalLink } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Menu, X, ChevronDown, Cpu, Shield, Zap, Globe, DollarSign, Laptop, Users, HelpCircle } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +29,14 @@ export default function Navbar() {
     }
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+    setActiveDropdown(null);
+  };
+
+  // Helper to determine if link is active
+  const isActive = (path) => location.pathname === path;
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled 
@@ -38,14 +47,13 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-12">
           
           {/* Logo Section */}
-          <div className="flex items-center space-x-8">
-            <a href="#" className="flex items-center space-x-2 group">
+          <div className="flex items-center space-x-6">
+            <Link to="/" onClick={closeMenu} className="flex items-center space-x-2 group">
               <img src={logo} alt="MoCard" className="h-8 md:h-9 object-contain group-hover:scale-[1.02] transition-transform duration-200" />
               <span className="text-xl md:text-2xl font-black font-outfit text-pp-black tracking-tight group-hover:text-pp-blue transition-colors duration-300 ml-1">
                 MoCard
               </span>
-        
-            </a>
+            </Link>
 
             {/* Desktop Navigation Links */}
             <div className="hidden lg:flex items-center space-x-1 font-outfit text-[15px] font-medium text-slate-800">
@@ -54,7 +62,9 @@ export default function Navbar() {
               <div className="relative">
                 <button 
                   onClick={() => toggleDropdown(0)}
-                  className="flex items-center space-x-1 px-4 py-2 rounded-full hover:bg-slate-50 hover:text-pp-blue transition duration-200"
+                  className={`flex items-center space-x-1 px-4 py-2 rounded-full hover:bg-slate-50 hover:text-pp-blue transition duration-200 ${
+                    isActive('/features') ? 'text-pp-blue font-bold bg-slate-50' : ''
+                  }`}
                 >
                   <span>Features</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 0 ? 'rotate-180' : ''}`} />
@@ -62,37 +72,122 @@ export default function Navbar() {
                 {activeDropdown === 0 && (
                   <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-slate-200/80 rounded-2xl shadow-lg py-2.5 transition-all animate-in fade-in slide-in-from-top-2 duration-200">
                     <div className="flex flex-col font-outfit text-sm">
-                      <a 
-                        href="#feat" 
-                        onClick={() => setActiveDropdown(null)} 
-                        className="px-5 py-2.5 text-slate-700 hover:bg-slate-50 hover:text-pp-blue transition-colors font-medium"
+                      <Link 
+                        to="/features" 
+                        onClick={closeMenu} 
+                        className="px-5 py-2.5 text-slate-700 hover:bg-slate-50 hover:text-pp-blue transition-colors font-medium flex items-center space-x-2"
                       >
-                        Seamless API Integration
-                      </a>
-                      <a 
-                        href="#feat" 
-                        onClick={() => setActiveDropdown(null)} 
-                        className="px-5 py-2.5 text-slate-700 hover:bg-slate-50 hover:text-pp-blue transition-colors font-medium"
+                        <Cpu className="w-4.5 h-4.5 text-pp-blue shrink-0" />
+                        <span>Unified API Engine</span>
+                      </Link>
+                      <Link 
+                        to="/features" 
+                        onClick={closeMenu} 
+                        className="px-5 py-2.5 text-slate-700 hover:bg-slate-50 hover:text-pp-blue transition-colors font-medium flex items-center space-x-2"
                       >
-                        Business Dashboard
-                      </a>
+                        <Zap className="w-4.5 h-4.5 text-pp-blue shrink-0" />
+                        <span>Dynamic Webhooks</span>
+                      </Link>
+                      <Link 
+                        to="/features" 
+                        onClick={closeMenu} 
+                        className="px-5 py-2.5 text-slate-700 hover:bg-slate-50 hover:text-pp-blue transition-colors font-medium flex items-center space-x-2"
+                      >
+                        <Shield className="w-4.5 h-4.5 text-pp-blue shrink-0" />
+                        <span>PCI-DSS Tokenization</span>
+                      </Link>
                     </div>
                   </div>
                 )}
               </div>
 
-              {/* Quick Links */}
-              <a href="#feat" className="px-4 py-2 rounded-full hover:bg-slate-50 hover:text-pp-blue transition duration-200">
-                Why Mocard?
-              </a>
-              
-              <a href="#clients" className="px-4 py-2 rounded-full hover:bg-slate-50 hover:text-pp-blue transition duration-200">
-                Clients
-              </a>
+              {/* Solutions Dropdown */}
+              <div className="relative">
+                <button 
+                  onClick={() => toggleDropdown(1)}
+                  className={`flex items-center space-x-1 px-4 py-2 rounded-full hover:bg-slate-50 hover:text-pp-blue transition duration-200 ${
+                    isActive('/solutions') ? 'text-pp-blue font-bold bg-slate-50' : ''
+                  }`}
+                >
+                  <span>Solutions</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 1 ? 'rotate-180' : ''}`} />
+                </button>
+                {activeDropdown === 1 && (
+                  <div className="absolute top-full left-0 mt-2 w-72 bg-white border border-slate-200/80 rounded-2xl shadow-lg py-2.5 transition-all animate-in fade-in slide-in-from-top-2 duration-200">
+                    <div className="flex flex-col font-outfit text-sm">
+                      <Link 
+                        to="/solutions" 
+                        onClick={closeMenu} 
+                        className="px-5 py-2.5 text-slate-700 hover:bg-slate-50 hover:text-pp-blue transition-colors font-medium flex items-center space-x-2"
+                      >
+                        <Globe className="w-4.5 h-4.5 text-pp-blue shrink-0" />
+                        <span>Cross-Border Remittances</span>
+                      </Link>
+                      <Link 
+                        to="/solutions" 
+                        onClick={closeMenu} 
+                        className="px-5 py-2.5 text-slate-700 hover:bg-slate-50 hover:text-pp-blue transition-colors font-medium flex items-center space-x-2"
+                      >
+                        <DollarSign className="w-4.5 h-4.5 text-pp-blue shrink-0" />
+                        <span>Global E-Commerce</span>
+                      </Link>
+                      <Link 
+                        to="/solutions" 
+                        onClick={closeMenu} 
+                        className="px-5 py-2.5 text-slate-700 hover:bg-slate-50 hover:text-pp-blue transition-colors font-medium flex items-center space-x-2"
+                      >
+                        <Users className="w-4.5 h-4.5 text-pp-blue shrink-0" />
+                        <span>Gig Economy Payouts</span>
+                      </Link>
+                      <Link 
+                        to="/solutions" 
+                        onClick={closeMenu} 
+                        className="px-5 py-2.5 text-slate-700 hover:bg-slate-50 hover:text-pp-blue transition-colors font-medium flex items-center space-x-2"
+                      >
+                        <Laptop className="w-4.5 h-4.5 text-pp-blue shrink-0" />
+                        <span>FinTech Infrastructure</span>
+                      </Link>
+                    </div>
+                  </div>
+                )}
+              </div>
 
-              <a href="#faq" className="px-4 py-2 rounded-full hover:bg-slate-50 hover:text-pp-blue transition duration-200">
-                FAQ
-              </a>
+              {/* Other Pages */}
+              <Link 
+                to="/developers" 
+                className={`px-4 py-2 rounded-full hover:bg-slate-50 hover:text-pp-blue transition duration-200 ${
+                  isActive('/developers') ? 'text-pp-blue font-bold bg-slate-50' : ''
+                }`}
+              >
+                Developers
+              </Link>
+              
+              <Link 
+                to="/pricing" 
+                className={`px-4 py-2 rounded-full hover:bg-slate-50 hover:text-pp-blue transition duration-200 ${
+                  isActive('/pricing') ? 'text-pp-blue font-bold bg-slate-50' : ''
+                }`}
+              >
+                Pricing
+              </Link>
+
+              <Link 
+                to="/company" 
+                className={`px-4 py-2 rounded-full hover:bg-slate-50 hover:text-pp-blue transition duration-200 ${
+                  isActive('/company') ? 'text-pp-blue font-bold bg-slate-50' : ''
+                }`}
+              >
+                Company
+              </Link>
+
+              <Link 
+                to="/contact" 
+                className={`px-4 py-2 rounded-full hover:bg-slate-50 hover:text-pp-blue transition duration-200 ${
+                  isActive('/contact') ? 'text-pp-blue font-bold bg-slate-50' : ''
+                }`}
+              >
+                Contact
+              </Link>
             </div>
           </div>
 
@@ -104,12 +199,12 @@ export default function Navbar() {
             >
               Log In
             </Link>
-            <a 
-              href="/#get-started" 
+            <Link 
+              to="/contact" 
               className="px-6 py-2.5 rounded-full bg-pp-black text-[15px] font-bold text-white hover:bg-pp-blue transition duration-200 shadow-sm"
             >
               Get Started
-            </a>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -128,44 +223,65 @@ export default function Navbar() {
       {isOpen && (
         <div className="lg:hidden border-t border-slate-100 bg-white/95 backdrop-blur-md py-4 px-6 space-y-4 shadow-inner">
           <div className="space-y-1 font-outfit text-base">
-            <a 
-              href="#feat" 
-              onClick={() => setIsOpen(false)}
+            <Link 
+              to="/features" 
+              onClick={closeMenu}
               className="block px-4 py-3 rounded-xl hover:bg-slate-50 text-pp-black font-medium transition duration-200"
             >
-              Why Mocard?
-            </a>
-            <a 
-              href="#clients" 
-              onClick={() => setIsOpen(false)}
+              Features
+            </Link>
+            <Link 
+              to="/solutions" 
+              onClick={closeMenu}
               className="block px-4 py-3 rounded-xl hover:bg-slate-50 text-pp-black font-medium transition duration-200"
             >
-              Who uses Mocard?
-            </a>
-            <a 
-              href="#faq" 
-              onClick={() => setIsOpen(false)}
+              Solutions
+            </Link>
+            <Link 
+              to="/developers" 
+              onClick={closeMenu}
               className="block px-4 py-3 rounded-xl hover:bg-slate-50 text-pp-black font-medium transition duration-200"
             >
-              FAQ
-            </a>
+              Developers
+            </Link>
+            <Link 
+              to="/pricing" 
+              onClick={closeMenu}
+              className="block px-4 py-3 rounded-xl hover:bg-slate-50 text-pp-black font-medium transition duration-200"
+            >
+              Pricing
+            </Link>
+            <Link 
+              to="/company" 
+              onClick={closeMenu}
+              className="block px-4 py-3 rounded-xl hover:bg-slate-50 text-pp-black font-medium transition duration-200"
+            >
+              Company
+            </Link>
+            <Link 
+              to="/contact" 
+              onClick={closeMenu}
+              className="block px-4 py-3 rounded-xl hover:bg-slate-50 text-pp-black font-medium transition duration-200"
+            >
+              Contact
+            </Link>
           </div>
           
           <div className="pt-4 border-t border-slate-100 flex flex-col space-y-3 font-outfit">
             <Link 
               to="/login" 
-              onClick={() => setIsOpen(false)}
+              onClick={closeMenu}
               className="w-full text-center py-3 rounded-full border border-pp-black text-sm font-bold text-pp-black hover:bg-slate-50 transition duration-200"
             >
               Log In
             </Link>
-            <a 
-              href="/#get-started" 
-              onClick={() => setIsOpen(false)}
+            <Link 
+              to="/contact" 
+              onClick={closeMenu}
               className="w-full text-center py-3 rounded-full bg-pp-black text-sm font-bold text-white hover:bg-pp-blue transition duration-200"
             >
               Get Started
-            </a>
+            </Link>
           </div>
         </div>
       )}
