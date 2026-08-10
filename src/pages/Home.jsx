@@ -6,7 +6,6 @@ import CardTransfer from '../components/CardTransfer';
 import WhoUsesMocard from '../components/WhoUsesMocard';
 import EverydayImpact from '../components/EverydayImpact';
 import Clients from '../components/Clients';
-import FintechLeader from '../components/FintechLeader';
 import FAQ from '../components/FAQ';
 import GetStartedSection from '../components/GetStartedSection';
 import ActionBanner from '../components/ActionBanner';
@@ -22,7 +21,6 @@ export default function Home() {
       <WhoUsesMocard />
       <EverydayImpact />
       <Clients />
-      <FintechLeader />
       <FAQ />
       <GetStartedSection />
       <ActionBanner />
