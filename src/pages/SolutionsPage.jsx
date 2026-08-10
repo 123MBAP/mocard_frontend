@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import EverydayImpact from '../components/EverydayImpact';
 import { ArrowRight, CheckCircle2, Globe, Laptop, Users, Hotel, ShieldAlert } from 'lucide-react';
 
 // Imports of assets
@@ -195,6 +196,8 @@ export default function SolutionsPage() {
           </div>
         ))}
       </section>
+
+      <EverydayImpact />
 
       {/* Trust & Security Footnote */}
       <section className="py-16 bg-slate-100 border-t border-slate-200">

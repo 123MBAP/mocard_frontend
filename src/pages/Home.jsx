@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import Features from '../components/Features';
 import CardTransfer from '../components/CardTransfer';
 import WhoUsesMocard from '../components/WhoUsesMocard';
+import EverydayImpact from '../components/EverydayImpact';
 import Clients from '../components/Clients';
 import FintechLeader from '../components/FintechLeader';
 import FAQ from '../components/FAQ';
@@ -19,6 +20,7 @@ export default function Home() {
       <Features />
       <CardTransfer />
       <WhoUsesMocard />
+      <EverydayImpact />
       <Clients />
       <FintechLeader />
       <FAQ />
