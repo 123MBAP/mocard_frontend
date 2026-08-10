@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import heroDevicesMockup from '../assets/hero_devices_mockup.png';
+import heroDevicesMockup from '../assets/hero_devices_only.png';
 
 export default function Hero() {
   return (
@@ -73,18 +73,15 @@ export default function Hero() {
             
           </div>
 
-          {/* Right Column: Devices Mockup with Big Blue organic shape in background */}
+          {/* Right Column: Devices Mockup (with background removed) */}
           <div className="lg:col-span-6 relative flex items-center justify-center lg:justify-end mt-12 lg:mt-0 z-10">
-            {/* Big Blue Blob Background matching reference shape and angle */}
-            <div className="absolute right-[-15%] top-1/2 -translate-y-1/2 w-[115%] h-[125%] bg-pp-blue rounded-l-[180px] lg:rounded-l-[240px] rounded-r-[80px] rotate-[-6deg] z-0 pointer-events-none hidden lg:block shadow-[0_20px_50px_rgba(0,112,224,0.15)]" />
-            <div className="absolute right-[-5%] top-1/2 -translate-y-1/2 w-[105%] h-[115%] bg-pp-blue rounded-l-[120px] rounded-r-[40px] rotate-[-6deg] z-0 pointer-events-none lg:hidden shadow-[0_20px_50px_rgba(0,112,224,0.15)]" />
             
             {/* Overlapping Laptop and Phone Mockups */}
             <div className="relative z-10 w-full max-w-[500px] lg:max-w-none transform hover:scale-[1.01] hover:-rotate-1 transition-all duration-500 ease-out">
               <img 
                 src={heroDevicesMockup} 
                 alt="Mocard Web and Mobile Apps Integration Mockup" 
-                className="w-full h-auto object-contain drop-shadow-[0_25px_35px_rgba(0,0,0,0.12)]"
+                className="w-full h-auto object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.08)]"
               />
             </div>
           </div>
