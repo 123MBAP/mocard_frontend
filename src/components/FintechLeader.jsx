@@ -112,15 +112,7 @@ export default function FintechLeader() {
                 
               </div>
 
-              {/* Decorative Arrow */}
-              <div className="pt-6 border-t border-slate-900 mt-6 flex items-center justify-between">
-                <span className="text-xs font-bold text-slate-500 group-hover:text-white transition-colors font-outfit">
-                  Technical Documentation
-                </span>
-                <ArrowUpRight className="w-4 h-4 text-slate-600 group-hover:text-white transition-colors" />
-              </div>
-
-            </div>
+          </div>
           ))}
         </div>
 

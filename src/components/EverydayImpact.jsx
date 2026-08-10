@@ -94,13 +94,6 @@ export default function EverydayImpact() {
                 </div>
               </div>
 
-              {/* Bottom Trigger Link */}
-              <div className="pt-6 border-t border-slate-100 mt-6 flex items-center justify-between">
-                <span className="text-xs font-bold text-slate-700 group-hover:text-pp-blue transition-colors font-outfit">
-                  Check APIs &amp; Integrations
-                </span>
-                <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-pp-blue group-hover:translate-x-1 transition-all" />
-              </div>
             </div>
           ))}
           
@@ -122,12 +115,6 @@ export default function EverydayImpact() {
               </div>
             </div>
 
-            <div className="pt-6 border-t border-slate-900 mt-6 flex items-center justify-between relative z-10">
-              <span className="text-xs font-bold text-pp-blue group-hover:text-white transition-colors font-outfit">
-                Access Sandbox Docs
-              </span>
-              <ArrowRight className="w-4 h-4 text-pp-blue group-hover:text-white group-hover:translate-x-1 transition-all" />
-            </div>
           </div>
 
         </div>

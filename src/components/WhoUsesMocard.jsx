@@ -141,14 +141,6 @@ export default function WhoUsesMocard() {
 
               </div>
 
-              {/* Action/learn indicator */}
-              <div className="pt-6 border-t border-slate-100/55 mt-6 flex items-center justify-between">
-                <span className="text-xs font-bold text-slate-700 group-hover:text-pp-blue transition-colors font-outfit">
-                  Explore Integration
-                </span>
-                <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-pp-blue group-hover:translate-x-1 transition-all" />
-              </div>
-
             </div>
           ))}
         </div>

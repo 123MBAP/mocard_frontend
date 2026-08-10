@@ -70,17 +70,6 @@ export default function Features() {
                   </p>
                 </div>
               </div>
-
-              {/* Action arrow */}
-              <div className="pt-6">
-                <a 
-                  href="#contact" 
-                  className="inline-flex items-center space-x-2 text-xs font-bold text-pp-black group-hover:text-pp-blue hover:underline font-outfit transition-colors"
-                >
-                  <span>Learn more</span>
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
             </div>
           ))}
         </div>
