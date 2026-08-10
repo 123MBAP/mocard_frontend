@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import heroDevicesMockup from '../assets/hero_devices_only.png';
+import payImage from '../assets/pay.png';
 
 export default function Hero() {
   return (
@@ -73,15 +74,23 @@ export default function Hero() {
             
           </div>
 
-          {/* Right Column: Devices Mockup (with background removed) */}
-          <div className="lg:col-span-6 relative flex items-center justify-center lg:justify-end mt-12 lg:mt-0 z-10">
-            
-            {/* Overlapping Laptop and Phone Mockups */}
-            <div className="relative z-10 w-full max-w-[500px] lg:max-w-none transform hover:scale-[1.01] hover:-rotate-1 transition-all duration-500 ease-out">
+          {/* Right Column: Two Mockup Images (layered & floating) */}
+          <div className="lg:col-span-6 relative flex items-center justify-center lg:justify-end mt-16 lg:mt-0 z-10 select-none">
+            {/* Main Devices Mockup */}
+            <div className="relative z-10 w-[85%] lg:w-[88%] xl:w-[90%] transform hover:scale-[1.02] hover:-rotate-1 transition-all duration-500 ease-out">
               <img 
                 src={heroDevicesMockup} 
                 alt="Mocard Web and Mobile Apps Integration Mockup" 
-                className="w-full h-auto object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.08)]"
+                className="w-full h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.06)]"
+              />
+            </div>
+            
+            {/* Floating pay.png Mockup */}
+            <div className="absolute bottom-[-10%] left-[-5%] sm:left-[0%] lg:left-[-8%] w-[48%] sm:w-[42%] lg:w-[46%] z-20 transform -rotate-[6deg] hover:rotate-0 hover:scale-105 hover:-translate-y-2 transition-all duration-500 ease-out">
+              <img 
+                src={payImage} 
+                alt="Mocard Payment Interface" 
+                className="w-full h-auto object-contain rounded-2xl border-4 border-white shadow-[0_20px_40px_rgba(0,0,0,0.12)] bg-white"
               />
             </div>
           </div>
