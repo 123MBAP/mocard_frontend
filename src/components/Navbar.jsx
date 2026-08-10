@@ -21,6 +21,16 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (activeDropdown !== null && !event.target.closest('.nav-dropdown-container')) {
+        setActiveDropdown(null);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [activeDropdown]);
+
   const toggleDropdown = (index) => {
     if (activeDropdown === index) {
       setActiveDropdown(null);
@@ -59,7 +69,7 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center space-x-1 font-outfit text-[15px] font-medium text-slate-800">
               
               {/* Features Dropdown */}
-              <div className="relative">
+              <div className="relative nav-dropdown-container">
                 <button 
                   onClick={() => toggleDropdown(0)}
                   className={`flex items-center space-x-1 px-4 py-2 rounded-full hover:bg-slate-50 hover:text-pp-blue transition duration-200 ${
@@ -102,7 +112,7 @@ export default function Navbar() {
               </div>
 
               {/* Solutions Dropdown */}
-              <div className="relative">
+              <div className="relative nav-dropdown-container">
                 <button 
                   onClick={() => toggleDropdown(1)}
                   className={`flex items-center space-x-1 px-4 py-2 rounded-full hover:bg-slate-50 hover:text-pp-blue transition duration-200 ${

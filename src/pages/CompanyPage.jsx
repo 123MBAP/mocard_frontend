@@ -19,34 +19,6 @@ export default function CompanyPage() {
       email: "nairobi@mocard.rw",
       phone: "+254 711 987 654",
       desc: "Our regional operations office managing merchant relations and mobile money integrations across East Africa."
-    },
-    {
-      city: "London",
-      address: "85 Great Portland Street, London, W1W 7LT, UK",
-      email: "london@mocard.rw",
-      phone: "+44 20 7946 0192",
-      desc: "Our regulatory compliance and international banking relations hub."
-    }
-  ];
-
-  const jobs = [
-    {
-      title: "Senior Go / Backend Engineer",
-      team: "Core Infrastructure",
-      location: "Kigali HQ / Hybrid",
-      desc: "Scale our transaction routing engine and design failover pipelines in Go. Experience with concurrency and REST APIs is required."
-    },
-    {
-      title: "Merchant Integration Engineer",
-      team: "Developer Success",
-      location: "Kigali HQ / Hybrid",
-      desc: "Assist merchants with SDK setups, API parameters, and signature-verification webhooks configuration. Solid JS/Node knowledge."
-    },
-    {
-      title: "Risk & Compliance Operations",
-      team: "Risk Management",
-      location: "Nairobi Office / Hybrid",
-      desc: "Review business onboarding files, TIN certificates, and ensure compliance with regional AML regulations and licensing guidelines."
     }
   ];
 
@@ -217,7 +189,7 @@ export default function CompanyPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {offices.map((office, idx) => (
               <div key={idx} className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:border-slate-350 hover:shadow-md transition-all duration-300 space-y-4 flex flex-col justify-between">
                 <div className="space-y-4">
@@ -238,42 +210,6 @@ export default function CompanyPage() {
             ))}
           </div>
 
-        </div>
-      </section>
-
-      {/* Careers / Hiring */}
-      <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-3xl font-black font-outfit text-pp-black">Join Our Kigali Team</h2>
-          <p className="text-slate-500 text-sm max-w-md mx-auto font-light">
-            We are looking for passionate developers, merchant integration experts, and systems architects to build Pan-African fintech rails.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {jobs.map((job, idx) => (
-            <div key={idx} className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between hover:border-slate-350 transition-all duration-300">
-              <div className="space-y-4">
-                <span className="text-[10px] font-bold bg-slate-100 text-slate-500 px-3 py-1 rounded-full uppercase tracking-wider font-outfit">
-                  {job.team}
-                </span>
-                <div className="space-y-1">
-                  <h3 className="text-lg font-bold font-outfit text-pp-black">{job.title}</h3>
-                  <span className="text-[11px] font-semibold text-slate-450 block font-outfit">{job.location}</span>
-                </div>
-                <p className="text-slate-500 text-xs leading-relaxed font-light">{job.desc}</p>
-              </div>
-
-              <div className="pt-6 border-t border-slate-100 mt-6">
-                <a 
-                  href="mailto:careers@mocard.rw" 
-                  className="w-full text-center py-2.5 rounded-full bg-pp-black hover:bg-pp-blue text-white text-xs font-bold font-outfit transition duration-200 block shadow-sm"
-                >
-                  Apply For Role
-                </a>
-              </div>
-            </div>
-          ))}
         </div>
       </section>
 
