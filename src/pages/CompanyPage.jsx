@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import FintechLeader from '../components/FintechLeader';
 import { Landmark, Users, Globe, Briefcase, Award, ShieldCheck } from 'lucide-react';
 
 export default function CompanyPage() {
@@ -111,6 +112,8 @@ export default function CompanyPage() {
 
         </div>
       </section>
+
+      <FintechLeader />
 
       {/* Offices & Locations */}
       <section className="py-20 bg-slate-100 border-y border-slate-200">

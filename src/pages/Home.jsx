@@ -5,6 +5,7 @@ import Features from '../components/Features';
 import CardTransfer from '../components/CardTransfer';
 import WhoUsesMocard from '../components/WhoUsesMocard';
 import Clients from '../components/Clients';
+import FintechLeader from '../components/FintechLeader';
 import FAQ from '../components/FAQ';
 import GetStartedSection from '../components/GetStartedSection';
 import ActionBanner from '../components/ActionBanner';
@@ -19,6 +20,7 @@ export default function Home() {
       <CardTransfer />
       <WhoUsesMocard />
       <Clients />
+      <FintechLeader />
       <FAQ />
       <GetStartedSection />
       <ActionBanner />
