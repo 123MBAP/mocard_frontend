@@ -6,7 +6,7 @@ import payImage from '../assets/pay.png';
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-white text-pp-black pt-32 pb-20 md:pt-40 md:pb-28 lg:pt-44 lg:pb-36">
+    <section className="relative overflow-hidden bg-white text-pp-black pt-28 pb-16 md:pt-36 md:pb-20 lg:pt-32 lg:pb-20">
       {/* Decorative background grid & soft radial highlights */}
       <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top_right,rgba(0,112,224,0.02),transparent_50%)] hover:bg-[radial-gradient(ellipse_at_top_right,rgba(0,112,224,0.05),transparent_50%)] transition-all duration-700 pointer-events-none" />
       
@@ -75,22 +75,22 @@ export default function Hero() {
           </div>
 
           {/* Right Column: Two Mockup Images (layered & floating) */}
-          <div className="lg:col-span-6 relative flex items-center justify-center lg:justify-end mt-16 lg:-mt-12 xl:-mt-24 z-10 select-none">
+          <div className="lg:col-span-6 relative flex items-center justify-center lg:justify-end mt-12 lg:-mt-16 xl:-mt-28 z-10 select-none">
             {/* Main Devices Mockup */}
-            <div className="relative z-10 w-[85%] lg:w-[88%] xl:w-[90%] transform hover:scale-[1.02] hover:-rotate-1 transition-all duration-500 ease-out">
+            <div className="relative z-10 w-[78%] lg:w-[80%] xl:w-[84%] transform hover:scale-[1.01] hover:-rotate-1 transition-all duration-500 ease-out">
               <img 
                 src={heroDevicesMockup} 
                 alt="Mocard Web and Mobile Apps Integration Mockup" 
-                className="w-full h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.06)]"
+                className="w-full h-auto object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.06)]"
               />
             </div>
             
-            {/* Floating pay.png Mockup */}
-            <div className="absolute bottom-[-10%] left-[-5%] sm:left-[0%] lg:left-[-8%] w-[48%] sm:w-[42%] lg:w-[46%] z-20 transform -rotate-[6deg] hover:rotate-0 hover:scale-105 hover:-translate-y-2 transition-all duration-500 ease-out">
+            {/* Floating pay.png Mockup (shifted up to prevent clipping/scrolling) */}
+            <div className="absolute bottom-[-2%] left-[2%] sm:left-[6%] lg:left-[0%] w-[44%] sm:w-[38%] lg:w-[42%] z-20 transform -rotate-[6deg] hover:rotate-0 hover:scale-105 hover:-translate-y-1 transition-all duration-500 ease-out">
               <img 
                 src={payImage} 
                 alt="Mocard Payment Interface" 
-                className="w-full h-auto object-contain rounded-2xl border-4 border-white shadow-[0_20px_40px_rgba(0,0,0,0.12)] bg-white"
+                className="w-full h-auto object-contain rounded-2xl border-4 border-white shadow-[0_15px_30px_rgba(0,0,0,0.1)] bg-white"
               />
             </div>
           </div>
