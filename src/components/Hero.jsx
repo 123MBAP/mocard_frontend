@@ -75,7 +75,7 @@ export default function Hero() {
           </div>
 
           {/* Right Column: Two Mockup Images (layered & floating) */}
-          <div className="lg:col-span-6 relative flex items-center justify-center lg:justify-end mt-16 lg:mt-0 z-10 select-none">
+          <div className="lg:col-span-6 relative flex items-center justify-center lg:justify-end mt-16 lg:-mt-12 xl:-mt-24 z-10 select-none">
             {/* Main Devices Mockup */}
             <div className="relative z-10 w-[85%] lg:w-[88%] xl:w-[90%] transform hover:scale-[1.02] hover:-rotate-1 transition-all duration-500 ease-out">
               <img 
