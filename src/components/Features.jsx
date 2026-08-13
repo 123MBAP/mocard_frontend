@@ -33,7 +33,7 @@ export default function Features() {
             Integrated Solutions Built <br className="hidden sm:inline" />
             for Enterprise Growth
           </h2>
-          <p className="text-slate-600 font-sans text-sm md:text-base leading-relaxed font-light">
+          <p className="text-slate-600 font-sans text-sm md:text-base leading-relaxed font-light text-justify">
             We simplify complex tech pipelines so your teams can focus on customer retention, product features, and business expansion.
           </p>
         </div>
@@ -59,7 +59,7 @@ export default function Features() {
                   <h3 className="text-lg font-bold font-outfit text-pp-black group-hover:text-pp-blue transition-colors duration-300">
                     {feat.title}
                   </h3>
-                  <p className="text-slate-500 text-xs md:text-sm leading-relaxed font-sans font-light">
+                  <p className="text-slate-500 text-xs md:text-sm leading-relaxed font-sans font-light text-justify">
                     {feat.description}
                   </p>
                 </div>
@@ -84,7 +84,7 @@ export default function Features() {
                 Integrate in Three <br className="hidden sm:inline" />
                 Easy Steps
               </h3>
-              <p className="text-slate-400 text-xs font-sans font-light leading-relaxed">
+              <p className="text-slate-400 text-xs font-sans font-light leading-relaxed text-justify">
                 Connect your business with major third-party services in under an hour. No complex config matrices or long onboarding pipelines.
               </p>
             </div>
@@ -101,7 +101,7 @@ export default function Features() {
                   </div>
                   <div className="space-y-1">
                     <h4 className="font-bold text-slate-100 text-xs font-outfit">{step.name}</h4>
-                    <p className="text-slate-400 text-[11px] leading-relaxed font-sans font-light">{step.desc}</p>
+                    <p className="text-slate-400 text-[11px] leading-relaxed font-sans font-light text-justify">{step.desc}</p>
                   </div>
                 </div>
               ))}

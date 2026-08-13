@@ -77,7 +77,7 @@ mocard.Integration.create(
             Built by Developers, <br className="hidden sm:inline" />
             For Modern Businesses
           </h2>
-          <p className="text-slate-600 font-sans text-xs md:text-sm leading-relaxed font-light max-w-2xl mx-auto">
+          <p className="text-slate-600 font-sans text-xs md:text-sm leading-relaxed font-light max-w-2xl mx-auto text-justify">
             Our APIs and tools make it easy to connect third-party platforms. Integrate our secure services into your application workflow with minimal effort.
           </p>
         </div>
@@ -173,7 +173,7 @@ mocard.Integration.create(
               <h3 className="text-xl font-bold font-outfit text-pp-black">
                 Developer-First Architecture
               </h3>
-              <p className="text-slate-500 text-xs md:text-sm leading-relaxed font-sans font-light">
+              <p className="text-slate-500 text-xs md:text-sm leading-relaxed font-sans font-light text-justify">
                 Connect and scale your business using integrations built for flexibility, security, and developer speed. Access extensive tooling to monitor requests and build production-ready services in minutes.
               </p>
             </div>
@@ -187,7 +187,7 @@ mocard.Integration.create(
                       {feat.title}
                     </h4>
                   </div>
-                  <p className="text-slate-500 text-[11px] leading-relaxed font-sans font-light">
+                  <p className="text-slate-500 text-[11px] leading-relaxed font-sans font-light text-justify">
                     {feat.desc}
                   </p>
                 </div>

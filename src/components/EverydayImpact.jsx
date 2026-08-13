@@ -51,7 +51,7 @@ export default function EverydayImpact() {
             Helping People Connect <br className="hidden sm:inline" />
             with Life's Daily Needs
           </h2>
-          <p className="text-slate-600 font-sans text-xs md:text-sm leading-relaxed font-light">
+          <p className="text-slate-600 font-sans text-xs md:text-sm leading-relaxed font-light text-justify">
             Mocard goes beyond business-to-business APIs — we build payment systems that solve real everyday problems for families, students, and citizens across Africa.
           </p>
         </div>
@@ -79,7 +79,7 @@ export default function EverydayImpact() {
                   <h3 className="text-base font-bold font-outfit text-pp-black group-hover:text-pp-blue transition-colors duration-300">
                     {useCase.title}
                   </h3>
-                  <p className="text-slate-500 text-xs leading-relaxed font-sans font-light">
+                  <p className="text-slate-500 text-xs leading-relaxed font-sans font-light text-justify">
                     {useCase.desc}
                   </p>
                 </div>
@@ -100,7 +100,7 @@ export default function EverydayImpact() {
               
               <div className="space-y-1 pt-2">
                 <h3 className="text-xl font-bold font-outfit leading-tight">Need a custom payment utility?</h3>
-                <p className="text-slate-400 text-xs leading-relaxed font-sans font-light">
+                <p className="text-slate-400 text-xs leading-relaxed font-sans font-light text-justify">
                   Our unified API sandbox lets you prototype, test, and launch bill-payment apps, airtime reload tools, and tuition settlement flows in minutes.
                 </p>
               </div>

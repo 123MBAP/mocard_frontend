@@ -46,7 +46,7 @@ export default function FAQ() {
           <h2 className="text-3xl md:text-4xl font-black font-outfit text-pp-black tracking-tight">
             Frequently Asked Questions
           </h2>
-          <p className="text-slate-600 font-sans text-xs md:text-sm leading-relaxed font-light max-w-xl mx-auto">
+          <p className="text-slate-600 font-sans text-xs md:text-sm leading-relaxed font-light max-w-xl mx-auto text-justify">
             Everything you need to know about setting up, billing, security, and developer options.
           </p>
         </div>
@@ -79,7 +79,7 @@ export default function FAQ() {
                     isOpen ? 'max-h-60 border-t border-slate-200' : 'max-h-0'
                   }`}
                 >
-                  <p className="px-5 py-4 text-slate-550 text-xs md:text-sm leading-relaxed font-sans font-light">
+                  <p className="px-5 py-4 text-slate-550 text-xs md:text-sm leading-relaxed font-sans font-light text-justify">
                     {faq.a}
                   </p>
                 </div>

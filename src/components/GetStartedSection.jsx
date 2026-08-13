@@ -57,7 +57,7 @@ export default function GetStartedSection() {
           <h2 className="text-3xl md:text-4xl font-black font-outfit text-pp-black tracking-tight leading-tight">
             How to Get Started with MoCard
           </h2>
-          <p className="text-slate-650 font-sans text-xs md:text-sm leading-relaxed font-light">
+          <p className="text-slate-650 font-sans text-xs md:text-sm leading-relaxed font-light text-justify">
             Create your merchant account by completing our simple three-step document verification process. No complex onboarding matrices.
           </p>
         </div>
@@ -79,7 +79,7 @@ export default function GetStartedSection() {
                     <li key={idx} className="flex items-start space-x-2 group/item cursor-pointer">
                       <div>
                         <strong className="text-slate-950 font-bold block font-outfit text-xs md:text-sm">{item.title}</strong>
-                        <span className="text-[11px] text-slate-500 block leading-relaxed">{item.desc}</span>
+                        <span className="text-[11px] text-slate-500 block leading-relaxed text-justify">{item.desc}</span>
                       </div>
                     </li>
                   ))}
@@ -108,7 +108,7 @@ export default function GetStartedSection() {
                       {step.num}
                     </span>
                     <h4 className="text-xs md:text-sm font-bold text-slate-905 font-outfit pl-2">{step.title}</h4>
-                    <p className="text-[11px] text-slate-500 pl-2 leading-relaxed">{step.desc}</p>
+                    <p className="text-[11px] text-slate-500 pl-2 leading-relaxed text-justify">{step.desc}</p>
                   </div>
                 ))}
               </div>
@@ -116,7 +116,7 @@ export default function GetStartedSection() {
 
             {/* Bottom Actions */}
             <div className="border-t border-slate-100 pt-5 mt-6 space-y-3">
-              <p className="text-[11px] text-slate-500 leading-relaxed font-sans">
+              <p className="text-[11px] text-slate-500 leading-relaxed font-sans text-justify">
                 Ready to submit? Copy our onboarding email address below, draft your request, and attach the required documents:
               </p>
               

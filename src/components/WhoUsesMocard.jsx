@@ -69,7 +69,7 @@ export default function WhoUsesMocard() {
           <h2 className="text-3xl md:text-4xl font-black font-outfit text-pp-black tracking-tight leading-tight">
             Who Uses MoCard?
           </h2>
-          <p className="text-slate-600 font-sans text-xs md:text-sm leading-relaxed font-light max-w-2xl mx-auto">
+          <p className="text-slate-600 font-sans text-xs md:text-sm leading-relaxed font-light max-w-2xl mx-auto text-justify">
             Our API integrations power transactions for thousands of individuals, local entrepreneurs, and scale-ups. Here is how different sectors benefit.
           </p>
         </div>
@@ -123,7 +123,7 @@ export default function WhoUsesMocard() {
                   <h3 className="text-base font-bold font-outfit text-pp-black group-hover:text-pp-blue transition-colors duration-300">
                     {user.title}
                   </h3>
-                  <p className="text-slate-500 text-xs leading-relaxed font-sans font-light">
+                  <p className="text-slate-500 text-xs leading-relaxed font-sans font-light text-justify">
                     {user.description}
                   </p>
                 </div>

@@ -75,7 +75,7 @@ export default function Clients() {
           <h2 className="text-3xl md:text-4xl font-black font-outfit text-pp-black tracking-tight leading-tight">
             Trusted by Rwanda's Leading Brands
           </h2>
-          <p className="text-slate-600 font-sans text-xs md:text-sm leading-relaxed font-light">
+          <p className="text-slate-600 font-sans text-xs md:text-sm leading-relaxed font-light text-justify">
             From logistics leaders to luxury hospitality hubs, Mocard powers connections that drive business forward.
           </p>
         </div>
@@ -102,7 +102,7 @@ export default function Clients() {
           <div className="flex items-center space-x-4">
             <div>
               <h4 className="font-bold text-pp-black text-xs md:text-sm font-outfit">SLA &amp; Reliability Guaranteed</h4>
-              <p className="text-slate-500 text-[11px] leading-relaxed font-light mt-0.5">Our platform processes thousands of integrations daily under strict compliance frameworks.</p>
+              <p className="text-slate-500 text-[11px] leading-relaxed font-light mt-0.5 text-justify">Our platform processes thousands of integrations daily under strict compliance frameworks.</p>
             </div>
           </div>
           <div className="flex items-center space-x-6 shrink-0 font-outfit text-[11px] font-bold text-slate-600">

@@ -30,7 +30,7 @@ export default function ActionBanner() {
                 Ready to Integrate <br />
                 Your Business?
               </h2>
-              <p className="text-slate-350 text-xs md:text-sm font-sans font-light leading-relaxed">
+              <p className="text-slate-355 text-xs md:text-sm font-sans font-light leading-relaxed text-justify">
                 Connect your business with third-party software APIs seamlessly. Enter your business email below to schedule a custom integration blueprint session with our core tech team.
               </p>
             </div>

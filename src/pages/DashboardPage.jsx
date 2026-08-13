@@ -436,9 +436,7 @@ export default function DashboardPage() {
                 MoCard
               </span>
             </Link>
-            <span className="ml-2 px-2 py-0.5 rounded bg-pp-blue/15 text-[10px] font-bold text-pp-blue border border-pp-blue/20 font-outfit tracking-wide uppercase">
-              B2B Portal
-            </span>
+        
           </div>
 
           {/* Nav Links */}
@@ -597,29 +595,7 @@ export default function DashboardPage() {
               {activeTab === 'overview' ? 'Merchant Console' : activeTab === 'links' ? 'Payment Links' : activeTab === 'api' ? 'API keys' : activeTab === 'reporting' ? 'Reporting & Logs' : 'Business Settings'}
             </h1>
             
-            {/* Sandbox/Live Toggle */}
-            <div className="flex items-center bg-slate-100 rounded-full p-1 border border-slate-200">
-              <button 
-                onClick={() => setIsSandbox(true)}
-                className={`px-3.5 py-1.5 rounded-full text-xs font-bold font-outfit transition duration-200 ${
-                  isSandbox 
-                    ? 'bg-white text-pp-blue shadow-xs' 
-                    : 'text-slate-500 hover:text-slate-800'
-                }`}
-              >
-                TEST MODE
-              </button>
-              <button 
-                onClick={() => setIsSandbox(false)}
-                className={`px-3.5 py-1.5 rounded-full text-xs font-bold font-outfit transition duration-200 ${
-                  !isSandbox 
-                    ? 'bg-slate-900 text-white shadow-xs' 
-                    : 'text-slate-500 hover:text-slate-800'
-                }`}
-              >
-                LIVE
-              </button>
-            </div>
+        
           </div>
 
           <div className="flex items-center space-x-4">
@@ -1922,7 +1898,7 @@ export default function DashboardPage() {
 
                       <div className="space-y-1.5 pt-2">
                         <label className="text-[9px] font-bold uppercase text-slate-455 block font-outfit">Integration Script Snippet</label>
-                        <pre className="bg-slate-900 text-slate-350 p-4 rounded-xl border border-slate-800 font-mono text-[10px] select-all overflow-x-auto leading-relaxed">
+                        <pre className="bg-slate-50 text-slate-900 p-4 rounded-xl border border-slate-200 font-mono text-[10px] select-all overflow-x-auto leading-relaxed">
 {`Mocard.checkout.open({
   amount: 2900,
   currency: 'USD',
