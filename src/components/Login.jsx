@@ -30,7 +30,7 @@ export default function Login() {
       } else {
         setStatus('success');
         setTimeout(() => {
-          navigate('/'); // Redirect to landing page on success
+          navigate('/dashboard'); // Redirect to merchant dashboard on success
         }, 800);
       }
     }, 1200);

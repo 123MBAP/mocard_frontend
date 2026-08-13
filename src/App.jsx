@@ -9,6 +9,9 @@ import PricingPage from './pages/PricingPage';
 import CompanyPage from './pages/CompanyPage';
 import ContactPage from './pages/ContactPage';
 import Login from './components/Login';
+import PaymentLinksPage from './pages/PaymentLinksPage';
+import DashboardPage from './pages/DashboardPage';
+import PersonalPage from './pages/PersonalPage';
 
 export default function App() {
   return (
@@ -24,6 +27,9 @@ export default function App() {
           <Route path="/company" element={<CompanyPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/payment-links" element={<PaymentLinksPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/personal" element={<PersonalPage />} />
           {/* Fallback path */}
           <Route path="*" element={<Home />} />
         </Routes>

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Plus, Minus, HelpCircle } from 'lucide-react';
 
 export default function FAQ() {
   const [openIdx, setOpenIdx] = useState(null);
@@ -36,43 +35,42 @@ export default function FAQ() {
   };
 
   return (
-    <section className="bg-white py-20 md:py-24 scroll-mt-24" id="faq">
+    <section className="bg-white py-14 md:py-18 scroll-mt-24" id="faq">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center mb-16 space-y-4 group cursor-pointer">
-          <div className="inline-flex items-center space-x-2 bg-slate-100 group-hover:bg-pp-blue/10 text-slate-650 group-hover:text-pp-blue px-4 py-1.5 rounded-full text-xs font-bold font-outfit uppercase tracking-wider transition-all duration-300">
-            <HelpCircle className="w-4.5 h-4.5" />
+        <div className="text-center mb-10 space-y-2 group cursor-pointer">
+          <div className="inline-flex items-center space-x-2 bg-slate-100 group-hover:bg-pp-blue/10 text-slate-650 group-hover:text-pp-blue px-3.5 py-1.5 rounded-lg text-xs font-bold font-outfit uppercase tracking-wider transition-all duration-300">
             <span>Support & Help</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-black font-outfit text-pp-black tracking-tight">
             Frequently Asked Questions
           </h2>
-          <p className="text-slate-650 font-sans text-base max-w-xl mx-auto">
+          <p className="text-slate-600 font-sans text-xs md:text-sm leading-relaxed font-light max-w-xl mx-auto">
             Everything you need to know about setting up, billing, security, and developer options.
           </p>
         </div>
 
         {/* FAQ Accordion List */}
-        <div className="space-y-4">
+        <div className="space-y-3.5">
           {faqs.map((faq, idx) => {
             const isOpen = openIdx === idx;
             return (
               <div 
                 key={idx} 
-                className={`border rounded-2xl transition-all duration-300 ${
-                  isOpen ? 'border-pp-black bg-slate-50/40 shadow-sm' : 'border-slate-200 hover:border-slate-350 bg-white'
+                className={`border rounded-xl transition-all duration-300 ${
+                  isOpen ? 'border-pp-black bg-slate-50/40 shadow-2xs' : 'border-slate-200 hover:border-slate-350 bg-white'
                 }`}
               >
                 <button
                   onClick={() => handleToggle(idx)}
-                  className="w-full text-left px-6 py-5 flex items-center justify-between font-outfit text-[15px] md:text-base font-bold text-pp-black focus:outline-none"
+                  className="w-full text-left px-5 py-4 flex items-center justify-between font-outfit text-sm md:text-base font-bold text-pp-black focus:outline-none cursor-pointer"
                 >
                   <span className="pr-4">{faq.q}</span>
-                  <div className={`p-1.5 rounded-lg transition-colors duration-200 ${
+                  <div className={`w-6 h-6 rounded flex items-center justify-center text-xs font-bold transition-colors duration-200 select-none ${
                     isOpen ? 'bg-pp-black text-white' : 'bg-slate-100 text-slate-500'
                   }`}>
-                    {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                    {isOpen ? '−' : '+'}
                   </div>
                 </button>
                 
@@ -81,7 +79,7 @@ export default function FAQ() {
                     isOpen ? 'max-h-60 border-t border-slate-200' : 'max-h-0'
                   }`}
                 >
-                  <p className="px-6 py-5 text-slate-600 text-sm md:text-[15px] leading-relaxed font-sans font-light">
+                  <p className="px-5 py-4 text-slate-550 text-xs md:text-sm leading-relaxed font-sans font-light">
                     {faq.a}
                   </p>
                 </div>

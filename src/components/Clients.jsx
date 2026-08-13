@@ -1,5 +1,4 @@
 import React from 'react';
-import { Award, CheckCircle } from 'lucide-react';
 
 // Static imports for partner logos
 import akageraaviation from '../assets/partners/akageraaviation.png';
@@ -65,28 +64,28 @@ export default function Clients() {
   ];
 
   return (
-    <section className="bg-pp-bg-warm py-20 md:py-24 border-y border-slate-200 scroll-mt-24" id="clients">
+    <section className="bg-pp-bg-warm py-14 md:py-18 border-y border-slate-200 scroll-mt-24" id="clients">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4 group cursor-pointer">
+        <div className="text-center max-w-3xl mx-auto mb-12 space-y-2 group cursor-pointer">
           <span className="text-xs md:text-sm font-bold tracking-widest text-slate-500 group-hover:text-pp-blue uppercase font-outfit transition-colors duration-300">
             Our Ecosystem
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black font-outfit text-pp-black tracking-tight leading-tight">
+          <h2 className="text-3xl md:text-4xl font-black font-outfit text-pp-black tracking-tight leading-tight">
             Trusted by Rwanda's Leading Brands
           </h2>
-          <p className="text-slate-650 font-sans text-base md:text-lg">
+          <p className="text-slate-600 font-sans text-xs md:text-sm leading-relaxed font-light">
             From logistics leaders to luxury hospitality hubs, Mocard powers connections that drive business forward.
           </p>
         </div>
 
         {/* Partners Logo Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {partners.map((partner, idx) => (
             <div 
               key={idx} 
-              className="bg-white rounded-xl h-30 border border-slate-200/80 shadow-sm  hover:border-slate-350 hover:scale-[1.03] transform transition-all duration-300 flex items-center justify-center p-0 group cursor-pointer"
+              className="bg-white rounded-xl h-24 border border-slate-200/80 shadow-2xs hover:border-slate-350 hover:scale-[1.02] transform transition-all duration-300 flex items-center justify-center p-2 group cursor-pointer"
             >
               <img 
                 src={partner.logo} 
@@ -99,23 +98,18 @@ export default function Clients() {
         </div>
 
         {/* Quick highlight banner */}
-        <div className="mt-16 bg-white/70 border border-slate-200 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="mt-12 bg-white border border-slate-200 rounded-2xl p-5 md:p-6 flex flex-col md:flex-row items-center justify-between gap-6 shadow-3xs">
           <div className="flex items-center space-x-4">
-            <div className="p-3 rounded-2xl bg-emerald-50 text-emerald-600 shrink-0">
-              <Award className="w-6 h-6" />
-            </div>
             <div>
-              <h4 className="font-bold text-pp-black text-[15px] font-outfit">SLA &amp; Reliability Guaranteed</h4>
-              <p className="text-slate-550 text-xs mt-1">Our platform processes thousands of integrations daily under strict compliance frameworks.</p>
+              <h4 className="font-bold text-pp-black text-xs md:text-sm font-outfit">SLA &amp; Reliability Guaranteed</h4>
+              <p className="text-slate-500 text-[11px] leading-relaxed font-light mt-0.5">Our platform processes thousands of integrations daily under strict compliance frameworks.</p>
             </div>
           </div>
-          <div className="flex items-center space-x-6 shrink-0 font-outfit text-xs font-semibold text-slate-600">
+          <div className="flex items-center space-x-6 shrink-0 font-outfit text-[11px] font-bold text-slate-600">
             <div className="flex items-center space-x-1.5">
-              <CheckCircle className="w-4 h-4 text-emerald-500" />
               <span>PCI Compliant Flow</span>
             </div>
             <div className="flex items-center space-x-1.5">
-              <CheckCircle className="w-4 h-4 text-emerald-500" />
               <span>Restful API Specs</span>
             </div>
           </div>

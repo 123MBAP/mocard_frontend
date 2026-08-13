@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { Terminal, Play, CheckCircle, RefreshCw, Key, Code, HelpCircle, Layers } from 'lucide-react';
 
 export default function DeveloperPage() {
   const [activeLang, setActiveLang] = useState('curl');
@@ -12,7 +11,7 @@ export default function DeveloperPage() {
   const [currency, setCurrency] = useState('USD');
   const [amount, setAmount] = useState(250.00);
   const [destination, setDestination] = useState('mtn_momo');
-  const [simStatus, setSimStatus] = useState('idle'); // idle | loading | success
+  const [simStatus, setSimStatus] = useState('idle');
   const [simResult, setSimResult] = useState(null);
 
   const sdkSnippets = {
@@ -84,7 +83,7 @@ func main() {
         currency: currency,
         recipient_gateway: destination,
         corridor: corridor,
-        fee: parseFloat(amount * 0.025).toFixed(2), // 2.5% mock fee
+        fee: parseFloat(amount * 0.025).toFixed(2),
         reference: `mocard_ref_${Math.random().toString(36).substr(2, 8).toUpperCase()}`,
         created_at: new Date().toISOString(),
         verified_by: "Mocard Sandbox Engine V1"
@@ -96,11 +95,11 @@ func main() {
     <div className="bg-slate-50 min-h-screen font-sans">
       <Navbar />
 
-      {/* Hero Header */}
-      <section className="bg-pp-black text-white pt-36 pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(0,112,224,0.15),transparent_40%)]" />
+      {/* Hero Header - Reduced padding */}
+      <section className="bg-pp-black text-white pt-20 pb-14 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(0,112,224,0.12),transparent_40%)]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="max-w-3xl mx-auto space-y-6">
+          <div className="max-w-3xl mx-auto space-y-3">
             <span className="text-xs md:text-sm font-bold uppercase tracking-widest text-pp-blue bg-pp-blue/10 px-4 py-1.5 rounded-full">
               Developer Portal
             </span>
@@ -114,9 +113,9 @@ func main() {
         </div>
       </section>
 
-      {/* Interactive Sandbox Console */}
-      <section className="py-20 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 space-y-4">
+      {/* Interactive Sandbox Console - Reduced spacing */}
+      <section className="py-16 md:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 space-y-2">
           <h2 className="text-3xl md:text-4xl font-black font-outfit text-pp-black">
             Interactive API Sandbox Playground
           </h2>
@@ -125,14 +124,13 @@ func main() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-12 items-stretch max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-12 gap-8 items-stretch max-w-6xl mx-auto">
           
           {/* Left Panel: Request Configuration Form */}
-          <div className="lg:col-span-5 bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-sm">
-            <form onSubmit={handleSimulate} className="space-y-5">
+          <div className="lg:col-span-5 bg-white border border-slate-200 rounded-2xl p-6 flex flex-col shadow-sm">
+            <form onSubmit={handleSimulate} className="space-y-4">
               
               <div className="flex items-center space-x-2 text-pp-black font-bold font-outfit text-base border-b border-slate-100 pb-3">
-                <Terminal className="w-5 h-5 text-pp-blue" />
                 <span>Configure Request</span>
               </div>
 
@@ -213,39 +211,34 @@ func main() {
               </div>
 
               {/* Credentials Mock */}
-              <div className="space-y-1.5 bg-slate-50 p-3 rounded-xl border border-slate-100 flex items-center space-x-3 text-xs text-slate-500 font-sans">
-                <Key className="w-4 h-4 text-slate-400 shrink-0" />
-                <div className="overflow-hidden">
-                  <span className="font-semibold block font-outfit">Sandbox Authentication</span>
-                  <span className="font-mono text-[10px] text-slate-450 block truncate">sec_key_sandbox_abc123</span>
+              <div className="space-y-1.5 bg-slate-50 p-3 rounded-xl border border-slate-100">
+                <div className="flex items-center text-xs text-slate-500 font-sans">
+                  <div className="overflow-hidden">
+                    <span className="font-semibold block font-outfit text-[10px]">Sandbox Authentication</span>
+                    <span className="font-mono text-[10px] text-slate-450 block truncate">sec_key_sandbox_abc123</span>
+                  </div>
                 </div>
               </div>
 
               <button
                 type="submit"
                 disabled={simStatus === 'loading'}
-                className="w-full py-3.5 rounded-full bg-pp-blue hover:bg-pp-blue-dark text-white text-xs font-bold font-outfit transition duration-200 shadow-sm flex items-center justify-center space-x-2 cursor-pointer disabled:bg-slate-300"
+                className="w-full py-3 rounded-full bg-pp-blue hover:bg-pp-blue-dark text-white text-xs font-bold font-outfit transition duration-200 shadow-sm flex items-center justify-center cursor-pointer disabled:bg-slate-300"
               >
                 {simStatus === 'loading' ? (
-                  <>
-                    <RefreshCw className="w-4 h-4 animate-spin" />
-                    <span>Processing Sandbox Rails...</span>
-                  </>
+                  <span>Processing Sandbox Rails...</span>
                 ) : (
-                  <>
-                    <Play className="w-4 h-4" />
-                    <span>Send Staging Request</span>
-                  </>
+                  <span>Send Staging Request</span>
                 )}
               </button>
             </form>
           </div>
 
-          {/* Right Panel: Sleek Code Viewer */}
-          <div className="lg:col-span-7 bg-slate-900 rounded-3xl overflow-hidden border border-slate-800 shadow-2xl font-mono text-xs flex flex-col justify-between min-h-[480px]">
+          {/* Right Panel: Code Viewer */}
+          <div className="lg:col-span-7 bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl font-mono text-xs flex flex-col min-h-[460px]">
             
             {/* Window header */}
-            <div className="bg-slate-950/80 px-5 py-3.5 border-b border-slate-800 flex items-center justify-between select-none">
+            <div className="bg-slate-950/80 px-5 py-3 border-b border-slate-800 flex items-center justify-between select-none">
               <div className="flex space-x-2">
                 <div className="w-3.5 h-3.5 rounded-full bg-rose-500/80" />
                 <div className="w-3.5 h-3.5 rounded-full bg-amber-500/80" />
@@ -278,22 +271,22 @@ func main() {
             </div>
 
             {/* Terminal Workspace */}
-            <div className="p-6 flex-grow flex flex-col justify-between bg-slate-900/90 text-slate-350 min-h-[320px]">
+            <div className="p-5 flex-grow flex flex-col justify-between bg-slate-900/90 text-slate-350 min-h-[300px]">
               
               {/* Dynamic Request payload snippet */}
-              <div className="space-y-2">
+              <div className="space-y-1.5">
                 <div className="text-[10px] text-slate-500 uppercase tracking-widest font-sans font-semibold">
                   API Script Request
                 </div>
-                <pre className="text-emerald-400 whitespace-pre overflow-x-auto scrollbar-none pb-2">
+                <pre className="text-emerald-400 whitespace-pre overflow-x-auto scrollbar-none pb-2 text-xs leading-relaxed">
                   <code>{sdkSnippets[activeLang](amount, currency, destination)}</code>
                 </pre>
               </div>
 
-              {/* Dynamic Response Payload simulated */}
-              <div className="border-t border-slate-800/80 my-4" />
+              <div className="border-t border-slate-800/80 my-3" />
 
-              <div className="space-y-2">
+              {/* Dynamic Response Payload simulated */}
+              <div className="space-y-1.5">
                 <div className="flex items-center justify-between text-[10px] text-slate-500 uppercase tracking-widest font-sans font-semibold">
                   <span>API Simulated Response</span>
                   {simStatus === 'success' && (
@@ -304,21 +297,19 @@ func main() {
                 </div>
                 
                 {simStatus === 'idle' && (
-                  <div className="text-slate-500 text-xs py-4 flex flex-col items-center justify-center space-y-2">
-                    <Code className="w-8 h-8 text-slate-650" />
+                  <div className="text-slate-500 text-xs py-3 text-center">
                     <span>Send a staging request in the left panel to populate transaction logs.</span>
                   </div>
                 )}
 
                 {simStatus === 'loading' && (
-                  <div className="text-slate-500 text-xs py-4 flex flex-col items-center justify-center space-y-2">
-                    <RefreshCw className="w-8 h-8 text-slate-600 animate-spin" />
+                  <div className="text-slate-500 text-xs py-3 text-center">
                     <span>Awaiting routing resolution...</span>
                   </div>
                 )}
 
                 {simStatus === 'success' && simResult && (
-                  <pre className="text-slate-300 whitespace-pre overflow-x-auto scrollbar-none">
+                  <pre className="text-slate-300 whitespace-pre overflow-x-auto scrollbar-none text-xs leading-relaxed">
                     <code>{JSON.stringify(simResult, null, 2)}</code>
                   </pre>
                 )}
@@ -327,7 +318,7 @@ func main() {
             </div>
 
             {/* Bottom Status bar */}
-            <div className="bg-slate-950/40 border-t border-slate-800 px-5 py-3.5 flex items-center justify-between text-[10px] text-slate-500 font-sans">
+            <div className="bg-slate-950/40 border-t border-slate-800 px-5 py-2.5 flex items-center justify-between text-[10px] text-slate-500 font-sans">
               <div className="flex items-center space-x-2">
                 <span className={`w-1.5 h-1.5 rounded-full ${simStatus === 'success' ? 'bg-emerald-500' : 'bg-amber-500 animate-pulse'}`} />
                 <span>Sandbox Mode active</span>
@@ -340,22 +331,123 @@ func main() {
         </div>
       </section>
 
-      {/* Webhook HMAC signature guide */}
-      <section className="py-16 bg-slate-100 border-t border-slate-200">
-        <div className="max-w-4xl mx-auto px-4 space-y-6">
-          <div className="space-y-2">
+      {/* B2B Unified API Suite Section - Reduced padding, no icons */}
+      <section className="py-16 bg-white border-t border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
+            <span className="text-xs md:text-sm font-bold uppercase tracking-widest text-pp-blue font-outfit block">
+              Developer Ecosystem
+            </span>
+            <h2 className="text-3xl md:text-4xl font-black font-outfit text-pp-black tracking-tight leading-tight">
+              A single platform, six unified API products.
+            </h2>
+            <p className="text-slate-550 font-light text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+              Integrate payments, messages, emails, validation rails, and corporate issuing in a single afternoon. Designed for modern multi-tenant enterprise platforms.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            {/* Card 1: Payments & Payouts */}
+            <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 space-y-3 hover:shadow-md hover:border-slate-300 transition duration-300">
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-base font-bold font-outfit text-pp-black">Payments API</h3>
+                  <span className="text-[10px] font-mono font-bold bg-white text-slate-700 px-2 py-0.5 rounded border border-slate-200/50">POST /v1/payments</span>
+                </div>
+                <p className="text-slate-500 text-sm leading-relaxed font-light">
+                  Accept credit/debit cards and local mobile money. Initiate real-time local payouts, bulk settlements, and manage automated FX conversions on the fly.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 2: Messaging Notifications */}
+            <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 space-y-3 hover:shadow-md hover:border-slate-300 transition duration-300">
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-base font-bold font-outfit text-pp-black">Messaging API</h3>
+                  <span className="text-[10px] font-mono font-bold bg-white text-slate-700 px-2 py-0.5 rounded border border-slate-200/50">POST /v1/messages</span>
+                </div>
+                <p className="text-slate-500 text-sm leading-relaxed font-light">
+                  Push automated transaction receipt SMS alerts, verify checkout sessions on WhatsApp, and send multi-factor authorization OTP tokens securely.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 3: Email Billing */}
+            <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 space-y-3 hover:shadow-md hover:border-slate-300 transition duration-300">
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-base font-bold font-outfit text-pp-black">Email & Billing API</h3>
+                  <span className="text-[10px] font-mono font-bold bg-white text-slate-700 px-2 py-0.5 rounded border border-slate-200/50">POST /v1/billing</span>
+                </div>
+                <p className="text-slate-500 text-sm leading-relaxed font-light">
+                  Generate digital, tax-compliant PDF invoices, automatically dispatch payment verification receipts, and send monthly account balance ledger statements.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 4: Wallet KYC Verification */}
+            <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 space-y-3 hover:shadow-md hover:border-slate-300 transition duration-300">
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-base font-bold font-outfit text-pp-black">Verification API</h3>
+                  <span className="text-[10px] font-mono font-bold bg-white text-slate-700 px-2 py-0.5 rounded border border-slate-200/50">GET /v1/verify</span>
+                </div>
+                <p className="text-slate-500 text-sm leading-relaxed font-light">
+                  Validate bank account details, verify mobile money wallet owner name lookup parameters, and run regional KYB compliance checks instantly.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 5: Split Transfers */}
+            <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 space-y-3 hover:shadow-md hover:border-slate-300 transition duration-300">
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-base font-bold font-outfit text-pp-black">Split Transfers API</h3>
+                  <span className="text-[10px] font-mono font-bold bg-white text-slate-700 px-2 py-0.5 rounded border border-slate-200/50">POST /v1/splits</span>
+                </div>
+                <p className="text-slate-500 text-sm leading-relaxed font-light">
+                  Manage marketplace integrations by dynamically splitting collection payments between platform fees, ledgers, and sub-merchant bank accounts.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 6: Corporate Card Issuing */}
+            <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 space-y-3 hover:shadow-md hover:border-slate-300 transition duration-300">
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-base font-bold font-outfit text-pp-black">Card Issuing API</h3>
+                  <span className="text-[10px] font-mono font-bold bg-white text-slate-700 px-2 py-0.5 rounded border border-slate-200/50">POST /v1/cards</span>
+                </div>
+                <p className="text-slate-500 text-sm leading-relaxed font-light">
+                  Instantly issue virtual Visa and Mastercard corporate debit cards. Set custom limits, tie to currency balances, and register authorization callbacks.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* Webhook HMAC signature guide - Reduced padding */}
+      <section className="py-12 bg-slate-100 border-t border-slate-200">
+        <div className="max-w-4xl mx-auto px-4 space-y-4">
+          <div className="space-y-1.5">
             <h3 className="text-2xl font-black font-outfit text-pp-black">Verifying Webhook Signatures</h3>
             <p className="text-slate-650 text-sm leading-relaxed font-light">
               Mocard signs all outgoing webhooks using a unique shared webhook secret. Verification guarantees that notifications are sent from our gateway and the contents are not modified.
             </p>
           </div>
 
-          <div className="bg-slate-900 text-slate-350 p-6 rounded-2xl border border-slate-800 font-mono text-xs space-y-4">
+          <div className="bg-slate-900 text-slate-350 p-5 rounded-2xl border border-slate-800 font-mono text-xs space-y-3">
             <div className="flex justify-between items-center text-[10px] text-slate-500 font-sans font-semibold">
               <span>Node.js Express Verification Middleware</span>
               <span>HMAC-SHA256</span>
             </div>
-            <pre className="text-slate-200 whitespace-pre overflow-x-auto">
+            <pre className="text-slate-200 whitespace-pre overflow-x-auto text-xs leading-relaxed">
               <code>{`const crypto = require('crypto');
 
 function verifyMocardWebhook(req, res, next) {
