@@ -26,17 +26,17 @@ export default function CompanyPage() {
     {
       year: "2024",
       title: "Founded in Kigali Heights",
-      desc: "Mocard was established in Kigali, Rwanda. We launched our core routing engine to connect international credit cards directly to Rwanda's local mobile money rails."
+      desc: "Mocard was established in Kigali, Rwanda. We launched our core routing engine to connect international platforms directly to local business databases and services."
     },
     {
       year: "2025",
       title: "East African Expansion",
-      desc: "Expanded payment rails to Kenya, Uganda, and Tanzania, integrating M-Pesa, MTN MoMo, Airtel Money, and local banks. Hit $100M+ in routed transactions."
+      desc: "Expanded integration connectors to major local enterprise platforms and regional services. Routed millions of secure API calls."
     },
     {
       year: "2026",
       title: "Leading the Pan-African Frontier",
-      desc: "Scaled connectivity across West and Southern Africa (including Nigeria and Ghana). Partnered with international banking partners to establish Mocard as the premier API payment engine for the continent."
+      desc: "Scaled connectivity across West and Southern Africa (including Nigeria and Ghana). Partnered with international banking partners to establish Mocard as the premier API integration engine for the continent."
     }
   ];
 
@@ -54,11 +54,11 @@ export default function CompanyPage() {
               Our Vision &amp; Presence
             </span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black font-outfit tracking-tight leading-[1.08]">
-              Leading African FinTech <br className="hidden sm:inline" />
+              Leading African Business Integrator <br className="hidden sm:inline" />
               from <span className="text-pp-blue">Kigali, Rwanda</span>
             </h1>
             <p className="text-slate-400 text-base md:text-lg font-light leading-relaxed max-w-2xl mx-auto font-sans">
-              Headquartered at Kigali Heights, Mocard builds the developer APIs and banking bridges that connect global capital to Africa's local mobile money structures.
+              Headquartered at Kigali Heights, Mocard builds the developer APIs and software bridges that connect global platforms to Africa's local business databases and services.
             </p>
           </div>
         </div>
@@ -75,13 +75,13 @@ export default function CompanyPage() {
               <span className="text-xs font-bold uppercase tracking-wider font-outfit">Strategic Headquarters</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-black font-outfit text-pp-black leading-tight">
-              Why Rwanda is Our Launchpad for Fintech Leadership
+              Why Rwanda is Our Launchpad for Tech Integration Leadership
             </h2>
-            <p className="text-slate-650 text-sm md:text-base leading-relaxed font-light font-sans">
+            <p className="text-slate-655 text-sm md:text-base leading-relaxed font-light font-sans">
               Rwanda has established itself as the premier technology hub of Africa. Operating out of **Kigali Heights**, Mocard is situated at the epicenter of Rwanda's forward-looking digital economy. 
             </p>
-            <p className="text-slate-650 text-sm md:text-base leading-relaxed font-light font-sans">
-              By working in partnership with the **Kigali International Financial Centre (KIFC)** ecosystem, we leverage progressive cross-border licensing frameworks, robust security standards, and high-speed regional connections. This unique sandbox environment lets us scale fintech integrations across East, West, and Southern Africa faster and more securely than ever.
+            <p className="text-slate-655 text-sm md:text-base leading-relaxed font-light font-sans">
+              By working in partnership with the **Kigali International Financial Centre (KIFC)** ecosystem, we leverage progressive cross-border licensing frameworks, robust security standards, and high-speed regional connections. This unique sandbox environment lets us scale software integrations across East, West, and Southern Africa faster and more securely than ever.
             </p>
             
             <div className="grid grid-cols-2 gap-4 pt-4">
@@ -95,11 +95,11 @@ export default function CompanyPage() {
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-                <span className="text-xs font-semibold text-slate-700 font-outfit">Central Bank Compliance</span>
+                <span className="text-xs font-semibold text-slate-700 font-outfit">Global Security Compliance</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-                <span className="text-xs font-semibold text-slate-700 font-outfit">Pan-African Gateway Licensing</span>
+                <span className="text-xs font-semibold text-slate-700 font-outfit">Pan-African Connector Network</span>
               </div>
             </div>
           </div>
@@ -125,7 +125,7 @@ export default function CompanyPage() {
               </div>
               <div className="flex justify-between items-center text-xs">
                 <span className="text-slate-400 font-sans">Regulatory Standard</span>
-                <span className="font-bold text-pp-black font-outfit">PCI-DSS &amp; AML-II</span>
+                <span className="font-bold text-pp-black font-outfit">SOC2 &amp; ISO 27001</span>
               </div>
               <div className="flex justify-between items-center text-xs">
                 <span className="text-slate-400 font-sans">Corporate Status</span>
@@ -184,8 +184,8 @@ export default function CompanyPage() {
           
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl font-black font-outfit text-pp-black">Global Operations</h2>
-            <p className="text-slate-500 text-sm max-w-md mx-auto font-light">
-              Mocard coordinates payment rails and regulatory guidelines across regional and international hubs.
+            <p className="text-slate-550 text-sm max-w-md mx-auto font-light">
+              Mocard coordinates integration connectors and security standards across regional and international hubs.
             </p>
           </div>
 

@@ -19,18 +19,18 @@ export default function DeveloperPage() {
   -H "Authorization: Bearer sec_key_sandbox_abc123" \\
   -H "Content-Type: application/json" \\
   -d '{
-    "amount": ${parseFloat(amt).toFixed(2)},
-    "currency": "${cur}",
-    "recipient_gateway": "${dest}",
+    "batch_size": ${parseInt(amt)},
+    "data_type": "records",
+    "recipient_service": "${dest}",
     "callback_url": "https://yourdomain.com/webhooks"
   }'`,
     node: (amt, cur, dest) => `const mocard = require('mocard')('sec_key_sandbox_abc123');
 
 (async () => {
   const integration = await mocard.integrations.create({
-    amount: ${parseFloat(amt).toFixed(2)},
-    currency: '${cur}',
-    recipientGateway: '${dest}',
+    batchSize: ${parseInt(amt)},
+    dataType: 'records',
+    recipientService: '${dest}',
     callbackUrl: 'https://yourdomain.com/webhooks'
   });
   console.log(integration.id);
@@ -40,9 +40,9 @@ export default function DeveloperPage() {
 mocard.api_key = "sec_key_sandbox_abc123"
 
 integration = mocard.Integration.create(
-    amount=${parseFloat(amt).toFixed(2)},
-    currency="${cur}",
-    recipient_gateway="${dest}",
+    batch_size=${parseInt(amt)},
+    data_type="records",
+    recipient_service="${dest}",
     callback_url="https://yourdomain.com/webhooks"
 )`,
     go: (amt, cur, dest) => `package main
@@ -57,9 +57,9 @@ func main() {
 	client := mocard.NewClient("sec_key_sandbox_abc123")
 	
 	params := &mocard.IntegrationParams{
-		Amount:           ${parseFloat(amt).toFixed(2)},
-		Currency:         "${cur}",
-		RecipientGateway: "${dest}",
+		BatchSize:        ${parseInt(amt)},
+		DataType:         "records",
+		RecipientService: "${dest}",
 		CallbackURL:      "https://yourdomain.com/webhooks",
 	}
 	
@@ -79,11 +79,10 @@ func main() {
         id: `intg_${Math.random().toString(36).substr(2, 10)}`,
         object: "integration",
         status: "succeeded",
-        amount: parseFloat(amount),
-        currency: currency,
-        recipient_gateway: destination,
-        corridor: corridor,
-        fee: parseFloat(amount * 0.025).toFixed(2),
+        batch_size: parseInt(amount),
+        data_type: "records",
+        recipient_service: destination,
+        data_path: corridor,
         reference: `mocard_ref_${Math.random().toString(36).substr(2, 8).toUpperCase()}`,
         created_at: new Date().toISOString(),
         verified_by: "Mocard Sandbox Engine V1"
@@ -104,10 +103,10 @@ func main() {
               Developer Portal
             </span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black font-outfit tracking-tight leading-tight">
-              Build Global Payment Bridges
+              Build Global Integration Bridges
             </h1>
             <p className="text-slate-400 text-base md:text-lg font-light leading-relaxed">
-              Integrate credit card payments and automated payouts in minutes. Check out our interactive staging console to test mock API requests and webhooks.
+              Integrate API connections and automated data syncs in minutes. Check out our interactive staging console to test mock API requests and webhooks.
             </p>
           </div>
         </div>
@@ -136,68 +135,68 @@ func main() {
 
               {/* Payment Method */}
               <div className="space-y-1.5">
-                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block font-outfit">Payment Method</label>
+                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block font-outfit">Authentication Method</label>
                 <div className="grid grid-cols-2 gap-2">
                   <button 
                     type="button"
-                    onClick={() => { setMethod('card'); setCurrency('USD'); }}
+                    onClick={() => { setMethod('card'); setCurrency('records'); }}
                     className={`py-2 px-3 text-xs font-bold rounded-xl border text-center transition-all ${
                       method === 'card' 
                         ? 'border-pp-blue text-pp-blue bg-pp-blue/5' 
                         : 'border-slate-200 text-slate-650 hover:bg-slate-50'
                     }`}
                   >
-                    Credit / Debit Card
+                    OAuth 2.0 Token
                   </button>
                   <button 
                     type="button"
-                    onClick={() => { setMethod('momo'); setCurrency('RWF'); }}
+                    onClick={() => { setMethod('momo'); setCurrency('records'); }}
                     className={`py-2 px-3 text-xs font-bold rounded-xl border text-center transition-all ${
                       method === 'momo' 
                         ? 'border-pp-blue text-pp-blue bg-pp-blue/5' 
                         : 'border-slate-200 text-slate-650 hover:bg-slate-50'
                     }`}
                   >
-                    Mobile Money
+                    API Key Header
                   </button>
                 </div>
               </div>
 
               {/* Corridor */}
               <div className="space-y-1.5">
-                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block font-outfit">Regional Corridor</label>
+                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block font-outfit">Data Flow Path</label>
                 <select 
                   value={corridor}
                   onChange={(e) => setCorridor(e.target.value)}
                   className="w-full text-xs font-semibold px-3.5 py-2.5 bg-slate-50 text-slate-900 border border-slate-200 focus:border-pp-blue rounded-xl outline-none font-sans"
                 >
-                  <option value="eu_to_africa">Europe to East Africa (MTN/Airtel)</option>
-                  <option value="us_to_africa">US to West Africa (Orange/Telecel)</option>
-                  <option value="intra_africa">Intra-Africa Corridor (Bank Payout)</option>
-                  <option value="local">Local Instant Rails (MTN/Airtel)</option>
+                  <option value="CRM_to_DB">CRM to Database (HubSpot/PostgreSQL)</option>
+                  <option value="ERP_to_Analytics">ERP to Analytics (Salesforce/BigQuery)</option>
+                  <option value="Webhook_to_Broker">Webhook to Message Broker (Kafka/RabbitMQ)</option>
+                  <option value="API_to_Cloud">API to Cloud Storage (AWS S3/GCS)</option>
                 </select>
               </div>
 
               {/* Destination */}
               <div className="space-y-1.5">
-                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block font-outfit">Recipient Payout Gateway</label>
+                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block font-outfit">Recipient Target Service</label>
                 <select 
                   value={destination}
                   onChange={(e) => setDestination(e.target.value)}
                   className="w-full text-xs font-semibold px-3.5 py-2.5 bg-slate-50 text-slate-900 border border-slate-200 focus:border-pp-blue rounded-xl outline-none font-sans"
                 >
-                  <option value="mtn_momo">MTN Mobile Money</option>
-                  <option value="airtel_money">Airtel Money Wallet</option>
-                  <option value="orange_money">Orange Money Wallet</option>
-                  <option value="equity_bank">Equity Bank Payout</option>
+                  <option value="hubspot">HubSpot CRM</option>
+                  <option value="postgresql">PostgreSQL Database</option>
+                  <option value="salesforce">Salesforce Platform</option>
+                  <option value="s3_bucket">Amazon S3 Bucket</option>
                 </select>
               </div>
 
               {/* Amount slider */}
               <div className="space-y-1.5">
                 <div className="flex justify-between items-center text-[10px] font-bold text-slate-500 uppercase tracking-wider font-outfit">
-                  <span>Transaction Amount</span>
-                  <span className="text-pp-blue text-xs font-bold font-mono">{currency} {parseFloat(amount).toFixed(2)}</span>
+                  <span>Sync Batch Size</span>
+                  <span className="text-pp-blue text-xs font-bold font-mono">{parseInt(amount)} records</span>
                 </div>
                 <input 
                   type="range" 
@@ -226,9 +225,9 @@ func main() {
                 className="w-full py-3 rounded-full bg-pp-blue hover:bg-pp-blue-dark text-white text-xs font-bold font-outfit transition duration-200 shadow-sm flex items-center justify-center cursor-pointer disabled:bg-slate-300"
               >
                 {simStatus === 'loading' ? (
-                  <span>Processing Sandbox Rails...</span>
+                  <span>Processing API Sync...</span>
                 ) : (
-                  <span>Send Staging Request</span>
+                  <span>Send API Sync Request</span>
                 )}
               </button>
             </form>
@@ -298,13 +297,13 @@ func main() {
                 
                 {simStatus === 'idle' && (
                   <div className="text-slate-500 text-xs py-3 text-center">
-                    <span>Send a staging request in the left panel to populate transaction logs.</span>
+                    <span>Send a staging request in the left panel to populate integration sync logs.</span>
                   </div>
                 )}
 
                 {simStatus === 'loading' && (
                   <div className="text-slate-500 text-xs py-3 text-center">
-                    <span>Awaiting routing resolution...</span>
+                    <span>Awaiting integration response...</span>
                   </div>
                 )}
 
@@ -343,7 +342,7 @@ func main() {
               A single platform, six unified API products.
             </h2>
             <p className="text-slate-550 font-light text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-              Integrate payments, messages, emails, validation rails, and corporate issuing in a single afternoon. Designed for modern multi-tenant enterprise platforms.
+              Integrate data workflows, messages, emails, system validations, and custom mapping rules in a single afternoon. Designed for modern multi-tenant enterprise platforms.
             </p>
           </div>
 
@@ -353,11 +352,11 @@ func main() {
             <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 space-y-3 hover:shadow-md hover:border-slate-300 transition duration-300">
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-base font-bold font-outfit text-pp-black">Payments API</h3>
-                  <span className="text-[10px] font-mono font-bold bg-white text-slate-700 px-2 py-0.5 rounded border border-slate-200/50">POST /v1/payments</span>
+                  <h3 className="text-base font-bold font-outfit text-pp-black">Integrations API</h3>
+                  <span className="text-[10px] font-mono font-bold bg-white text-slate-700 px-2 py-0.5 rounded border border-slate-200/50">POST /v1/integrations</span>
                 </div>
                 <p className="text-slate-500 text-sm leading-relaxed font-light">
-                  Accept credit/debit cards and local mobile money. Initiate real-time local payouts, bulk settlements, and manage automated FX conversions on the fly.
+                  Connect CRM databases and local SaaS platforms. Initiate real-time data migrations, bulk synchronizations, and manage automated schema mappings on the fly.
                 </p>
               </div>
             </div>
@@ -370,7 +369,7 @@ func main() {
                   <span className="text-[10px] font-mono font-bold bg-white text-slate-700 px-2 py-0.5 rounded border border-slate-200/50">POST /v1/messages</span>
                 </div>
                 <p className="text-slate-500 text-sm leading-relaxed font-light">
-                  Push automated transaction receipt SMS alerts, verify checkout sessions on WhatsApp, and send multi-factor authorization OTP tokens securely.
+                  Push automated notification SMS alerts, verify data sync sessions on WhatsApp, and send multi-factor authorization OTP tokens securely.
                 </p>
               </div>
             </div>
@@ -379,11 +378,11 @@ func main() {
             <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 space-y-3 hover:shadow-md hover:border-slate-300 transition duration-300">
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-base font-bold font-outfit text-pp-black">Email & Billing API</h3>
+                  <h3 className="text-base font-bold font-outfit text-pp-black">Email & Alerts API</h3>
                   <span className="text-[10px] font-mono font-bold bg-white text-slate-700 px-2 py-0.5 rounded border border-slate-200/50">POST /v1/billing</span>
                 </div>
                 <p className="text-slate-500 text-sm leading-relaxed font-light">
-                  Generate digital, tax-compliant PDF invoices, automatically dispatch payment verification receipts, and send monthly account balance ledger statements.
+                  Generate digital system health reports, automatically dispatch sync logs, and send monthly data traffic ledger statements.
                 </p>
               </div>
             </div>
@@ -396,7 +395,7 @@ func main() {
                   <span className="text-[10px] font-mono font-bold bg-white text-slate-700 px-2 py-0.5 rounded border border-slate-200/50">GET /v1/verify</span>
                 </div>
                 <p className="text-slate-500 text-sm leading-relaxed font-light">
-                  Validate bank account details, verify mobile money wallet owner name lookup parameters, and run regional KYB compliance checks instantly.
+                  Validate API endpoints, verify database server owner lookup parameters, and run regional system compliance checks instantly.
                 </p>
               </div>
             </div>
@@ -405,11 +404,11 @@ func main() {
             <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 space-y-3 hover:shadow-md hover:border-slate-300 transition duration-300">
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-base font-bold font-outfit text-pp-black">Split Transfers API</h3>
-                  <span className="text-[10px] font-mono font-bold bg-white text-slate-700 px-2 py-0.5 rounded border border-slate-200/50">POST /v1/splits</span>
+                  <h3 className="text-base font-bold font-outfit text-pp-black">Data Routing API</h3>
+                  <span className="text-[10px] font-mono font-bold bg-white text-slate-700 px-2 py-0.5 rounded border border-slate-200/50">POST /v1/routing</span>
                 </div>
                 <p className="text-slate-500 text-sm leading-relaxed font-light">
-                  Manage marketplace integrations by dynamically splitting collection payments between platform fees, ledgers, and sub-merchant bank accounts.
+                  Manage platform integrations by dynamically splitting and routing data payloads between different servers, cloud warehouses, and client APIs.
                 </p>
               </div>
             </div>
@@ -418,11 +417,11 @@ func main() {
             <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 space-y-3 hover:shadow-md hover:border-slate-300 transition duration-300">
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-base font-bold font-outfit text-pp-black">Card Issuing API</h3>
-                  <span className="text-[10px] font-mono font-bold bg-white text-slate-700 px-2 py-0.5 rounded border border-slate-200/50">POST /v1/cards</span>
+                  <h3 className="text-base font-bold font-outfit text-pp-black">Custom Connectors API</h3>
+                  <span className="text-[10px] font-mono font-bold bg-white text-slate-700 px-2 py-0.5 rounded border border-slate-200/50">POST /v1/connectors</span>
                 </div>
                 <p className="text-slate-500 text-sm leading-relaxed font-light">
-                  Instantly issue virtual Visa and Mastercard corporate debit cards. Set custom limits, tie to currency balances, and register authorization callbacks.
+                  Instantly construct custom API connectors for proprietary services. Set custom access scopes, tie to system bandwidth limits, and register authorization callbacks.
                 </p>
               </div>
             </div>

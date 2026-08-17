@@ -463,7 +463,7 @@ export default function DashboardPage() {
               }`}
             >
               <CreditCard className="w-4.5 h-4.5" />
-              <span>Online Checkout</span>
+              <span>Data Workflows</span>
             </button>
 
             <button 
@@ -475,7 +475,7 @@ export default function DashboardPage() {
               }`}
             >
               <Link2 className="w-4.5 h-4.5" />
-              <span>Payment Links</span>
+              <span>API Connections</span>
             </button>
 
             {/* Bulk Payouts */}
@@ -488,7 +488,7 @@ export default function DashboardPage() {
               }`}
             >
               <Send className="w-4.5 h-4.5" />
-              <span>Bulk Payouts</span>
+              <span>Bulk Integrations</span>
             </button>
             {/* APIs Expandable Accordion Menu */}
             <div className="space-y-1">
@@ -514,12 +514,12 @@ export default function DashboardPage() {
               {isApiSubmenuOpen && (
                 <div className="pl-9 pr-2 py-1.5 space-y-1 animate-in slide-in-from-top-2 duration-200">
                   {[
-                    { id: 'payments', label: 'Payments API' },
+                    { id: 'payments', label: 'Integrations API' },
                     { id: 'messaging', label: 'Messaging API' },
-                    { id: 'billing', label: 'Email & Billing API' },
+                    { id: 'billing', label: 'Email & Alerts API' },
                     { id: 'verify', label: 'Verification API' },
-                    { id: 'splits', label: 'Split Transfers API' },
-                    { id: 'cards', label: 'Card Issuing API' }
+                    { id: 'splits', label: 'Data Routing API' },
+                    { id: 'cards', label: 'Custom Connectors API' }
                   ].map((subApi) => (
                     <button
                       key={subApi.id}
@@ -592,7 +592,7 @@ export default function DashboardPage() {
         <header className="h-20 bg-white border-b border-slate-200 px-8 flex items-center justify-between shrink-0">
           <div className="flex items-center space-x-4">
             <h1 className="text-xl font-bold font-outfit text-slate-900 capitalize">
-              {activeTab === 'overview' ? 'Merchant Console' : activeTab === 'links' ? 'Payment Links' : activeTab === 'api' ? 'API keys' : activeTab === 'reporting' ? 'Reporting & Logs' : 'Business Settings'}
+              {activeTab === 'overview' ? 'Integration Console' : activeTab === 'links' ? 'API Connections' : activeTab === 'api' ? 'API keys' : activeTab === 'reporting' ? 'Reporting & Logs' : 'Business Settings'}
             </h1>
             
         
@@ -632,7 +632,7 @@ export default function DashboardPage() {
                   className="bg-white border border-slate-200 rounded-3xl p-6 shadow-xs flex flex-col justify-between min-h-[130px] hover:border-slate-300 hover:shadow-md transition duration-250 cursor-pointer group"
                 >
                   <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-outfit">Total Volume Cleared</span>
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-outfit">Total Sync Volume</span>
                     <div className="p-1.5 bg-pp-blue/10 rounded-lg text-pp-blue group-hover:scale-105 transition">
                       <DollarSign className="w-4 h-4" />
                     </div>
@@ -653,7 +653,7 @@ export default function DashboardPage() {
                   className="bg-white border border-slate-200 rounded-3xl p-6 shadow-xs flex flex-col justify-between min-h-[130px] hover:border-slate-300 hover:shadow-md transition duration-250 cursor-pointer group"
                 >
                   <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-outfit">Settled Payouts</span>
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-outfit">Completed Syncs</span>
                     <div className="p-1.5 bg-emerald-50 rounded-lg text-emerald-600 group-hover:scale-105 transition">
                       <CheckCircle2 className="w-4 h-4" />
                     </div>
@@ -670,13 +670,13 @@ export default function DashboardPage() {
                   className="bg-white border border-slate-200 rounded-3xl p-6 shadow-xs flex flex-col justify-between min-h-[130px] hover:border-slate-300 hover:shadow-md transition duration-250 cursor-pointer group"
                 >
                   <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-outfit">Active Links Count</span>
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-outfit">Active API Connections</span>
                     <div className="p-1.5 bg-indigo-50 rounded-lg text-indigo-500 group-hover:scale-105 transition">
                       <Link2 className="w-4 h-4" />
                     </div>
                   </div>
                   <div className="flex items-end justify-between mt-4">
-                    <span className="text-2xl font-black font-outfit text-slate-900">{generatedLinks.length} Links</span>
+                    <span className="text-2xl font-black font-outfit text-slate-900">{generatedLinks.length} Connections</span>
                     <button 
                       onClick={(e) => {
                         e.stopPropagation();
@@ -725,7 +725,7 @@ export default function DashboardPage() {
                   {/* Chart Header */}
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
-                      <h3 className="font-bold font-outfit text-slate-900 text-lg">Transaction Analytics</h3>
+                      <h3 className="font-bold font-outfit text-slate-900 text-lg">Sync Activity Analytics</h3>
                       
                       {/* Metric Toggle Dropdown */}
                       <div className="flex items-center space-x-3">
@@ -863,12 +863,12 @@ export default function DashboardPage() {
                 {/* Grid of the 6 B2B APIs status */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {[
-                    { id: 'payments', label: 'Payments API', desc: 'Collection & Disbursals', status: 'Active', keys: '2 active keys', color: 'emerald' },
+                    { id: 'payments', label: 'Integrations API', desc: 'SaaS & Database Connectors', status: 'Active', keys: '2 active keys', color: 'emerald' },
                     { id: 'messaging', label: 'Messaging API', desc: 'WhatsApp & SMS OTPs', status: 'Active', keys: '1 active key', color: 'emerald' },
-                    { id: 'billing', label: 'Email & Billing API', desc: 'PDF Invoicing Rails', status: 'Active', keys: '1 active key', color: 'emerald' },
-                    { id: 'verify', label: 'Verification API', desc: 'Account & Wallet Lookup', status: 'Pending Config', keys: 'No active keys', color: 'amber' },
-                    { id: 'splits', label: 'Split Transfers API', desc: 'Escrows & Commission Splitting', status: 'Inactive', keys: 'No active keys', color: 'slate' },
-                    { id: 'cards', label: 'Card Issuing API', desc: 'Visa/MC Card Generation', status: 'Inactive', keys: 'No active keys', color: 'slate' }
+                    { id: 'billing', label: 'Email & Alerts API', desc: 'PDF Reports & Alerts', status: 'Active', keys: '1 active key', color: 'emerald' },
+                    { id: 'verify', label: 'Verification API', desc: 'Endpoint & Host Lookup', status: 'Pending Config', keys: 'No active keys', color: 'amber' },
+                    { id: 'splits', label: 'Data Routing API', desc: 'Payload Splitters & Routing', status: 'Inactive', keys: 'No active keys', color: 'slate' },
+                    { id: 'cards', label: 'Custom Connectors API', desc: 'Custom Service Adapters', status: 'Inactive', keys: 'No active keys', color: 'slate' }
                   ].map((api) => (
                     <div 
                       key={api.id}
@@ -909,14 +909,14 @@ export default function DashboardPage() {
             </>
           )}
 
-          {/* TAB 2: PAYMENT LINKS (REDESIGNED TO MATCH API SECTION STYLE) */}
+          {/* TAB 2: API CONNECTIONS (REDESIGNED TO MATCH API SECTION STYLE) */}
           {activeTab === 'links' && (
             <div className="bg-white border border-slate-200 rounded-3xl p-8 shadow-xs space-y-6 animate-in fade-in duration-200 text-slate-800 font-sans">
               
               {/* Header section */}
               <div className="flex items-center justify-between border-b border-slate-100 pb-6">
                 <div>
-                  <h3 className="text-2xl font-bold font-outfit text-slate-900">Payment links</h3>
+                  <h3 className="text-2xl font-bold font-outfit text-slate-900">API Connections</h3>
                 </div>
                 
                 <div className="flex items-center space-x-3">
@@ -925,7 +925,7 @@ export default function DashboardPage() {
                     className="bg-slate-900 text-white hover:bg-slate-800 px-5 py-2 rounded-full font-bold font-outfit text-xs transition duration-200 cursor-pointer flex items-center space-x-1 shadow-sm"
                   >
                     <Plus className="w-3.5 h-3.5" />
-                    <span>Create payment link</span>
+                    <span>Create API Connection</span>
                   </button>
                   <button className="border border-slate-200 hover:bg-slate-50 text-slate-500 hover:text-slate-800 w-9 h-9 flex items-center justify-center rounded-xl transition duration-200 cursor-pointer">
                     <span className="font-mono text-xs font-bold">&lt;/&gt;</span>
@@ -980,7 +980,7 @@ export default function DashboardPage() {
 
                   {/* Export / Download Button */}
                   <button 
-                    onClick={() => showToast('Payment links exported!')}
+                    onClick={() => showToast('API Connections exported!')}
                     className="border border-slate-200 bg-slate-50 text-slate-500 hover:text-slate-800 w-9 h-9 flex items-center justify-center rounded-xl transition duration-200 cursor-pointer hover:border-slate-400 hover:bg-slate-100"
                   >
                     <Download className="w-4 h-4" />
@@ -989,7 +989,7 @@ export default function DashboardPage() {
 
               </div>
 
-              {/* Payment Links Table Area */}
+              {/* API Connections Table Area */}
               <div className="overflow-x-auto border border-slate-200 rounded-2xl bg-white">
                 <table className="w-full border-collapse">
                   <thead>

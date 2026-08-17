@@ -17,73 +17,73 @@ export default function SolutionsPage() {
   const solutions = [
     {
       id: "remittance",
-      title: "Cross-Border Remittances",
-      subtitle: "International Card to Local Mobile Wallets",
-      desc: "Allow diaspora members to send money instantly using their credit or debit card. The funds are routed directly and deposited into the recipient's mobile money wallet.",
+      title: "System Data Migrations",
+      subtitle: "Cross-Platform Data Synchronization",
+      desc: "Allow enterprise systems to migrate and sync data instantly. Information is routed directly and deposited into the target database or CRM.",
       bullets: [
-        "Instant settlement in local currencies",
-        "Secure card tokenization to reduce fraud risk",
-        "Detailed transaction receipts and webhooks"
+        "Instant sync in target systems",
+        "Secure tokenization to reduce leak risk",
+        "Detailed sync logs and webhooks"
       ],
-      targetBusinesses: ["Remittance Startups", "Digital Neo-banks", "Diaspora Transfer Apps", "Global Payroll Platforms"],
+      targetBusinesses: ["Cloud Startups", "Digital Neo-banks", "Data Engineering Teams", "Global Tech Platforms"],
       image: CrossBorderImage,
-      badge: "Cross-Border"
+      badge: "Data Sync"
     },
     {
       id: "ecommerce",
-      title: "Global E-Commerce Checkouts",
-      subtitle: "Accept Payments Worldwide, Settle Locally",
-      desc: "Expand your online store's footprint. Accept card payments online from customers across Europe, US, or Asia, and receive payouts directly to your local bank account or mobile wallet.",
+      title: "Enterprise SaaS Syncing",
+      subtitle: "Accept Data Feeds Globally, Sync Locally",
+      desc: "Expand your application's reach. Connect and sync data between CRM tools, email marketing suites, and analytics engines.",
       bullets: [
-        "99.9% checkout availability SLA",
-        "Optimized mobile checkout design",
-        "Simple API integration with checkout forms"
+        "99.9% integration availability SLA",
+        "Optimized webhook payload delivery",
+        "Simple API integration with standard components"
       ],
       targetBusinesses: ["SaaS & Software Providers", "Retail Marketplaces", "Digital Content Creators", "Subscription Services"],
       image: EcommerceImage,
-      badge: "E-Commerce"
+      badge: "SaaS Sync"
     },
     {
       id: "gig",
-      title: "Gig Economy & Driver Payouts",
-      subtitle: "Instant Payouts for On-Demand Services",
-      desc: "Integrate automatic payouts into your ride-sharing or delivery platform. Workers can cash out their daily earnings instantly to their mobile money wallets at any time of day.",
+      title: "Real-time Event Webhooks",
+      subtitle: "Instant Event Webhooks for Cloud Services",
+      desc: "Integrate automatic webhooks into your platform. Applications can trigger real-time data syncs and microservice notifications at any time of day.",
       bullets: [
-        "Automated payout script verification",
-        "24/7 service availability",
-        "Webhook status notifications for every cash-out"
+        "Automated webhook script verification",
+        "24/7 endpoint availability",
+        "Status notifications for every event call"
       ],
-      targetBusinesses: ["Ride-Hailing Apps", "On-Demand Delivery Networks", "Freelance Job Boards", "Staffing Platforms"],
+      targetBusinesses: ["On-Demand Platforms", "SaaS Automation Workflows", "Freelance Hubs", "Enterprise Operations"],
       image: GigEconomyImage,
-      badge: "Gig Economy"
+      badge: "Event Webhooks"
     },
     {
       id: "tourism",
-      title: "Hospitality & Tourism Direct Settle",
-      subtitle: "Global Booking Settlements for Operators",
-      desc: "Accept booking payments from global tourists and settle directly to local travel agencies, hospitality hubs, hotels, and guide operators via secure API paths.",
+      title: "Multi-System Orchestration",
+      subtitle: "Unified Database Synchronization",
+      desc: "Synchronize reservation details, guest directories, inventory logs, and staff schedules across multiple platforms via secure API paths.",
       bullets: [
-        "Secure reservation payment capture",
-        "Integrated multi-party split payouts",
-        "Supports major international credit networks"
+        "Secure customer data capture",
+        "Integrated multi-app data flow routing",
+        "Supports major cloud database networks"
       ],
-      targetBusinesses: ["Boutique Hotels", "Tour Operators & Guides", "Adventure Sports Agencies", "Local Booking Aggregators"],
+      targetBusinesses: ["Boutique Hotels", "Tour Operators & Guides", "Hospitality Management Systems", "Local Booking Aggregators"],
       image: [TourismImage, HospitalityImage],
-      badge: "Tourism"
+      badge: "Orchestration"
     },
     {
       id: "fintech",
-      title: "FinTech Infrastructure",
-      subtitle: "API Blocks for Next-Gen Financial Apps",
-      desc: "Build custom digital wallets, micro-lending apps, and recurring billing software. Developers can integrate our REST APIs and official SDKs in minutes.",
+      title: "API Integration Infrastructure",
+      subtitle: "API Blocks for Next-Gen Software Integration",
+      desc: "Build custom integration hubs, automated ETL flows, and data mapping modules. Developers can integrate our REST APIs and official SDKs in minutes.",
       bullets: [
-        "Rich REST API documentation",
+        "Rich API documentation",
         "Sandbox testing environments",
-        "Webhook triggers for every transfer state change"
+        "Webhook triggers for every data state change"
       ],
-      targetBusinesses: ["Digital Wallet Apps", "Micro-Lending Startups", "Payment Gateway Integrators", "Crypto Off-Ramp Providers"],
+      targetBusinesses: ["Software Engineers", "Product Managers", "IT Integrators", "Database Administrators"],
       image: IntegrationImage,
-      badge: "FinTech"
+      badge: "Integrations"
     }
   ];
 
@@ -100,10 +100,10 @@ export default function SolutionsPage() {
               Tailored Sector Solutions
             </span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black font-outfit tracking-tight leading-tight">
-              Global Payment Connectors
+              Global API & Software Connectors
             </h1>
             <p className="text-slate-400 text-base md:text-lg font-light leading-relaxed">
-              Mocard maps global credit networks to local deposit methods. See how different industries leverage our infrastructure to solve payment complexity.
+              Mocard maps enterprise software and cloud applications. See how different industries leverage our infrastructure to solve integration complexity.
             </p>
           </div>
         </div>
@@ -205,9 +205,9 @@ export default function SolutionsPage() {
           <div className="inline-flex items-center justify-center p-3 rounded-full bg-rose-50 text-rose-500 border border-rose-100">
             <ShieldAlert className="w-6 h-6" />
           </div>
-          <h3 className="text-xl font-bold font-outfit text-pp-black">Regulatory Compliance Framework</h3>
+          <h3 className="text-xl font-bold font-outfit text-pp-black">System Security Framework</h3>
           <p className="text-slate-500 text-sm leading-relaxed max-w-2xl mx-auto font-light">
-            All integrations must comply with international Anti-Money Laundering (AML) standards and KYC policies. Mocard does not hold funds on-site; all payout instructions are dispatched directly through regulated transaction providers.
+            All integrations must comply with enterprise security standards and data privacy policies. Mocard does not store raw payloads long-term; all data routing is dispatched securely through encrypted tunnels.
           </p>
         </div>
       </section>

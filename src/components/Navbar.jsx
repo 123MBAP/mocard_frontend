@@ -170,31 +170,31 @@ export default function Navbar() {
                     onClick={closeMenu} 
                     className="group inline-flex items-center space-x-2 text-xl font-black font-outfit text-pp-black hover:text-pp-blue transition-colors duration-200"
                   >
-                    <span>MoCard Personal</span>
+                    <span>MoCard Simple Sync</span>
                     <ArrowRight className="w-5 h-5 text-pp-blue group-hover:translate-x-1.5 transition-transform duration-200" />
                   </Link>
                   <p className="text-sm font-light text-slate-500 leading-relaxed font-sans">
-                    Simple, fast, and secure payments for individuals. Settle globally, connect instantly.
+                    Simple, fast, and secure integrations for individual developers. Sync data globally, connect instantly.
                   </p>
                 </div>
 
                 {/* Column 1: Send & Receive */}
                 <div className="col-span-3 space-y-4">
                   <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-400 font-outfit border-b border-slate-100 pb-2">
-                    Send & Receive
+                    Personal
                   </h4>
                   <div className="flex flex-col space-y-3 font-outfit text-[14.5px] pt-1">
                     <Link to="/personal?tab=card-to-momo" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
-                      Card to Mobile Money
+                      Single Service Connect
                     </Link>
                     <Link to="/personal?tab=send-abroad" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
-                      Send Money Abroad
+                      Cross-Region Sync
                     </Link>
                     <Link to="/personal?tab=request-payments" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
-                      Request Payments
+                      Request Data Pull
                     </Link>
                     <Link to="/personal?tab=mocard-app" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
-                      Mocard App & Links
+                      Mocard Connect App
                     </Link>
                   </div>
                 </div>
@@ -206,7 +206,7 @@ export default function Navbar() {
                   </h4>
                   <div className="flex flex-col space-y-3 font-outfit text-[14.5px] pt-1">
                     <Link to="/features" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
-                      PCI-DSS Compliance
+                      Security Compliance
                     </Link>
                     <Link to="/company" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
                       About Us & Careers
@@ -232,7 +232,7 @@ export default function Navbar() {
                     onClick={closeMenu}
                     className="flex items-center justify-between px-5 py-3 rounded-full bg-pp-black text-sm font-bold text-white hover:bg-pp-blue transition duration-200 group w-full"
                   >
-                    <span>Personal Fees</span>
+                    <span>Developer Pricing</span>
                     <ArrowRight className="w-4.5 h-4.5 group-hover:translate-x-1 transition-transform" />
                   </Link>
               
@@ -249,28 +249,28 @@ export default function Navbar() {
                     onClick={closeMenu} 
                     className="group inline-flex items-center space-x-2 text-xl font-black font-outfit text-pp-black hover:text-pp-blue transition-colors duration-200"
                   >
-                    <span>MoCard Open</span>
+                    <span>MoCard Open Connect</span>
                     <ArrowRight className="w-5 h-5 text-pp-blue group-hover:translate-x-1.5 transition-transform duration-200" />
                   </Link>
                   <p className="text-sm font-light text-slate-500 leading-relaxed font-sans">
-                    The platform for all business. Accelerate your enterprise with next-generation billing rails.
+                    The platform for all business. Accelerate your enterprise with next-generation integration rails.
                   </p>
                 </div>
 
                 {/* Column 1: Merchant Suite */}
                 <div className="col-span-3 space-y-4">
                   <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-400 font-outfit border-b border-slate-100 pb-2">
-                    Merchant Suite
+                    Integration Suite
                   </h4>
                   <div className="flex flex-col space-y-3 font-outfit text-[14.5px] pt-1">
                     <Link to="/dashboard?tab=checkout" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
-                      Online Checkout
+                      Data Workflows
                     </Link>
                     <Link to="/payment-links" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
-                      Shareable Payment Links
+                      Shareable API Connectors
                     </Link>
                     <Link to="/dashboard?tab=payouts" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
-                      Bulk Payouts & Transfers
+                      Bulk Data Synchronization
                     </Link>
                   </div>
                 </div>
@@ -282,7 +282,7 @@ export default function Navbar() {
                   </h4>
                   <div className="flex flex-col space-y-3 font-outfit text-[14.5px] pt-1">
                     <Link to="/dashboard" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
-                      Merchant Dashboard
+                      Integration Dashboard
                     </Link>
                     <Link to="/dashboard?tab=api" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
                       API & SDK Integrations
@@ -308,7 +308,7 @@ export default function Navbar() {
                     onClick={closeMenu}
                     className="flex items-center justify-between px-5 py-3 rounded-full bg-pp-black text-sm font-bold text-white hover:bg-pp-blue transition duration-200 group w-full"
                   >
-                    <span>Fees</span>
+                    <span>Pricing</span>
                     <ArrowRight className="w-4.5 h-4.5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <Link 
@@ -316,7 +316,7 @@ export default function Navbar() {
                     onClick={closeMenu}
                     className="block text-center text-xs font-bold text-slate-800 hover:text-pp-blue transition duration-200 mt-2 font-outfit uppercase tracking-wider"
                   >
-                    Payment Methods
+                    Connector Directory
                   </Link>
                 </div>
               </div>
@@ -341,11 +341,11 @@ export default function Navbar() {
               </button>
               {mobileSection === 'personal' && (
                 <div className="pl-6 pr-4 py-2 space-y-3 bg-slate-50/50 rounded-xl mt-1">
-                  <Link to="/personal?tab=card-to-momo" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Card to Mobile Money</Link>
-                  <Link to="/personal?tab=send-abroad" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Send Money Abroad</Link>
-                  <Link to="/personal?tab=request-payments" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Request Payments</Link>
+                  <Link to="/personal?tab=card-to-momo" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Single Service Connect</Link>
+                  <Link to="/personal?tab=send-abroad" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Cross-Region Sync</Link>
+                  <Link to="/personal?tab=request-payments" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Request Data Pull</Link>
                   <Link to="/personal?tab=mocard-app" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">
-                    Mocard App & Links
+                    Mocard Connect App
                   </Link>
                   <Link to="/company" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Help & Careers</Link>
                 </div>
@@ -363,10 +363,10 @@ export default function Navbar() {
               </button>
               {mobileSection === 'business' && (
                 <div className="pl-6 pr-4 py-2 space-y-3 bg-slate-50/50 rounded-xl mt-1">
-                  <Link to="/dashboard?tab=checkout" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Online Checkout</Link>
-                  <Link to="/payment-links" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Shareable Payment Links</Link>
-                  <Link to="/dashboard?tab=payouts" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Bulk Payouts & Transfers</Link>
-                  <Link to="/dashboard" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Merchant Dashboard</Link>
+                  <Link to="/dashboard?tab=checkout" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Data Workflows</Link>
+                  <Link to="/payment-links" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Shareable API Connectors</Link>
+                  <Link to="/dashboard?tab=payouts" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Bulk Data Synchronization</Link>
+                  <Link to="/dashboard" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Integration Dashboard</Link>
                   <Link to="/dashboard?tab=api" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">API & SDK Integrations</Link>
                   <Link to="/dashboard?tab=reporting" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Reporting Tools & Logs</Link>
                 </div>

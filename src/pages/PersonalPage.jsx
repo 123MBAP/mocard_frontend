@@ -72,13 +72,13 @@ export default function PersonalPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="max-w-3xl mx-auto space-y-6">
             <span className="text-xs md:text-sm font-bold uppercase tracking-widest text-pp-blue bg-pp-blue/10 px-4 py-1.5 rounded-full font-outfit">
-              MoCard Personal
+              MoCard Simple Sync
             </span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black font-outfit tracking-tight leading-tight">
-              Simple Consumer Payments
+              Simple Sync Data Connect
             </h1>
             <p className="text-slate-400 text-base md:text-lg font-light leading-relaxed">
-              Send money directly from credit card networks to local mobile money wallets, settle cross-border corridors, and request peer-to-peer transfers instantly.
+              Sync data directly from international platform services to local business databases, schedule automated data transfers, and manage webhooks instantly.
             </p>
           </div>
         </div>
@@ -89,10 +89,10 @@ export default function PersonalPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex space-x-1 sm:space-x-2 overflow-x-auto scrollbar-none py-3">
             {[
-              { id: 'card-to-momo', label: 'Card to Mobile Money', icon: CreditCard },
-              { id: 'send-abroad', label: 'Send Money Abroad', icon: Globe },
-              { id: 'request-payments', label: 'Request Payments', icon: QrCode },
-              { id: 'mocard-app', label: 'Mocard Mobile App', icon: Smartphone }
+              { id: 'card-to-momo', label: 'Single Service Connect', icon: CreditCard },
+              { id: 'send-abroad', label: 'Cross-Region Sync', icon: Globe },
+              { id: 'request-payments', label: 'Request Data Pull', icon: QrCode },
+              { id: 'mocard-app', label: 'Mocard Connect App', icon: Smartphone }
             ].map(tab => {
               const Icon = tab.icon;
               return (
@@ -117,21 +117,21 @@ export default function PersonalPage() {
       {/* Main Workspace Workspace */}
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* TAB 1: CARD TO MOBILE MONEY */}
+        {/* TAB 1: SINGLE SERVICE CONNECT */}
         {activeTab === 'card-to-momo' && (
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center animate-in fade-in duration-200">
             <div className="lg:col-span-6 space-y-6">
-              <span className="text-xs font-bold text-pp-blue uppercase tracking-widest font-outfit block">Instant Deposit</span>
+              <span className="text-xs font-bold text-pp-blue uppercase tracking-widest font-outfit block">Instant Sync</span>
               <h2 className="text-3xl md:text-4xl font-black font-outfit text-pp-black leading-tight">
-                Send from any international card directly to local wallets.
+                Sync from any international platform directly to local databases.
               </h2>
               <p className="text-slate-500 text-sm md:text-base leading-relaxed font-light">
-                MoCard Personal bridges international payment cards with regional mobile money wallets (like MTN Momo, Airtel Money, or Orange). Input card details, enter a relative phone number, and deposit funds instantly.
+                MoCard Simple Sync bridges international cloud services with local business databases (like MySQL, PostgreSQL, or Salesforce). Input platform details, select target tables, and map fields instantly.
               </p>
               
               <div className="pt-4 border-t border-slate-100 flex items-center space-x-3 text-xs text-slate-450 font-outfit">
                 <ShieldCheck className="w-5 h-5 text-emerald-500 shrink-0" />
-                <span>PCI-DSS Compliant • Encrypted Gateway Channels • Active Settle Verification</span>
+                <span>SOC2 Compliant • Encrypted API Gateway Channels • Active Sync Verification</span>
               </div>
             </div>
 
@@ -140,7 +140,7 @@ export default function PersonalPage() {
               <div className="w-full max-w-sm bg-white border border-slate-200 rounded-3xl p-6 shadow-sm space-y-5 relative">
                 
                 <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-                  <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest font-outfit">Transfer Calculator</span>
+                  <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest font-outfit">Sync Configuration Simulator</span>
                   <span className="w-2.5 h-2.5 rounded-full bg-pp-blue animate-pulse" />
                 </div>
 
@@ -148,7 +148,7 @@ export default function PersonalPage() {
                   <form onSubmit={handleSimulateTransfer} className="space-y-4">
                     {/* Send amount input */}
                     <div className="space-y-1.5">
-                      <label className="text-[9px] font-bold text-slate-450 uppercase block font-outfit">You Send</label>
+                      <label className="text-[9px] font-bold text-slate-450 uppercase block font-outfit">Send Records Count</label>
                       <div className="flex bg-slate-50 border border-slate-200 rounded-xl overflow-hidden focus-within:border-pp-blue transition">
                         <input 
                           type="number" 
@@ -174,11 +174,11 @@ export default function PersonalPage() {
                     {/* Destination config */}
                     <div className="grid grid-cols-2 gap-4">
                       <div className="space-y-1.5">
-                        <label className="text-[9px] font-bold text-slate-450 uppercase block font-outfit">Destination Country</label>
+                        <label className="text-[9px] font-bold text-slate-450 uppercase block font-outfit">Target Region</label>
                         <select 
                           value={destCountry} 
                           onChange={(e) => setDestCountry(e.target.value)}
-                          className="w-full text-xs font-semibold px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-pp-blue cursor-pointer"
+                          className="w-full text-xs font-semibold px-3 py-2.5 bg-slate-55 border border-slate-200 rounded-xl outline-none focus:border-pp-blue cursor-pointer"
                         >
                           <option value="Rwanda">Rwanda</option>
                           <option value="Kenya">Kenya</option>
@@ -187,7 +187,7 @@ export default function PersonalPage() {
                       </div>
 
                       <div className="space-y-1.5">
-                        <label className="text-[9px] font-bold text-slate-450 uppercase block font-outfit">Recipient Network</label>
+                        <label className="text-[9px] font-bold text-slate-450 uppercase block font-outfit">DB Adapter Driver</label>
                         <span className="w-full text-xs font-bold px-3 py-2.5 bg-slate-100 border border-slate-200 rounded-xl block text-slate-600">
                           {destCountry === 'Rwanda' ? 'MTN / Airtel' : destCountry === 'Kenya' ? 'M-Pesa' : 'MTN Money'}
                         </span>
@@ -196,7 +196,7 @@ export default function PersonalPage() {
 
                     {/* Recipient Phone */}
                     <div className="space-y-1.5">
-                      <label className="text-[9px] font-bold text-slate-450 uppercase block font-outfit">Recipient Phone Number</label>
+                      <label className="text-[9px] font-bold text-slate-450 uppercase block font-outfit">Recipient Endpoint URI</label>
                       <input 
                         type="text" 
                         required
@@ -209,15 +209,15 @@ export default function PersonalPage() {
                     {/* Output conversions */}
                     <div className="bg-slate-50 p-4 border border-slate-150 rounded-2xl text-[11px] space-y-1.5">
                       <div className="flex justify-between text-slate-450">
-                        <span>Simulated FX Rate:</span>
-                        <span className="font-bold text-slate-700">1 {sendCurrency} = {currentRate} {destCountry === 'Rwanda' ? 'RWF' : destCountry === 'Kenya' ? 'KES' : 'UGX'}</span>
+                        <span>Simulated Payload Rate:</span>
+                        <span className="font-bold text-slate-700">1 Row = {currentRate} Objects</span>
                       </div>
                       <div className="flex justify-between text-slate-450 border-b border-slate-200 pb-1.5">
-                        <span>Transfer Fee (1.5%):</span>
+                        <span>Sync Overhead (1.5%):</span>
                         <span className="font-bold text-slate-750">{(sendAmount * 0.015).toFixed(2)} {sendCurrency}</span>
                       </div>
                       <div className="flex justify-between text-slate-800 font-bold pt-0.5 text-xs">
-                        <span>Recipient Receives:</span>
+                        <span>Target DB Receives:</span>
                         <span className="text-pp-blue font-outfit">{receiveAmount} {destCountry === 'Rwanda' ? 'RWF' : destCountry === 'Kenya' ? 'KES' : 'UGX'}</span>
                       </div>
                     </div>
@@ -227,7 +227,7 @@ export default function PersonalPage() {
                       type="submit"
                       className="w-full py-3 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-outfit shadow-sm cursor-pointer transition mt-2"
                     >
-                      <span>Simulate Transfer</span>
+                      <span>Simulate Sync Job</span>
                     </button>
                   </form>
                 )}
@@ -268,42 +268,42 @@ export default function PersonalPage() {
           </div>
         )}
 
-        {/* TAB 2: SEND MONEY ABROAD */}
+        {/* TAB 2: CROSS-REGION SYNC */}
         {activeTab === 'send-abroad' && (
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center animate-in fade-in duration-200">
             <div className="lg:col-span-6 space-y-6">
-              <span className="text-xs font-bold text-pp-blue uppercase tracking-widest font-outfit block">Remittances</span>
+              <span className="text-xs font-bold text-pp-blue uppercase tracking-widest font-outfit block">Data Pipelines</span>
               <h2 className="text-3xl md:text-4xl font-black font-outfit text-pp-black leading-tight">
-                Send to regional corridors at competitive exchange rates.
+                Replicate database updates to regional endpoints with low overhead.
               </h2>
               <p className="text-slate-500 text-sm md:text-base leading-relaxed font-light">
-                MoCard maps currency pairs dynamically using stable liquidity bridges. Transfer money across East and West Africa with low friction, zero hidden fees, and absolute compliance.
+                MoCard maps data structures dynamically using stable connector bridges. Transfer datasets across East and West Africa with low latency, zero data loss, and absolute integrity.
               </p>
 
               <div className="border border-slate-200 rounded-2xl overflow-hidden bg-white text-[11px] max-w-md shadow-2xs">
                 <table className="w-full text-left">
                   <thead>
-                    <tr className="bg-slate-100 border-b border-slate-200 text-slate-450 uppercase text-[9px] font-bold tracking-wider">
-                      <th className="px-4 py-2.5">Corridor</th>
-                      <th className="px-4 py-2.5">Fx Conversion</th>
-                      <th className="px-4 py-2.5 text-right">Fee</th>
+                    <tr className="bg-slate-100 border-b border-slate-200 text-slate-455 uppercase text-[9px] font-bold tracking-wider">
+                      <th className="px-4 py-2.5">Sync Path</th>
+                      <th className="px-4 py-2.5">Throughput Rate</th>
+                      <th className="px-4 py-2.5 text-right">Latency</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td className="px-4 py-3 font-semibold text-slate-800">USD to East Africa</td>
-                      <td className="px-4 py-3 font-mono text-slate-600">1 USD = 1,320 RWF</td>
-                      <td className="px-4 py-3 text-right text-emerald-600 font-bold">1.5%</td>
+                      <td className="px-4 py-3 font-semibold text-slate-800">AWS Cloud to East Africa DB</td>
+                      <td className="px-4 py-3 font-mono text-slate-600">1 Row = 1,320 Objects</td>
+                      <td className="px-4 py-3 text-right text-emerald-600 font-bold">1.5ms</td>
                     </tr>
                     <tr className="border-t border-slate-100">
-                      <td className="px-4 py-3 font-semibold text-slate-800">EUR to East Africa</td>
-                      <td className="px-4 py-3 font-mono text-slate-600">1 EUR = 1,425 RWF</td>
-                      <td className="px-4 py-3 text-right text-emerald-600 font-bold">1.5%</td>
+                      <td className="px-4 py-3 font-semibold text-slate-800">GCP Bucket to East Africa DB</td>
+                      <td className="px-4 py-3 font-mono text-slate-600">1 Row = 1,425 Objects</td>
+                      <td className="px-4 py-3 text-right text-emerald-600 font-bold">1.5ms</td>
                     </tr>
                     <tr className="border-t border-slate-100">
-                      <td className="px-4 py-3 font-semibold text-slate-800">GBP to Kenya</td>
-                      <td className="px-4 py-3 font-mono text-slate-600">1 GBP = 168 KES</td>
-                      <td className="px-4 py-3 text-right text-emerald-600 font-bold">1.5%</td>
+                      <td className="px-4 py-3 font-semibold text-slate-800">Azure Blob to Kenya DB</td>
+                      <td className="px-4 py-3 font-mono text-slate-600">1 Row = 168 Objects</td>
+                      <td className="px-4 py-3 text-right text-emerald-600 font-bold">1.5ms</td>
                     </tr>
                   </tbody>
                 </table>
@@ -316,9 +316,9 @@ export default function PersonalPage() {
                   <Globe className="w-6 h-6 animate-pulse" />
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-lg font-bold text-slate-100">Global Remittance Network</h3>
+                  <h3 className="text-lg font-bold text-slate-100">Global Integration Pipeline Network</h3>
                   <p className="text-xs text-slate-400 font-light font-sans leading-relaxed">
-                    MoCard acts as a compliant software layer. All funds are cleared by Central Bank authorized payment service operators and deposited instantly without staging periods.
+                    MoCard acts as a compliant software layer. All data payloads are validated by secure local security firewalls and dispatched instantly without staging periods.
                   </p>
                 </div>
               </div>
@@ -326,16 +326,16 @@ export default function PersonalPage() {
           </div>
         )}
 
-        {/* TAB 3: REQUEST PAYMENTS */}
+        {/* TAB 3: REQUEST DATA PULL */}
         {activeTab === 'request-payments' && (
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center animate-in fade-in duration-200">
             <div className="lg:col-span-6 space-y-6">
-              <span className="text-xs font-bold text-pp-blue uppercase tracking-widest font-outfit block">P2P Requests</span>
+              <span className="text-xs font-bold text-pp-blue uppercase tracking-widest font-outfit block">P2P Pull Requests</span>
               <h2 className="text-3xl md:text-4xl font-black font-outfit text-pp-black leading-tight">
-                Request payments from friends with unique links.
+                Request data pulls from endpoints with unique links.
               </h2>
               <p className="text-slate-500 text-sm md:text-base leading-relaxed font-light">
-                Generate simple web links to request split bills, collect fees, or receive gifts. Anyone can click the link and pay you instantly using cards or mobile money.
+                Generate simple web links to request data dumps, collect system logs, or retrieve reports. Any system can trigger the link and upload data instantly using API endpoints.
               </p>
               
               <div className="flex bg-white border border-slate-200 rounded-2xl p-4 shadow-3xs max-w-md items-center justify-between">
@@ -344,8 +344,8 @@ export default function PersonalPage() {
                     <QrCode className="w-4 h-4" />
                   </div>
                   <div>
-                    <h4 className="text-xs font-bold text-slate-800 font-outfit">Visual QR Code Receipts</h4>
-                    <p className="text-[9px] text-slate-400 font-light">Allow scans directly inside mobile apps</p>
+                    <h4 className="text-xs font-bold text-slate-800 font-outfit">Visual Auth Handshakes</h4>
+                    <p className="text-[9px] text-slate-400 font-light">Allow token scans directly inside terminal consoles</p>
                   </div>
                 </div>
               </div>
@@ -355,13 +355,13 @@ export default function PersonalPage() {
               {/* Payment Link generator panel */}
               <div className="w-full max-w-sm bg-white border border-slate-200 rounded-3xl p-6 shadow-sm space-y-5">
                 <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-                  <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest font-outfit">P2P Link Generator</span>
+                  <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest font-outfit">Data Pull Link Generator</span>
                   <span className="w-2.5 h-2.5 rounded-full bg-pp-blue" />
                 </div>
 
                 <form onSubmit={handleGenerateLink} className="space-y-4">
                   <div className="space-y-1.5">
-                    <label className="text-[9px] font-bold text-slate-450 uppercase block font-outfit">Your Name</label>
+                    <label className="text-[9px] font-bold text-slate-455 uppercase block font-outfit">Requester Client ID</label>
                     <input 
                       type="text" 
                       required
@@ -373,7 +373,7 @@ export default function PersonalPage() {
 
                   <div className="grid grid-cols-3 gap-3">
                     <div className="col-span-2 space-y-1.5">
-                      <label className="text-[9px] font-bold text-slate-450 uppercase block font-outfit">Requested Amount</label>
+                      <label className="text-[9px] font-bold text-slate-455 uppercase block font-outfit">Requested Max Rows</label>
                       <input 
                         type="text" 
                         required
@@ -383,15 +383,15 @@ export default function PersonalPage() {
                       />
                     </div>
                     <div className="space-y-1.5">
-                      <label className="text-[9px] font-bold text-slate-450 uppercase block font-outfit">Currency</label>
+                      <label className="text-[9px] font-bold text-slate-455 uppercase block font-outfit">Payload Format</label>
                       <select 
                         value={reqCurrency} 
                         onChange={(e) => setReqCurrency(e.target.value)}
                         className="w-full text-xs font-semibold px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-pp-blue cursor-pointer bg-white"
                       >
-                        <option value="RWF">RWF</option>
-                        <option value="KES">KES</option>
-                        <option value="USD">USD</option>
+                        <option value="RWF">JSON</option>
+                        <option value="KES">XML</option>
+                        <option value="USD">CSV</option>
                       </select>
                     </div>
                   </div>
@@ -400,7 +400,7 @@ export default function PersonalPage() {
                     type="submit"
                     className="w-full py-2.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-outfit shadow-sm cursor-pointer transition mt-2"
                   >
-                    <span>Generate P2P Link</span>
+                    <span>Generate Pull Link</span>
                   </button>
                 </form>
 
@@ -419,7 +419,7 @@ export default function PersonalPage() {
                           setCopied(true);
                           setTimeout(() => setCopied(false), 2000);
                         }}
-                        className="p-2 border border-slate-200 hover:bg-slate-50 rounded-lg transition text-slate-500 cursor-pointer"
+                        className="p-2 border border-slate-200 hover:bg-slate-50 rounded-lg transition text-slate-555 cursor-pointer"
                       >
                         {copied ? <span className="text-[8px] font-bold text-emerald-500 uppercase">Copied</span> : <Copy className="w-3.5 h-3.5" />}
                       </button>
@@ -427,8 +427,8 @@ export default function PersonalPage() {
                     
                     <div className="bg-slate-50 border border-slate-200 rounded-xl p-3 flex items-center justify-between">
                       <div className="text-[10px] text-slate-500 font-light">
-                        <p className="font-bold text-slate-800">Scan QR to pay</p>
-                        <p className="mt-0.5">Jane Doe • {reqAmount} {reqCurrency}</p>
+                        <p className="font-bold text-slate-800">Scan QR to authenticate</p>
+                        <p className="mt-0.5">{reqName} • Max {reqAmount} rows</p>
                       </div>
                       <div className="w-12 h-12 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-slate-400">
                         <QrCode className="w-8 h-8" />
@@ -442,26 +442,26 @@ export default function PersonalPage() {
           </div>
         )}
 
-        {/* TAB 4: MOCARD MOBILE APP */}
+        {/* TAB 4: MOCARD CONNECT APP */}
         {activeTab === 'mocard-app' && (
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center animate-in fade-in duration-200">
             <div className="lg:col-span-6 space-y-6">
-              <span className="text-xs font-bold text-pp-blue uppercase tracking-widest font-outfit block">Mobile Application</span>
+              <span className="text-xs font-bold text-pp-blue uppercase tracking-widest font-outfit block">Integration Console App</span>
               <h2 className="text-3xl md:text-4xl font-black font-outfit text-pp-black leading-tight">
-                MoCard App. The wallet built for regional trade.
+                MoCard App. The console built for system monitoring.
               </h2>
               <p className="text-slate-500 text-sm md:text-base leading-relaxed font-light">
-                Track personal ledger balances, scan partner QR merchants, send money abroad, and cash out instantly. Download the MoCard app to manage payouts securely from your mobile device.
+                Track system connection statuses, scan partner client certificates, sync databases, and verify APIs instantly. Download the MoCard app to manage connections securely from your mobile device.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
                 <button className="px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-outfit flex items-center justify-center space-x-2 cursor-pointer shadow-sm">
                   <Download className="w-4 h-4" />
-                  <span>Download iOS App</span>
+                  <span>Download App</span>
                 </button>
                 <button className="px-5 py-3 rounded-xl border border-slate-250 hover:bg-slate-50 text-slate-700 font-bold text-xs font-outfit flex items-center justify-center space-x-2 cursor-pointer bg-white">
                   <Download className="w-4 h-4" />
-                  <span>Download Android APK</span>
+                  <span>Download CLI Tool</span>
                 </button>
               </div>
             </div>

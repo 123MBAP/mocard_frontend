@@ -22,13 +22,13 @@ export default function PaymentLinksPage() {
           <div className="max-w-3xl mx-auto space-y-6">
             <span className="inline-flex items-center space-x-2 bg-pp-blue/10 border border-pp-blue/20 rounded-full px-4.5 py-1.5 text-xs md:text-sm font-semibold tracking-wide text-pp-blue font-outfit">
               <Sparkles className="w-3.5 h-3.5 mr-1 animate-pulse" />
-              <span>Fintech · Payments</span>
+              <span>Business · Integration</span>
             </span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black font-outfit tracking-tight leading-tight">
-              Get paid with a <span className="text-pp-blue">single link.</span>
+              Connect your apps with a <span className="text-pp-blue">single integration.</span>
             </h1>
             <p className="text-slate-400 text-base md:text-lg font-light leading-relaxed max-w-2xl mx-auto">
-              Mocard turns any product, service, or invoice into a sharable payment link. Customers tap, pay, and you get notified in seconds — no checkout to build, no integration to ship.
+              Mocard turns any CRM, database, or API into a shareable integration connector. Systems connect, sync, and you get notified in seconds — no custom glue-code to build, no infrastructure to ship.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <a 
@@ -69,13 +69,13 @@ export default function PaymentLinksPage() {
           <div className="lg:col-span-8 bg-slate-50 border border-slate-200/60 rounded-3xl p-6 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group">
             <div className="space-y-4 mb-6">
               <span className="text-xs font-bold text-pp-blue uppercase tracking-widest font-outfit">
-                Link Creation Hub
+                API Connection Hub
               </span>
               <h3 className="text-2xl font-bold font-outfit text-pp-black">
-                Create a Payment Link
+                Create an API Connection
               </h3>
               <p className="text-slate-555 text-sm font-light leading-relaxed">
-                Generate shareable links in under a minute directly from your dashboard. Customize product name, set price amount, and specify description on the fly.
+                Generate shareable connections in under a minute directly from your dashboard. Customize service names, set data mappings, and specify parameters on the fly.
               </p>
             </div>
             <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
@@ -91,13 +91,13 @@ export default function PaymentLinksPage() {
           <div className="lg:col-span-4 bg-slate-50 border border-slate-200/60 rounded-3xl p-6 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group">
             <div className="space-y-4 mb-6">
               <span className="text-xs font-bold text-pp-blue uppercase tracking-widest font-outfit">
-                Checkout Flow
+                Sync Flow
               </span>
               <h3 className="text-2xl font-bold font-outfit text-pp-black">
-                Tap, Pay, Settle
+                Connect, Sync, Automate
               </h3>
               <p className="text-slate-555 text-sm font-light leading-relaxed">
-                Akagera Game Lodge payment links shown live on mobile checkout interface. Simple, fast payments in local wallets.
+                Enterprise data connection channels shown live in sync dashboard. Simple, fast integrations with third-party web services.
               </p>
             </div>
             <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white p-2">
@@ -117,10 +117,10 @@ export default function PaymentLinksPage() {
                 Multi-Device Ready
               </span>
               <h3 className="text-3xl font-black font-outfit tracking-tight">
-                Mocard Dashboard Across All Platforms
+                Mocard Integration Dashboard Across All Platforms
               </h3>
               <p className="text-slate-400 text-sm font-light leading-relaxed">
-                Configure your business on laptops, verify customer transfers on your desktop, and watch payment alerts land in real-time on your mobile app dashboard.
+                Configure your integrations on laptops, verify system connections on your desktop, and watch data sync alerts land in real-time on your mobile app dashboard.
               </p>
             </div>
             <div className="relative z-10 w-full lg:w-1/2 max-w-md shrink-0">
@@ -145,10 +145,10 @@ export default function PaymentLinksPage() {
               Simplified Path
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-black font-outfit text-pp-black tracking-tight leading-tight">
-              From idea to paid in minutes
+              From idea to integrated in minutes
             </h2>
             <p className="text-slate-500 font-light text-base md:text-lg max-w-2xl mx-auto">
-              No coding, no setup headaches. Create a link, share it, and watch the payments come in.
+              No complex code, no setup headaches. Choose a connection, activate it, and watch the data sync flow.
             </p>
           </div>
 
@@ -165,16 +165,16 @@ export default function PaymentLinksPage() {
               </div>
               <div className="space-y-2">
                 <h3 className="text-xl font-bold font-outfit text-pp-black">
-                  Create a link
+                  Select your service
                 </h3>
                 <p className="text-slate-500 text-sm leading-relaxed font-light">
-                  Name your product, set a price, add a short description. You're done in under a minute.
+                  Choose your CRM, database, or API, define data mappings, and specify headers. You're done in under a minute.
                 </p>
               </div>
             </div>
 
             {/* Step 2 */}
-            <div className="bg-white border border-slate-200/80 rounded-3xl p-8 space-y-6 hover:border-slate-350 transition duration-300 relative group cursor-pointer shadow-xs">
+            <div className="bg-white border border-slate-200/80 rounded-3xl p-8 space-y-6 hover:border-slate-355 transition duration-300 relative group cursor-pointer shadow-xs">
               <span className="absolute top-6 right-8 text-5xl font-black text-slate-100 group-hover:text-pp-blue/10 transition-colors font-outfit">
                 02
               </span>
@@ -183,16 +183,16 @@ export default function PaymentLinksPage() {
               </div>
               <div className="space-y-2">
                 <h3 className="text-xl font-bold font-outfit text-pp-black">
-                  Share anywhere
+                  Authenticate once
                 </h3>
                 <p className="text-slate-500 text-sm leading-relaxed font-light">
-                  Paste into WhatsApp, SMS, email, social — anywhere your customers are. One tap, they pay.
+                  Enter your API keys or OAuth credentials securely. One click, and the secure connection is live.
                 </p>
               </div>
             </div>
 
             {/* Step 3 */}
-            <div className="bg-white border border-slate-200/80 rounded-3xl p-8 space-y-6 hover:border-slate-350 transition duration-300 relative group cursor-pointer shadow-xs">
+            <div className="bg-white border border-slate-200/80 rounded-3xl p-8 space-y-6 hover:border-slate-355 transition duration-300 relative group cursor-pointer shadow-xs">
               <span className="absolute top-6 right-8 text-5xl font-black text-slate-100 group-hover:text-pp-blue/10 transition-colors font-outfit">
                 03
               </span>
@@ -201,10 +201,10 @@ export default function PaymentLinksPage() {
               </div>
               <div className="space-y-2">
                 <h3 className="text-xl font-bold font-outfit text-pp-black">
-                  Get paid & track
+                  Sync & Monitor
                 </h3>
                 <p className="text-slate-500 text-sm leading-relaxed font-light">
-                  Funds land in your account. A clean dashboard shows who paid, when, and for what.
+                  Data flows between your services. A clean dashboard shows sync status, traffic, and logs.
                 </p>
               </div>
             </div>
@@ -224,10 +224,10 @@ export default function PaymentLinksPage() {
               Made For Real Business
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-black font-outfit text-pp-black tracking-tight leading-tight">
-              Built for small business reality.
+              Built for enterprise reality.
             </h2>
             <p className="text-slate-500 font-sans text-base md:text-lg font-light leading-relaxed">
-              Most payment tools assume you have a dev team, an accounting department, and a website. Mocard assumes you just want to get paid.
+              Most integration tools assume you have an army of engineers, a massive budget, and weeks of time. Mocard assumes you just want your software to connect.
             </p>
             <div className="pt-2">
               <a 
@@ -249,9 +249,9 @@ export default function PaymentLinksPage() {
                 <Link2 className="w-5 h-5" />
               </div>
               <div className="space-y-1">
-                <h4 className="text-lg font-bold font-outfit text-pp-black">Zero integration</h4>
+                <h4 className="text-lg font-bold font-outfit text-pp-black">Zero code complexity</h4>
                 <p className="text-slate-500 text-sm font-light leading-relaxed">
-                  No plugins, no SDKs, no website needed. A link is the entire setup.
+                  No custom middleware, no complex SDK maintenance. A configuration is the entire setup.
                 </p>
               </div>
             </div>
@@ -262,9 +262,9 @@ export default function PaymentLinksPage() {
                 <ShieldCheck className="w-5 h-5" />
               </div>
               <div className="space-y-1">
-                <h4 className="text-lg font-bold font-outfit text-pp-black">Bank-grade security</h4>
+                <h4 className="text-lg font-bold font-outfit text-pp-black">Enterprise security</h4>
                 <p className="text-slate-500 text-sm font-light leading-relaxed">
-                  Every payment is encrypted end-to-end. Your customers' data stays safe.
+                  Every data transmission is encrypted end-to-end. Your company's data stays safe.
                 </p>
               </div>
             </div>
@@ -275,9 +275,9 @@ export default function PaymentLinksPage() {
                 <Coins className="w-5 h-5" />
               </div>
               <div className="space-y-1">
-                <h4 className="text-lg font-bold font-outfit text-pp-black">Accepts every method</h4>
+                <h4 className="text-lg font-bold font-outfit text-pp-black">Supports every protocol</h4>
                 <p className="text-slate-500 text-sm font-light leading-relaxed">
-                  Mobile money, cards, bank transfer — whatever works for your customer.
+                  REST, GraphQL, gRPC, Webhooks — whatever works for your backend architecture.
                 </p>
               </div>
             </div>
@@ -288,9 +288,9 @@ export default function PaymentLinksPage() {
                 <BarChart3 className="w-5 h-5" />
               </div>
               <div className="space-y-1">
-                <h4 className="text-lg font-bold font-outfit text-pp-black">Clear reporting</h4>
+                <h4 className="text-lg font-bold font-outfit text-pp-black">Real-time monitoring</h4>
                 <p className="text-slate-500 text-sm font-light leading-relaxed">
-                  See every sale, track revenue, export statements — no spreadsheets required.
+                  See every request, track payload sizes, export activity logs — no complex debugging tools required.
                 </p>
               </div>
             </div>
@@ -305,10 +305,10 @@ export default function PaymentLinksPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(0,112,224,0.15),transparent_45%)]" />
         <div className="max-w-4xl mx-auto px-4 text-center space-y-8 relative z-10">
           <h2 className="text-4xl sm:text-5xl font-black font-outfit tracking-tight">
-            Start getting paid today.
+            Start connecting today.
           </h2>
           <p className="text-slate-400 text-base sm:text-lg max-w-xl mx-auto font-light leading-relaxed">
-            Mocard is free to sign up, quick to set up, and built to make money collection the easiest part of your day.
+            Mocard is free to sign up, quick to set up, and built to make software integration the easiest part of your day.
           </p>
           <div className="pt-2">
             <a 

@@ -16,7 +16,7 @@ export default function Features() {
 
   const steps = [
     { num: "01", name: "Connect API", desc: "Link your backend application using our structured developer documentations and tools." },
-    { num: "02", name: "Route Transactions", desc: "Transactions and service requests are routed securely and instantly via Mocard core." },
+    { num: "02", name: "Route Requests", desc: "Data and service requests are routed securely and instantly via Mocard core." },
     { num: "03", name: "Scale Instantly", desc: "Monitor traffic, track metrics, and scale your business without worrying about infrastructure." }
   ];
 

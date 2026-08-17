@@ -11,45 +11,45 @@ import Ecomerce_merchantsImage from '../assets/images/ecommerce_merchants.png';
 export default function WhoUsesMocard() {
   const users = [
     {
-      title: "Cross-border Senders",
+      title: "Cross-system Connectors",
       image: CrossBorderImage,
-      tag: "Card to Mobile Money",
-      description: "Diaspora members can now send money to their loved ones back home using their international debit or credit cards. MoCard ensures that the funds are received instantly and securely in their mobile wallets.",
-      benefit: "Instant settlement"
+      tag: "Single Service Connect",
+      description: "Connect legacy systems to modern cloud applications seamlessly. MoCard ensures data is synced instantly and securely between platforms.",
+      benefit: "Instant sync"
     },
     {
-      title: "Local Businesses",
+      title: "Enterprise Syncing",
       image: LocalBusinessImage,
-      tag: "Bulk Payouts & Transfers",
-      description: "Automate payouts to suppliers, vendors, and contractors across multiple currencies. Dispatch hundreds of payments directly to mobile money numbers with a single click.",
-      benefit: "Automated payouts"
+      tag: "Bulk Data Sync",
+      description: "Automate data syncing across databases, CRMs, and ERPs. Dispatch hundreds of updates with a single workflow execution.",
+      benefit: "Automated workflows"
     },
     {
-      title: "E-Commerce Merchants",
+      title: "SaaS API Hub",
       image: Ecomerce_merchantsImage,
-      tag: "Global Online Checkout",
-      description: "Accept card payments online from customers worldwide and receive settlements directly in your local bank account or mobile wallet. Minimize cart abandonment.",
-      benefit: "99.9% Checkout Uptime"
+      tag: "Global Online Sync",
+      description: "Connect your SaaS application with major marketing, customer support, and analytics tools. Minimize pipeline downtime.",
+      benefit: "99.9% Integration Uptime"
     },
     {
-      title: "Gig Economy Apps",
+      title: "Real-time Event Triggers",
       image: GigEconomyImage,
-      tag: "On-Demand Driver Payouts",
-      description: "Power ride-hailing and food delivery apps with automated payouts. Enable drivers and couriers to cash out their earnings instantly to their mobile wallets 24/7.",
-      benefit: "24/7 withdrawals"
+      tag: "On-Demand Sync",
+      description: "Power event-driven applications with automated webhooks. Enable instantly triggered updates to remote databases 24/7.",
+      benefit: "24/7 event handling"
     },
     {
-      title: "Hospitality & Tourism",
+      title: "Multi-System Orchestration",
       image: [TourismImage, HospitalityImage],
-      tag: "Direct Settlements",
-      description: "Accept global booking payments from tourists and settle directly to local travel agencies, hotels, and guide operators via secure API integrations.",
-      benefit: "Secure reservations"
+      tag: "Direct Integration",
+      description: "Connect and synchronize customer reservations, inventory management systems, and loyalty programs via secure API paths.",
+      benefit: "Unified bookings"
     },
     {
-      title: "FinTech Integrators",
+      title: "Custom Integrators",
       image: IntegrationImage,
-      tag: "API & Webhook Integrations",
-      description: "Build custom digital wallets, lending platforms, or billing software. Developers can integrate our well-documented REST APIs and production-ready SDKs in minutes.",
+      tag: "API & Webhook Sync",
+      description: "Build custom automation pipelines, ETL data flows, or sync scripts. Developers can integrate our well-documented REST APIs and production-ready SDKs in minutes.",
       benefit: "Developer sandbox"
     }
   ];
@@ -69,8 +69,8 @@ export default function WhoUsesMocard() {
           <h2 className="text-3xl md:text-4xl font-black font-outfit text-pp-black tracking-tight leading-tight">
             Who Uses MoCard?
           </h2>
-          <p className="text-slate-600 font-sans text-xs md:text-sm leading-relaxed font-light max-w-2xl mx-auto text-justify">
-            Our API integrations power transactions for thousands of individuals, local entrepreneurs, and scale-ups. Here is how different sectors benefit.
+          <p className="text-slate-650 font-sans text-xs md:text-sm leading-relaxed font-light max-w-2xl mx-auto text-justify">
+            Our API integrations power data flows for thousands of systems, local developers, and scale-ups. Here is how different sectors benefit.
           </p>
         </div>
 

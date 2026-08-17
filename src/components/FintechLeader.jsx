@@ -5,35 +5,35 @@ export default function FintechLeader() {
   const leadershipPillars = [
     {
       icon: <Cpu className="w-6 h-6 text-pp-blue" />,
-      title: "Unified Mobile Money & Card Rails",
-      desc: "Africa's payment landscape is highly fragmented. Mocard resolves this by bridging local mobile money networks (MTN MoMo, Airtel Money, M-Pesa, Orange Money) with global card networks (Visa, Mastercard) under a single, unified API endpoint.",
-      tag: "Infrastructure Integration"
+      title: "Unified Business Integration Engine",
+      desc: "The modern software ecosystem is highly fragmented. Mocard resolves this by bridging CRMs, ERPs, databases, and third-party SaaS applications under a single, unified API hub.",
+      tag: "API Middleware Hub"
     },
     {
       icon: <Zap className="w-6 h-6 text-emerald-650" />,
-      title: "Instant Liquidity & Settlements",
-      desc: "Traditionally, card settlements take days to clear, hindering local cash flow. MoCard bypasses this bottleneck by instantly converting card transactions into mobile money payouts, ensuring merchants receive funds in real-time.",
-      tag: "Liquidity Velocity"
+      title: "Real-time Data Synchronization",
+      desc: "Traditionally, data synchronization batch jobs take hours or days to run, slowing down decision making. Mocard bypasses this bottleneck by instantly syncing events, ensuring systems remain updated in real-time.",
+      tag: "Real-time Sync"
     },
     {
       icon: <Shield className="w-6 h-6 text-amber-600" />,
-      title: "Regulatory & Compliance Shield",
-      desc: "Navigating licenses and compliance across 54 countries is complex. Our platform comes built-in with robust KYC, AML tracking, and regional central bank regulatory compliance, acting as your legal firewall across sub-Saharan Africa.",
-      tag: "Pan-African Compliance"
+      title: "Enterprise Security & Compliance Shield",
+      desc: "Navigating security compliance and data protection guidelines across different jurisdictions is complex. Our platform comes built-in with robust encryption, SOC2 tracking, and compliance shields.",
+      tag: "Global Security Standards"
     },
     {
-      icon: <Globe className="w-6 h-6 text-purple-650" />,
-      title: "Carrier-Grade Resilience",
-      desc: "Engineered for Africa's unique network dynamics. Our transaction routing engine automatically bypasses carrier outages and retries dropped requests, guaranteeing high success rates even in low-bandwidth regions.",
-      tag: "Network Fault Tolerance"
+      icon: <Globe className="w-6 h-6 text-purple-655" />,
+      title: "Enterprise-Grade Resilience",
+      desc: "Engineered for complex enterprise microservices. Our transaction routing engine automatically bypasses API outages and retries dropped requests, guaranteeing high success rates.",
+      tag: "System Fault Tolerance"
     }
   ];
 
   const stats = [
-    { value: "40+", label: "African Countries Covered" },
-    { value: "150+", label: "Integrated Local Payment Rails" },
-    { value: "$1.2B+", label: "Annual Transaction Run Rate" },
-    { value: "99.99%", label: "Transaction Gateway Uptime" }
+    { value: "40+", label: "Connected Cloud Providers" },
+    { value: "150+", label: "Pre-built SaaS Connectors" },
+    { value: "$1.2B+", label: "Annual API Requests Handled" },
+    { value: "99.99%", label: "Gateway System Uptime" }
   ];
 
   return (
@@ -50,16 +50,16 @@ export default function FintechLeader() {
           
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center space-x-2 bg-pp-blue/10 border border-pp-blue/20 rounded-full px-4.5 py-1.5 text-xs md:text-sm font-semibold tracking-wide text-pp-blue font-outfit">
-              <span>The Future of African FinTech</span>
+              <span>The Future of Business Integration</span>
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-black font-outfit tracking-tight leading-[1.12]">
-              Pioneering the Unified Payment Engine for the African Continent
+              Pioneering the Unified Integration Engine for Modern Enterprises
             </h2>
           </div>
           
           <div className="lg:col-span-5">
             <p className="text-slate-400 font-sans text-base md:text-lg font-light leading-relaxed">
-              Mocard is not just an API integrator — we are building the core financial plumbing that enables cross-border digital commerce. By linking global capital with local liquidity rails, we empower businesses to scale nationwide and beyond.
+              Mocard is not just an API integrator — we are building the core connectivity fabric that enables modern digital operations. By linking diverse applications with local and cloud systems, we empower businesses to scale.
             </p>
           </div>
           
@@ -117,11 +117,11 @@ export default function FintechLeader() {
         </div>
 
         {/* African Expansion Callout */}
-        <div className="mt-20 border-t border-slate-850 pt-16 flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div className="mt-20 border-t border-slate-855 pt-16 flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="space-y-3 max-w-2xl text-center lg:text-left">
-            <h4 className="text-xl font-bold font-outfit text-white">Ready to capture the African market?</h4>
-            <p className="text-slate-450 text-sm font-sans font-light leading-relaxed">
-              Integrate Mocard's SDK today to instantly accept mobile wallet payments in Kenya, Rwanda, Tanzania, Ghana, Nigeria, and 35+ other nations.
+            <h4 className="text-xl font-bold font-outfit text-white">Ready to scale your enterprise operations?</h4>
+            <p className="text-slate-455 text-sm font-sans font-light leading-relaxed">
+              Integrate Mocard's API today to instantly connect and automate workflows across CRMs, ERPs, and cloud tools.
             </p>
           </div>
           <a 

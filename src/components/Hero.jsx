@@ -25,17 +25,17 @@ export default function Hero() {
           {/* Eyebrow Product Tag */}
           <div className="inline-flex items-center space-x-2 bg-slate-50 border border-slate-200/80 rounded-lg px-3.5 py-1.5 text-xs font-semibold tracking-wide text-slate-700 font-outfit shadow-2xs">
             <span className="w-1.5 h-1.5 rounded-full bg-pp-blue animate-pulse" />
-            <span>PAYMENT INFRASTRUCTURE FOR AFRICA</span>
+            <span>API INTEGRATION INFRASTRUCTURE</span>
           </div>
 
           {/* Title */}
           <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black font-outfit leading-[1.1] tracking-tight text-pp-black">
-            Connect to all African payments through <span className="text-pp-blue">one API integration</span>.
+            Connect Your Business <span className="text-pp-blue">with Mocard</span>
           </h1>
 
           {/* Supporting Paragraph */}
           <p className="text-sm md:text-base text-slate-550 leading-relaxed font-sans font-light max-w-xl mx-auto">
-            Mocard eliminates the complexity of building and maintaining separate pipelines for credit cards, local mobile money wallets, and regional bank networks. Connect your platform once, and let us handle gateway routing, compliance, and settlement infrastructure.
+            We are an API integrator helping businesses connect with third-party services seamlessly. We build the technology, you focus on your customers.
           </p>
 
           {/* CTA Buttons */}
@@ -58,7 +58,7 @@ export default function Hero() {
           {/* Trust & Credibility Row */}
           <div className="pt-8 border-t border-slate-100 flex items-center justify-center space-x-2.5 text-xs font-medium text-slate-450 font-outfit w-full">
             <ShieldCheck className="w-4.5 h-4.5 text-emerald-500 shrink-0" />
-            <span>Active in East & West Africa • Supporting MTN, Airtel, Orange, Visa, and Mastercard</span>
+            <span>Active globally • Supporting HubSpot, Salesforce, Stripe, Slack, and major cloud providers</span>
           </div>
           
         </div>
