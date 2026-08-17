@@ -84,10 +84,10 @@ export default function Navbar() {
               </span>
             </Link>
 
-            {/* Desktop Navigation Links (Personal & Business) */}
+            {/* Desktop Navigation Links (Individual   & Business) */}
             <div className="hidden lg:flex items-center space-x-2 font-outfit text-[15px] font-semibold text-slate-800">
               
-              {/* Personal Dropdown Trigger */}
+              {/* Individual   Dropdown Trigger */}
               <button 
                 onClick={() => toggleDropdown(0)}
                 onMouseEnter={() => setActiveDropdown(0)}
@@ -97,7 +97,7 @@ export default function Navbar() {
                     : 'hover:bg-slate-50 text-slate-700 hover:text-pp-black'
                 }`}
               >
-                <span>Personal</span>
+                <span>Individual  </span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 0 ? 'rotate-180 text-pp-blue' : 'text-slate-400'}`} />
               </button>
 
@@ -128,7 +128,7 @@ export default function Navbar() {
               Developers
             </Link>
             <Link 
-              to="/login" 
+              to="/dashboard" 
               onMouseEnter={() => setActiveDropdown(null)}
               className="px-6 py-2.5 rounded-full border border-pp-black text-[15px] font-bold text-pp-black hover:bg-slate-50 transition duration-200 hover:border-pp-blue hover:text-pp-blue"
             >
@@ -160,56 +160,38 @@ export default function Navbar() {
         <div className="hidden lg:block absolute top-full left-0 right-0 w-full bg-white border-t border-slate-200 shadow-xl z-40 animate-in fade-in slide-in-from-top-2 duration-200 mega-dropdown-panel">
           <div className="max-w-7xl mx-auto px-8 py-10">
             {activeDropdown === 0 ? (
-              /* Personal Dropdown Content */
+              /* Individual  Dropdown Content */
               <div className="grid grid-cols-12 gap-8 items-start">
                 
                 {/* Left Side Header Block */}
-                <div className="col-span-3 space-y-2.5">
+                <div className="col-span-4 space-y-2.5">
                   <Link 
-                    to="/personal" 
+                    to="/Individual " 
                     onClick={closeMenu} 
                     className="group inline-flex items-center space-x-2 text-xl font-black font-outfit text-pp-black hover:text-pp-blue transition-colors duration-200"
                   >
-                    <span>MoCard Simple Sync</span>
+                    <span>MoCard for Individuals</span>
                     <ArrowRight className="w-5 h-5 text-pp-blue group-hover:translate-x-1.5 transition-transform duration-200" />
                   </Link>
                   <p className="text-sm font-light text-slate-500 leading-relaxed font-sans">
-                    Simple, fast, and secure integrations for individual developers. Sync data globally, connect instantly.
+                    Pay securely, link cards, transfer across regions, and manage everyday transactions in one place.
                   </p>
                 </div>
 
-                {/* Column 1: Send & Receive */}
-                <div className="col-span-3 space-y-4">
+                {/* Column 1: Individual   (Exactly 4 navigations) */}
+                <div className="col-span-4 space-y-4">
                   <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-400 font-outfit border-b border-slate-100 pb-2">
-                    Personal
+                    Individual   Solutions
                   </h4>
                   <div className="flex flex-col space-y-3 font-outfit text-[14.5px] pt-1">
-                    <Link to="/personal?tab=card-to-momo" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
-                      Single Service Connect
+                    <Link to="/checkout" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
+                      MoCard Checkout
                     </Link>
-                    <Link to="/personal?tab=send-abroad" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
-                      Cross-Region Sync
+                    <Link to="/send-request" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
+                      Send & Request Money
                     </Link>
-                    <Link to="/personal?tab=request-payments" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
-                      Request Data Pull
-                    </Link>
-                    <Link to="/personal?tab=mocard-app" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
-                      Mocard Connect App
-                    </Link>
-                  </div>
-                </div>
-
-                {/* Column 2: Security & Support */}
-                <div className="col-span-3 space-y-4">
-                  <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-400 font-outfit border-b border-slate-100 pb-2">
-                    Security & Company
-                  </h4>
-                  <div className="flex flex-col space-y-3 font-outfit text-[14.5px] pt-1">
-                    <Link to="/features" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
-                      Security Compliance
-                    </Link>
-                    <Link to="/company" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
-                      About Us & Careers
+                    <Link to="/security" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
+                      Security &amp; Buyer Protection
                     </Link>
                     <Link to="/contact" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
                       Contact Support
@@ -218,7 +200,7 @@ export default function Navbar() {
                 </div>
 
                 {/* Right Card / Sidebar */}
-                <div className="col-span-3 bg-slate-50 border border-slate-100 p-6 rounded-3xl space-y-3.5 shadow-xs">
+                <div className="col-span-4 bg-slate-50 border border-slate-100 p-6 rounded-3xl space-y-3.5 shadow-xs">
                   <Link 
                     to="/contact" 
                     onClick={closeMenu}
@@ -235,7 +217,6 @@ export default function Navbar() {
                     <span>Developer Pricing</span>
                     <ArrowRight className="w-4.5 h-4.5 group-hover:translate-x-1 transition-transform" />
                   </Link>
-              
                 </div>
               </div>
             ) : (
@@ -263,14 +244,11 @@ export default function Navbar() {
                     Integration Suite
                   </h4>
                   <div className="flex flex-col space-y-3 font-outfit text-[14.5px] pt-1">
-                    <Link to="/dashboard?tab=checkout" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
-                      Data Workflows
+                    <Link to="/online-checkouts" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
+                      Online Checkouts
                     </Link>
                     <Link to="/payment-links" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
-                      Shareable API Connectors
-                    </Link>
-                    <Link to="/dashboard?tab=payouts" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
-                      Bulk Data Synchronization
+                      Payment Links
                     </Link>
                   </div>
                 </div>
@@ -284,11 +262,8 @@ export default function Navbar() {
                     <Link to="/dashboard" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
                       Integration Dashboard
                     </Link>
-                    <Link to="/dashboard?tab=api" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
-                      API & SDK Integrations
-                    </Link>
-                    <Link to="/dashboard?tab=reporting" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
-                      Reporting Tools & Logs
+                    <Link to="/reporting-tools" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
+                      Business Reporting Tools
                     </Link>
                   </div>
                 </div>
@@ -296,19 +271,19 @@ export default function Navbar() {
                 {/* Right Card / Sidebar */}
                 <div className="col-span-3 bg-slate-50 border border-slate-100 p-6 rounded-3xl space-y-3.5 shadow-xs">
                   <Link 
+                    to="/sandbox" 
+                    onClick={closeMenu}
+                    className="flex items-center justify-between px-5 py-3 rounded-full bg-pp-blue text-sm font-bold text-white hover:brightness-110 transition duration-200 group w-full shadow-sm"
+                  >
+                    <span>Try Sandbox Demo</span>
+                    <ArrowRight className="w-4.5 h-4.5 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                  <Link 
                     to="/contact" 
                     onClick={closeMenu}
                     className="flex items-center justify-between px-5 py-3 rounded-full bg-pp-black text-sm font-bold text-white hover:bg-pp-blue transition duration-200 group w-full"
                   >
-                    <span>Get Started</span>
-                    <ArrowRight className="w-4.5 h-4.5 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                  <Link 
-                    to="/pricing" 
-                    onClick={closeMenu}
-                    className="flex items-center justify-between px-5 py-3 rounded-full bg-pp-black text-sm font-bold text-white hover:bg-pp-blue transition duration-200 group w-full"
-                  >
-                    <span>Pricing</span>
+                    <span>Request API Access</span>
                     <ArrowRight className="w-4.5 h-4.5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <Link 
@@ -330,24 +305,21 @@ export default function Navbar() {
         <div className="lg:hidden border-t border-slate-100 bg-white/95 backdrop-blur-md py-4 px-6 space-y-4 shadow-inner max-h-[85vh] overflow-y-auto">
           <div className="space-y-1 font-outfit text-base">
             
-            {/* Personal Accordion */}
+            {/* Individual   Accordion */}
             <div>
               <button 
-                onClick={() => toggleMobileSection('personal')}
+                onClick={() => toggleMobileSection('Individual  ')}
                 className="w-full flex justify-between items-center px-4 py-3 rounded-xl hover:bg-slate-50 text-pp-black font-bold transition duration-200"
               >
-                <span>Personal</span>
-                <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${mobileSection === 'personal' ? 'rotate-180 text-pp-blue' : 'text-slate-400'}`} />
+                <span>Individual  </span>
+                <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${mobileSection === 'Individual  ' ? 'rotate-180 text-pp-blue' : 'text-slate-400'}`} />
               </button>
-              {mobileSection === 'personal' && (
+              {mobileSection === 'Individual  ' && (
                 <div className="pl-6 pr-4 py-2 space-y-3 bg-slate-50/50 rounded-xl mt-1">
-                  <Link to="/personal?tab=card-to-momo" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Single Service Connect</Link>
-                  <Link to="/personal?tab=send-abroad" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Cross-Region Sync</Link>
-                  <Link to="/personal?tab=request-payments" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Request Data Pull</Link>
-                  <Link to="/personal?tab=mocard-app" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">
-                    Mocard Connect App
-                  </Link>
-                  <Link to="/company" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Help & Careers</Link>
+                  <Link to="/checkout" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">MoCard Checkout</Link>
+                  <Link to="/send-request" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Send & Request Money</Link>
+                  <Link to="/security" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Security &amp; Buyer Protection</Link>
+                  <Link to="/contact" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Contact Support</Link>
                 </div>
               )}
             </div>
@@ -363,12 +335,11 @@ export default function Navbar() {
               </button>
               {mobileSection === 'business' && (
                 <div className="pl-6 pr-4 py-2 space-y-3 bg-slate-50/50 rounded-xl mt-1">
-                  <Link to="/dashboard?tab=checkout" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Data Workflows</Link>
-                  <Link to="/payment-links" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Shareable API Connectors</Link>
-                  <Link to="/dashboard?tab=payouts" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Bulk Data Synchronization</Link>
+                  <Link to="/online-checkouts" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Online Checkouts</Link>
+                  <Link to="/payment-links" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Payment Links</Link>
                   <Link to="/dashboard" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Integration Dashboard</Link>
-                  <Link to="/dashboard?tab=api" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">API & SDK Integrations</Link>
-                  <Link to="/dashboard?tab=reporting" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Reporting Tools & Logs</Link>
+                  <Link to="/reporting-tools" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Business Reporting Tools</Link>
+                  <Link to="/sandbox" onClick={closeMenu} className="block text-sm text-pp-blue hover:text-pp-blue font-bold py-1">Try Sandbox Demo</Link>
                 </div>
               )}
             </div>
@@ -400,7 +371,7 @@ export default function Navbar() {
           
           <div className="pt-4 border-t border-slate-100 flex flex-col space-y-3 font-outfit">
             <Link 
-              to="/login" 
+              to="/dashboard" 
               onClick={closeMenu}
               className="w-full text-center py-3 rounded-full border border-pp-black text-sm font-bold text-pp-black hover:bg-slate-50 transition duration-200"
             >

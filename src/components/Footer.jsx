@@ -68,9 +68,10 @@ export default function Footer() {
               </h4>
               <ul className="space-y-2.5 text-sm">
                 <li><Link to="/pricing" className="hover:text-pp-blue transition-colors">Pricing Calculator</Link></li>
-                <li><Link to="/developers" className="hover:text-pp-blue transition-colors">Staging Sandbox</Link></li>
-                <li><Link to="/contact" className="hover:text-pp-blue transition-colors">Support center</Link></li>
-                <li><a href="/login" className="hover:text-pp-blue transition-colors">Merchant Console</a></li>
+                <li><Link to="/reporting-tools" className="hover:text-pp-blue transition-colors">Business Reporting Tools</Link></li>
+                <li><Link to="/sandbox" className="hover:text-pp-blue transition-colors">Interactive Sandbox</Link></li>
+                <li><Link to="/contact" className="hover:text-pp-blue transition-colors">Support Center</Link></li>
+                <li><Link to="/sandbox" className="hover:text-pp-blue transition-colors">Demo Merchant Console</Link></li>
               </ul>
             </div>
 

@@ -177,6 +177,14 @@ export default function Login() {
                   )}
                 </button>
 
+                <button
+                  type="button"
+                  onClick={() => navigate('/dashboard')}
+                  className="w-full py-3.5 rounded-full border border-pp-blue text-pp-blue hover:bg-[#e8f0fe]/40 font-bold text-[15px] flex items-center justify-center space-x-2 transition duration-200 mt-3 cursor-pointer"
+                >
+                  <span>Access Sandbox Demo Console</span>
+                </button>
+
                 {/* Horizontal Line Divider */}
                 <div className="relative flex py-4 items-center">
                   <div className="flex-grow border-t border-slate-200"></div>
