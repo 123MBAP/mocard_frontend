@@ -61,7 +61,7 @@ mocard.Integration.create(
   ];
 
   return (
-    <section className="bg-slate-50 py-14 md:py-18 border-t border-slate-200 relative overflow-hidden scroll-mt-24" id="api-integration">
+    <section className="bg-white py-14 md:py-18 border-t border-slate-200 relative overflow-hidden scroll-mt-24" id="api-integration">
       {/* Decorative gradient blur in background */}
       <div className="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-pp-blue/5 blur-3xl pointer-events-none" />
       <div className="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-indigo-500/5 blur-3xl pointer-events-none" />
@@ -70,9 +70,9 @@ mocard.Integration.create(
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-2 group cursor-pointer">
-          <span className="text-xs md:text-sm font-bold tracking-widest text-slate-500 group-hover:text-pp-blue uppercase font-outfit transition-colors duration-300">
-            Developer Experience
-          </span>
+          <div className="inline-flex items-center space-x-2 bg-pp-blue/10 border border-pp-blue/20 rounded-full px-4 py-1.5 text-xs md:text-sm font-bold tracking-widest text-pp-blue uppercase font-outfit transition-colors duration-300">
+            <span>Developer Experience</span>
+          </div>
           <h2 className="text-3xl md:text-4xl font-black font-outfit text-pp-black tracking-tight leading-tight">
             Built by Developers, <br className="hidden sm:inline" />
             For Modern Businesses
@@ -115,7 +115,7 @@ mocard.Integration.create(
                     onClick={() => setActiveTab(tab.id)}
                     className={`px-3.5 py-2 text-[11px] font-semibold border-b-2 transition-all duration-300 cursor-pointer ${
                       activeTab === tab.id
-                        ? 'border-pp-blue text-white bg-slate-900/60'
+                        ? 'border-pp-blue text-pp-blue bg-slate-900/40'
                         : 'border-transparent text-slate-500 hover:text-slate-300'
                     }`}
                   >

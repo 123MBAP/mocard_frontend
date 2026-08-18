@@ -13,7 +13,6 @@ import PaymentLinksPage from './pages/PaymentLinksPage';
 import DashboardPage from './pages/DashboardPage';
 import PersonalPage from './pages/PersonalPage';
 import ReportingToolsPage from './pages/ReportingToolsPage';
-import SandboxConsole from './pages/SandboxConsole';
 import OnlineCheckoutsPage from './pages/OnlineCheckoutsPage';
 import PersonalCheckoutPage from './pages/PersonalCheckoutPage';
 import SendRequestPage from './pages/SendRequestPage';
@@ -41,7 +40,6 @@ export default function App() {
           <Route path="/send-request" element={<SendRequestPage />} />
           <Route path="/security" element={<SecurityPage />} />
           <Route path="/reporting-tools" element={<ReportingToolsPage />} />
-          <Route path="/sandbox" element={<SandboxConsole />} />
           {/* Fallback path */}
           <Route path="*" element={<Home />} />
         </Routes>

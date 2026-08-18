@@ -35,7 +35,7 @@ export default function EverydayImpact() {
   ];
 
   return (
-    <section className="bg-slate-50 py-14 md:py-18 border-t border-slate-200/80 relative overflow-hidden scroll-mt-24" id="everyday-impact">
+    <section className="bg-white py-14 md:py-18 border-t border-slate-200/80 relative overflow-hidden scroll-mt-24" id="everyday-impact">
       {/* Decorative background grid elements */}
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_bottom_right,rgba(0,112,224,0.015),transparent_45%)] pointer-events-none" />
       <div className="absolute left-[-10%] top-[20%] w-[400px] h-[400px] rounded-full bg-pp-blue/5 filter blur-3xl pointer-events-none" />
@@ -61,12 +61,12 @@ export default function EverydayImpact() {
           {useCases.map((useCase, idx) => (
             <div 
               key={idx} 
-              className="group bg-white border border-slate-200 rounded-2xl p-5 hover:border-slate-350 hover:bg-white hover:shadow-md transition-all duration-300 flex flex-col justify-between cursor-pointer"
+              className="group bg-white border border-slate-200 rounded-2xl p-5 hover:border-pp-blue hover:bg-pp-blue/5 hover:shadow-md transition-all duration-300 flex flex-col justify-between cursor-pointer"
             >
               <div className="space-y-4">
                 {/* Icon and Tag Badge */}
                 <div className="flex justify-between items-center">
-                  <span className="text-[9px] font-bold bg-slate-100 text-slate-600 px-2.5 py-1 rounded-lg uppercase tracking-wider font-outfit">
+                  <span className="text-[9px] font-bold bg-pp-blue/15 text-pp-blue px-2.5 py-1 rounded-lg uppercase tracking-wider font-outfit group-hover:bg-pp-blue/25 transition-colors border border-pp-blue/30">
                     {useCase.badge}
                   </span>
                 </div>
@@ -89,12 +89,12 @@ export default function EverydayImpact() {
           ))}
           
           {/* Quick Sandbox Showcase Card */}
-          <div className="group bg-pp-black text-white border border-slate-800 rounded-2xl p-5 flex flex-col justify-between hover:shadow-md transition-all duration-300 relative overflow-hidden cursor-pointer">
+          <div className="group bg-pp-blue text-white border border-pp-blue/50 rounded-2xl p-5 flex flex-col justify-between hover:shadow-md transition-all duration-300 relative overflow-hidden cursor-pointer">
             {/* Subtle light glow */}
-            <div className="absolute top-0 right-0 w-48 h-48 rounded-full bg-pp-blue/10 blur-2xl pointer-events-none" />
+            <div className="absolute top-0 right-0 w-48 h-48 rounded-full bg-white/10 blur-2xl pointer-events-none" />
             
             <div className="space-y-4 relative z-10">
-              <span className="text-[9px] font-bold bg-slate-900 border border-slate-800 text-pp-blue px-2.5 py-1 rounded-lg uppercase tracking-wider font-outfit w-fit block">
+              <span className="text-[9px] font-bold bg-white/20 border border-white/30 text-white px-2.5 py-1 rounded-lg uppercase tracking-wider font-outfit w-fit block">
                 Developer Sandbox
               </span>
               

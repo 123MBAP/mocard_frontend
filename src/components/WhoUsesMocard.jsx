@@ -63,9 +63,9 @@ export default function WhoUsesMocard() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-2 group cursor-pointer">
-          <span className="text-xs md:text-sm font-bold tracking-widest text-slate-500 group-hover:text-pp-blue uppercase font-outfit transition-colors duration-300">
-            Ecosystem Fit
-          </span>
+          <div className="inline-flex items-center space-x-2 bg-pp-blue/10 border border-pp-blue/20 rounded-full px-4 py-1.5 text-xs md:text-sm font-bold tracking-widest text-pp-blue uppercase font-outfit transition-colors duration-300">
+            <span>Ecosystem Fit</span>
+          </div>
           <h2 className="text-3xl md:text-4xl font-black font-outfit text-pp-black tracking-tight leading-tight">
             Who Uses MoCard?
           </h2>
@@ -79,7 +79,7 @@ export default function WhoUsesMocard() {
           {users.map((user, idx) => (
             <div 
               key={idx}
-              className="group bg-white border border-slate-200 rounded-2xl p-5 hover:border-slate-350 hover:bg-slate-50/50 hover:shadow-md transition-all duration-300 flex flex-col justify-between cursor-pointer"
+              className="group bg-white border border-slate-200 rounded-2xl p-5 hover:border-pp-blue hover:bg-pp-blue/5 hover:shadow-md transition-all duration-300 flex flex-col justify-between cursor-pointer"
             >
               <div className="space-y-4">
                 
@@ -110,7 +110,7 @@ export default function WhoUsesMocard() {
 
                 {/* Top bar with tag benefit */}
                 <div className="flex justify-between items-center">
-                  <span className="text-[9px] font-bold bg-slate-100 text-slate-650 px-2.5 py-1 rounded-lg uppercase tracking-wider font-outfit group-hover:bg-white transition-colors border border-transparent group-hover:border-slate-200/60">
+                  <span className="text-[9px] font-bold bg-pp-blue/15 text-pp-blue px-2.5 py-1 rounded-lg uppercase tracking-wider font-outfit group-hover:bg-pp-blue/25 transition-colors border border-pp-blue/30">
                     {user.benefit}
                   </span>
                 </div>

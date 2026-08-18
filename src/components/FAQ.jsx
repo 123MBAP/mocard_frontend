@@ -40,7 +40,7 @@ export default function FAQ() {
         
         {/* Header */}
         <div className="text-center mb-10 space-y-2 group cursor-pointer">
-          <div className="inline-flex items-center space-x-2 bg-slate-100 group-hover:bg-pp-blue/10 text-slate-650 group-hover:text-pp-blue px-3.5 py-1.5 rounded-lg text-xs font-bold font-outfit uppercase tracking-wider transition-all duration-300">
+          <div className="inline-flex items-center space-x-2 bg-pp-blue/10 border border-pp-blue/20 text-pp-blue px-3.5 py-1.5 rounded-full text-xs font-bold font-outfit uppercase tracking-wider transition-all duration-300">
             <span>Support & Help</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-black font-outfit text-pp-black tracking-tight">
@@ -59,7 +59,7 @@ export default function FAQ() {
               <div 
                 key={idx} 
                 className={`border rounded-xl transition-all duration-300 ${
-                  isOpen ? 'border-pp-black bg-slate-50/40 shadow-2xs' : 'border-slate-200 hover:border-slate-350 bg-white'
+                  isOpen ? 'border-pp-blue bg-pp-blue/5 shadow-2xs' : 'border-slate-200 hover:border-slate-350 bg-white'
                 }`}
               >
                 <button
@@ -68,7 +68,7 @@ export default function FAQ() {
                 >
                   <span className="pr-4">{faq.q}</span>
                   <div className={`w-6 h-6 rounded flex items-center justify-center text-xs font-bold transition-colors duration-200 select-none ${
-                    isOpen ? 'bg-pp-black text-white' : 'bg-slate-100 text-slate-500'
+                    isOpen ? 'bg-pp-blue text-white' : 'bg-slate-100 text-slate-500'
                   }`}>
                     {isOpen ? '−' : '+'}
                   </div>

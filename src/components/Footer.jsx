@@ -7,7 +7,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-pp-bg-warm text-slate-600 py-16 border-t border-slate-200 font-sans">
+    <footer className="bg-white text-slate-600 py-16 border-t border-slate-200 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Split Block */}

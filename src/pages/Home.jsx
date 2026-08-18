@@ -13,7 +13,7 @@ import Footer from '../components/Footer';
 
 export default function Home() {
   return (
-    <>
+    <div className="bg-white text-pp-black antialiased overflow-x-hidden">
       <Navbar />
       <Hero />
       <Features />
@@ -25,6 +25,6 @@ export default function Home() {
       <GetStartedSection />
       <ActionBanner />
       <Footer />
-    </>
+    </div>
   );
 }

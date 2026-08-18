@@ -14,23 +14,23 @@ export default function ActionBanner() {
   return (
     <section className="bg-white py-12 md:py-14" id="newsletter">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden bg-pp-black rounded-2xl shadow-xl p-6 md:p-10 text-white text-center md:text-left">
+        <div className="relative overflow-hidden bg-pp-blue/10 border border-pp-blue/20 rounded-2xl shadow-lg p-6 md:p-10 text-pp-black text-center md:text-left">
           
           {/* Subtle background glow */}
-          <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_bottom_right,rgba(0,112,224,0.14),transparent_40%)]" />
+          <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_bottom_right,rgba(0,112,224,0.08),transparent_40%)]" />
 
           <div className="relative z-10 grid md:grid-cols-12 gap-8 items-center">
             
             {/* Left Content */}
             <div className="md:col-span-6 space-y-3 group/left cursor-pointer">
-              <span className="text-xs md:text-sm font-bold tracking-widest text-slate-400 group-hover/left:text-pp-blue uppercase font-outfit block transition-colors duration-300">
+              <span className="text-xs md:text-sm font-bold tracking-widest text-pp-blue uppercase font-outfit block transition-colors duration-300">
                 Get Started Today
               </span>
-              <h2 className="text-3xl md:text-4xl font-black font-outfit leading-none tracking-tight">
+              <h2 className="text-3xl md:text-4xl font-black font-outfit leading-none tracking-tight text-pp-black">
                 Ready to Integrate <br />
                 Your Business?
               </h2>
-              <p className="text-slate-355 text-xs md:text-sm font-sans font-light leading-relaxed text-justify">
+              <p className="text-slate-700 text-xs md:text-sm font-sans font-light leading-relaxed text-justify">
                 Connect your business with third-party software APIs seamlessly. Enter your business email below to schedule a custom integration blueprint session with our core tech team.
               </p>
             </div>
@@ -52,7 +52,7 @@ export default function ActionBanner() {
                   />
                   <button
                     type="submit"
-                    className="w-full sm:w-auto shrink-0 px-5 py-2.5 rounded-full bg-pp-black hover:bg-neutral-850 text-white font-outfit font-bold text-xs flex items-center justify-center space-x-1.5 transition duration-200 cursor-pointer"
+                    className="w-full sm:w-auto shrink-0 px-5 py-2.5 rounded-full bg-pp-blue hover:bg-pp-blue/90 text-white font-outfit font-bold text-xs flex items-center justify-center space-x-1.5 transition duration-200 cursor-pointer"
                   >
                     <span>Contact Sales</span>
                     <span>→</span>

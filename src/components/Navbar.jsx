@@ -93,12 +93,12 @@ export default function Navbar() {
                 onMouseEnter={() => setActiveDropdown(0)}
                 className={`flex items-center space-x-1.5 px-4.5 py-2.5 rounded-full transition-all duration-200 ${
                   activeDropdown === 0 
-                    ? 'bg-[#e8f0fe] text-pp-blue font-bold shadow-xs' 
-                    : 'hover:bg-slate-50 text-slate-700 hover:text-pp-black'
+                    ? 'bg-pp-brand/10 text-pp-brand font-bold shadow-sm ring-1 ring-pp-brand/10' 
+                    : 'hover:bg-slate-50 text-slate-700 hover:text-pp-brand'
                 }`}
               >
                 <span>Individual  </span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 0 ? 'rotate-180 text-pp-blue' : 'text-slate-400'}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 0 ? 'rotate-180 text-pp-brand' : 'text-slate-400'}`} />
               </button>
 
               {/* Business Dropdown Trigger */}
@@ -107,12 +107,12 @@ export default function Navbar() {
                 onMouseEnter={() => setActiveDropdown(1)}
                 className={`flex items-center space-x-1.5 px-4.5 py-2.5 rounded-full transition-all duration-200 ${
                   activeDropdown === 1 
-                    ? 'bg-[#e8f0fe] text-pp-blue font-bold shadow-xs' 
-                    : 'hover:bg-slate-50 text-slate-700 hover:text-pp-black'
+                    ? 'bg-pp-brand/10 text-pp-brand font-bold shadow-sm ring-1 ring-pp-brand/10' 
+                    : 'hover:bg-slate-50 text-slate-700 hover:text-pp-brand'
                 }`}
               >
                 <span>Business</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 1 ? 'rotate-180 text-pp-blue' : 'text-slate-400'}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 1 ? 'rotate-180 text-pp-brand' : 'text-slate-400'}`} />
               </button>
 
             </div>
@@ -123,21 +123,21 @@ export default function Navbar() {
             <Link 
               to="/developers" 
               onMouseEnter={() => setActiveDropdown(null)}
-              className="text-[15px] font-bold text-slate-700 hover:text-pp-blue transition duration-200 px-3 py-2 rounded-full hover:bg-slate-50"
+              className="text-[15px] font-bold text-slate-700 hover:text-pp-brand transition duration-200 px-3 py-2 rounded-full hover:bg-slate-50"
             >
               Developers
             </Link>
             <Link 
               to="/dashboard" 
               onMouseEnter={() => setActiveDropdown(null)}
-              className="px-6 py-2.5 rounded-full border border-pp-black text-[15px] font-bold text-pp-black hover:bg-slate-50 transition duration-200 hover:border-pp-blue hover:text-pp-blue"
+              className="px-6 py-2.5 rounded-full border border-pp-brand text-[15px] font-bold text-pp-brand hover:bg-pp-brand/5 transition duration-200 shadow-sm shadow-pp-brand/5"
             >
               Log In
             </Link>
             <Link 
               to="/contact" 
               onMouseEnter={() => setActiveDropdown(null)}
-              className="px-6 py-2.5 rounded-full bg-pp-black text-[15px] font-bold text-white hover:bg-pp-blue transition duration-200 shadow-sm"
+              className="px-6 py-2.5 rounded-full bg-pp-brand text-[15px] font-bold text-white hover:brightness-110 transition duration-200 shadow-md shadow-pp-brand/20"
             >
               Sign Up
             </Link>
@@ -168,10 +168,10 @@ export default function Navbar() {
                   <Link 
                     to="/Individual " 
                     onClick={closeMenu} 
-                    className="group inline-flex items-center space-x-2 text-xl font-black font-outfit text-pp-black hover:text-pp-blue transition-colors duration-200"
+                    className="group inline-flex items-center space-x-2 text-xl font-black font-outfit text-pp-black hover:text-pp-brand transition-colors duration-200"
                   >
                     <span>MoCard for Individuals</span>
-                    <ArrowRight className="w-5 h-5 text-pp-blue group-hover:translate-x-1.5 transition-transform duration-200" />
+                    <ArrowRight className="w-5 h-5 text-pp-brand group-hover:translate-x-1.5 transition-transform duration-200" />
                   </Link>
                   <p className="text-sm font-light text-slate-500 leading-relaxed font-sans">
                     Pay securely, link cards, transfer across regions, and manage everyday transactions in one place.
@@ -184,16 +184,16 @@ export default function Navbar() {
                     Individual   Solutions
                   </h4>
                   <div className="flex flex-col space-y-3 font-outfit text-[14.5px] pt-1">
-                    <Link to="/checkout" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
+                    <Link to="/checkout" onClick={closeMenu} className="text-slate-700 hover:text-pp-brand transition-colors font-medium">
                       MoCard Checkout
                     </Link>
-                    <Link to="/send-request" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
+                    <Link to="/send-request" onClick={closeMenu} className="text-slate-700 hover:text-pp-brand transition-colors font-medium">
                       Send & Request Money
                     </Link>
-                    <Link to="/security" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
+                    <Link to="/security" onClick={closeMenu} className="text-slate-700 hover:text-pp-brand transition-colors font-medium">
                       Security &amp; Buyer Protection
                     </Link>
-                    <Link to="/contact" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
+                    <Link to="/contact" onClick={closeMenu} className="text-slate-700 hover:text-pp-brand transition-colors font-medium">
                       Contact Support
                     </Link>
                   </div>
@@ -204,7 +204,7 @@ export default function Navbar() {
                   <Link 
                     to="/contact" 
                     onClick={closeMenu}
-                    className="flex items-center justify-between px-5 py-3 rounded-full bg-pp-black text-sm font-bold text-white hover:bg-pp-blue transition duration-200 group w-full"
+                    className="flex items-center justify-between px-5 py-3 rounded-full bg-pp-brand text-sm font-bold text-white hover:brightness-110 transition duration-200 group w-full shadow-sm shadow-pp-brand/20"
                   >
                     <span>Sign Up Now</span>
                     <ArrowRight className="w-4.5 h-4.5 group-hover:translate-x-1 transition-transform" />
@@ -212,7 +212,7 @@ export default function Navbar() {
                   <Link 
                     to="/pricing" 
                     onClick={closeMenu}
-                    className="flex items-center justify-between px-5 py-3 rounded-full bg-pp-black text-sm font-bold text-white hover:bg-pp-blue transition duration-200 group w-full"
+                    className="flex items-center justify-between px-5 py-3 rounded-full bg-pp-brand text-sm font-bold text-white hover:brightness-110 transition duration-200 group w-full shadow-sm shadow-pp-brand/20"
                   >
                     <span>Developer Pricing</span>
                     <ArrowRight className="w-4.5 h-4.5 group-hover:translate-x-1 transition-transform" />
@@ -228,10 +228,10 @@ export default function Navbar() {
                   <Link 
                     to="/solutions" 
                     onClick={closeMenu} 
-                    className="group inline-flex items-center space-x-2 text-xl font-black font-outfit text-pp-black hover:text-pp-blue transition-colors duration-200"
+                    className="group inline-flex items-center space-x-2 text-xl font-black font-outfit text-pp-black hover:text-pp-brand transition-colors duration-200"
                   >
                     <span>MoCard Open Connect</span>
-                    <ArrowRight className="w-5 h-5 text-pp-blue group-hover:translate-x-1.5 transition-transform duration-200" />
+                    <ArrowRight className="w-5 h-5 text-pp-brand group-hover:translate-x-1.5 transition-transform duration-200" />
                   </Link>
                   <p className="text-sm font-light text-slate-500 leading-relaxed font-sans">
                     The platform for all business. Accelerate your enterprise with next-generation integration rails.
@@ -244,10 +244,10 @@ export default function Navbar() {
                     Integration Suite
                   </h4>
                   <div className="flex flex-col space-y-3 font-outfit text-[14.5px] pt-1">
-                    <Link to="/online-checkouts" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
+                    <Link to="/online-checkouts" onClick={closeMenu} className="text-slate-700 hover:text-pp-brand transition-colors font-medium">
                       Online Checkouts
                     </Link>
-                    <Link to="/payment-links" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
+                    <Link to="/payment-links" onClick={closeMenu} className="text-slate-700 hover:text-pp-brand transition-colors font-medium">
                       Payment Links
                     </Link>
                   </div>
@@ -259,10 +259,10 @@ export default function Navbar() {
                     Platform Infrastructure
                   </h4>
                   <div className="flex flex-col space-y-3 font-outfit text-[14.5px] pt-1">
-                    <Link to="/dashboard" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
+                    <Link to="/dashboard" onClick={closeMenu} className="text-slate-700 hover:text-pp-brand transition-colors font-medium">
                       Integration Dashboard
                     </Link>
-                    <Link to="/reporting-tools" onClick={closeMenu} className="text-slate-700 hover:text-pp-blue transition-colors font-medium">
+                    <Link to="/reporting-tools" onClick={closeMenu} className="text-slate-700 hover:text-pp-brand transition-colors font-medium">
                       Business Reporting Tools
                     </Link>
                   </div>
@@ -273,7 +273,7 @@ export default function Navbar() {
                   <Link 
                     to="/sandbox" 
                     onClick={closeMenu}
-                    className="flex items-center justify-between px-5 py-3 rounded-full bg-pp-blue text-sm font-bold text-white hover:brightness-110 transition duration-200 group w-full shadow-sm"
+                    className="flex items-center justify-between px-5 py-3 rounded-full bg-pp-brand text-sm font-bold text-white hover:brightness-110 transition duration-200 group w-full shadow-sm shadow-pp-brand/20"
                   >
                     <span>Try Sandbox Demo</span>
                     <ArrowRight className="w-4.5 h-4.5 group-hover:translate-x-1 transition-transform" />
@@ -281,7 +281,7 @@ export default function Navbar() {
                   <Link 
                     to="/contact" 
                     onClick={closeMenu}
-                    className="flex items-center justify-between px-5 py-3 rounded-full bg-pp-black text-sm font-bold text-white hover:bg-pp-blue transition duration-200 group w-full"
+                    className="flex items-center justify-between px-5 py-3 rounded-full bg-pp-brand text-sm font-bold text-white hover:brightness-110 transition duration-200 group w-full shadow-sm shadow-pp-brand/20"
                   >
                     <span>Request API Access</span>
                     <ArrowRight className="w-4.5 h-4.5 group-hover:translate-x-1 transition-transform" />
@@ -289,7 +289,7 @@ export default function Navbar() {
                   <Link 
                     to="/solutions" 
                     onClick={closeMenu}
-                    className="block text-center text-xs font-bold text-slate-800 hover:text-pp-blue transition duration-200 mt-2 font-outfit uppercase tracking-wider"
+                    className="block text-center text-xs font-bold text-slate-800 hover:text-pp-brand transition duration-200 mt-2 font-outfit uppercase tracking-wider"
                   >
                     Connector Directory
                   </Link>
@@ -312,14 +312,14 @@ export default function Navbar() {
                 className="w-full flex justify-between items-center px-4 py-3 rounded-xl hover:bg-slate-50 text-pp-black font-bold transition duration-200"
               >
                 <span>Individual  </span>
-                <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${mobileSection === 'Individual  ' ? 'rotate-180 text-pp-blue' : 'text-slate-400'}`} />
+                <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${mobileSection === 'Individual  ' ? 'rotate-180 text-pp-brand' : 'text-slate-400'}`} />
               </button>
               {mobileSection === 'Individual  ' && (
                 <div className="pl-6 pr-4 py-2 space-y-3 bg-slate-50/50 rounded-xl mt-1">
-                  <Link to="/checkout" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">MoCard Checkout</Link>
-                  <Link to="/send-request" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Send & Request Money</Link>
-                  <Link to="/security" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Security &amp; Buyer Protection</Link>
-                  <Link to="/contact" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Contact Support</Link>
+                  <Link to="/checkout" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-brand font-medium py-1">MoCard Checkout</Link>
+                  <Link to="/send-request" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-brand font-medium py-1">Send & Request Money</Link>
+                  <Link to="/security" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-brand font-medium py-1">Security &amp; Buyer Protection</Link>
+                  <Link to="/contact" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-brand font-medium py-1">Contact Support</Link>
                 </div>
               )}
             </div>
@@ -331,15 +331,15 @@ export default function Navbar() {
                 className="w-full flex justify-between items-center px-4 py-3 rounded-xl hover:bg-slate-50 text-pp-black font-bold transition duration-200"
               >
                 <span>Business</span>
-                <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${mobileSection === 'business' ? 'rotate-180 text-pp-blue' : 'text-slate-400'}`} />
+                <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${mobileSection === 'business' ? 'rotate-180 text-pp-brand' : 'text-slate-400'}`} />
               </button>
               {mobileSection === 'business' && (
                 <div className="pl-6 pr-4 py-2 space-y-3 bg-slate-50/50 rounded-xl mt-1">
-                  <Link to="/online-checkouts" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Online Checkouts</Link>
-                  <Link to="/payment-links" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Payment Links</Link>
-                  <Link to="/dashboard" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Integration Dashboard</Link>
-                  <Link to="/reporting-tools" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-blue font-medium py-1">Business Reporting Tools</Link>
-                  <Link to="/sandbox" onClick={closeMenu} className="block text-sm text-pp-blue hover:text-pp-blue font-bold py-1">Try Sandbox Demo</Link>
+                  <Link to="/online-checkouts" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-brand font-medium py-1">Online Checkouts</Link>
+                  <Link to="/payment-links" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-brand font-medium py-1">Payment Links</Link>
+                  <Link to="/dashboard" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-brand font-medium py-1">Integration Dashboard</Link>
+                  <Link to="/reporting-tools" onClick={closeMenu} className="block text-sm text-slate-700 hover:text-pp-brand font-medium py-1">Business Reporting Tools</Link>
+                  <Link to="/sandbox" onClick={closeMenu} className="block text-sm text-pp-brand hover:text-pp-brand font-bold py-1">Try Sandbox Demo</Link>
                 </div>
               )}
             </div>
@@ -373,14 +373,14 @@ export default function Navbar() {
             <Link 
               to="/dashboard" 
               onClick={closeMenu}
-              className="w-full text-center py-3 rounded-full border border-pp-black text-sm font-bold text-pp-black hover:bg-slate-50 transition duration-200"
+              className="w-full text-center py-3 rounded-full border border-pp-brand text-sm font-bold text-pp-brand hover:bg-pp-brand/5 transition duration-200"
             >
               Log In
             </Link>
             <Link 
               to="/contact" 
               onClick={closeMenu}
-              className="w-full text-center py-3 rounded-full bg-pp-black text-sm font-bold text-white hover:bg-pp-blue transition duration-200"
+              className="w-full text-center py-3 rounded-full bg-pp-brand text-sm font-bold text-white hover:brightness-110 transition duration-200"
             >
               Sign Up
             </Link>

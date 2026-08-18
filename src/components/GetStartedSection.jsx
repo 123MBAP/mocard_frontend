@@ -46,14 +46,14 @@ export default function GetStartedSection() {
   ];
 
   return (
-    <section className="bg-slate-50 py-14 md:py-18 border-t border-slate-200 scroll-mt-24" id="get-started">
+    <section className="bg-white py-14 md:py-18 border-t border-slate-200 scroll-mt-24" id="get-started">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-2 group cursor-pointer">
-          <span className="text-xs md:text-sm font-bold tracking-widest text-slate-500 group-hover:text-pp-blue uppercase font-outfit transition-colors duration-300">
-            Account Opening Guide
-          </span>
+          <div className="inline-flex items-center space-x-2 bg-pp-blue/10 border border-pp-blue/20 rounded-full px-4 py-1.5 text-xs md:text-sm font-bold tracking-widest text-pp-blue uppercase font-outfit transition-colors duration-300">
+            <span>Account Opening Guide</span>
+          </div>
           <h2 className="text-3xl md:text-4xl font-black font-outfit text-pp-black tracking-tight leading-tight">
             How to Get Started with MoCard
           </h2>
@@ -127,7 +127,7 @@ export default function GetStartedSection() {
                 </div>
                 <button
                   onClick={handleCopyEmail}
-                  className="w-full sm:w-auto px-4.5 py-2 bg-pp-black hover:bg-neutral-850 text-white rounded-full text-xs font-bold font-outfit transition duration-200 shadow-sm shrink-0 cursor-pointer flex items-center justify-center"
+                  className="w-full sm:w-auto px-4.5 py-2 bg-pp-blue hover:bg-pp-blue/90 text-white rounded-full text-xs font-bold font-outfit transition duration-200 shadow-sm shrink-0 cursor-pointer flex items-center justify-center"
                 >
                   {copied ? <span>Copied!</span> : <span>Copy Email</span>}
                 </button>

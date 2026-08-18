@@ -64,14 +64,14 @@ export default function Clients() {
   ];
 
   return (
-    <section className="bg-pp-bg-warm py-14 md:py-18 border-y border-slate-200 scroll-mt-24" id="clients">
+    <section className="bg-white py-14 md:py-18 border-y border-slate-200 scroll-mt-24" id="clients">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-2 group cursor-pointer">
-          <span className="text-xs md:text-sm font-bold tracking-widest text-slate-500 group-hover:text-pp-blue uppercase font-outfit transition-colors duration-300">
-            Our Ecosystem
-          </span>
+          <div className="inline-flex items-center space-x-2 bg-pp-blue/10 border border-pp-blue/20 rounded-full px-4 py-1.5 text-xs md:text-sm font-bold tracking-widest text-pp-blue uppercase font-outfit transition-colors duration-300">
+            <span>Our Ecosystem</span>
+          </div>
           <h2 className="text-3xl md:text-4xl font-black font-outfit text-pp-black tracking-tight leading-tight">
             Trusted by Rwanda's Leading Brands
           </h2>
