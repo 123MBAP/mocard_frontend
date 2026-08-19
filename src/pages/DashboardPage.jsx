@@ -68,67 +68,8 @@ export default function DashboardPage() {
     <div className="bg-[#f8faf9] min-h-screen font-sans antialiased text-[#13201c]">
       <Navbar />
 
-      {/* Hero Banner */}
-      <section className="relative min-h-[75vh] flex items-center overflow-hidden bg-[#f7f6f2] pt-28 pb-16">
-        {/* Background decoration */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute -top-40 -right-40 w-[550px] h-[550px] rounded-full bg-[#1f6e5c]/5 blur-3xl" />
-          <div className="absolute top-40 -left-40 w-[420px] h-[420px] rounded-full bg-[#123c32]/5 blur-3xl" />
-          
-          {/* Restrained grid lines */}
-          <div
-            className="absolute inset-0 opacity-[0.03]"
-            style={{
-              backgroundImage:
-                'linear-gradient(#0f172a 1px, transparent 1px), linear-gradient(90deg, #0f172a 1px, transparent 1px)',
-              backgroundSize: '45px 45px',
-            }}
-          />
-        </div>
-
-        {/* Decorative geometry */}
-        <div className="absolute -right-40 top-24 h-[600px] w-[600px] rounded-full border border-[#123c32]/8 pointer-events-none" />
-        <div className="absolute -right-16 top-48 h-[420px] w-[420px] rounded-full border border-[#123c32]/8 pointer-events-none" />
-
-        <div className="relative z-10 mx-auto max-w-7xl px-5 w-full sm:px-8 lg:px-10">
-          <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-            <div className="mb-6 inline-flex items-center gap-2 border border-[#123c32]/10 bg-white/70 px-4 py-2 text-[10px] font-bold uppercase tracking-wider text-[#1f6e5c] backdrop-blur-md">
-              <span className="h-1.5 w-1.5 bg-[#1f6e5c]" />
-              Business Command Center
-            </div>
-
-            <h1 className="text-[3.2rem] sm:text-[4.2rem] lg:text-[5.8rem] font-black leading-[0.9] tracking-tight text-[#13201c] max-w-3xl">
-              Unified payments
-              <span className="block font-serif font-normal italic text-[#1f6e5c]">
-                command dashboard.
-              </span>
-            </h1>
-
-            <p className="mt-6 max-w-2xl text-base sm:text-lg text-black/50 leading-relaxed font-light">
-              Track revenue, monitor payment flows, and manage operations from one clear view. Everything your team needs to run faster, safer, and more efficiently in one place.
-            </p>
-
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row justify-center w-full sm:w-auto">
-              <a
-                href="#live-overview"
-                className="group inline-flex items-center justify-center gap-3 bg-[#123c32] px-7 py-4 text-sm font-bold text-white transition hover:bg-[#1f6e5c]"
-              >
-                Explore Dashboard
-                <ArrowRight size={17} className="transition-transform group-hover:translate-x-1" />
-              </a>
-              <Link
-                to="/contact"
-                className="group inline-flex items-center justify-center gap-3 border border-black/10 bg-white px-7 py-4 text-sm font-bold text-[#123c32] transition hover:border-[#123c32]/30"
-              >
-                Book a Demo
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Embedded Live Chart & Transaction Widget */}
-      <section id="live-overview" className="py-20 sm:py-28 bg-[#f3f0e8] border-t border-black/5">
+      <section id="live-overview" className="pt-28 pb-20 sm:pt-36 sm:pb-28 bg-[#f3f0e8] border-b border-black/5">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           
           {/* Header */}

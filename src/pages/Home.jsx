@@ -20,6 +20,22 @@ import {
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
+// Partner images
+import akageraImg from '../assets/partners/akageraaviation.png';
+import atlasImg from '../assets/partners/atlas.jpg';
+import byizaImg from '../assets/partners/byiza.jpg';
+import choosekigaliImg from '../assets/partners/choosekigali.png';
+import cleoImg from '../assets/partners/cleo.png';
+import dguideImg from '../assets/partners/dguide.png';
+import everImg from '../assets/partners/ever-retreat.jpg';
+import ferwabaImg from '../assets/partners/ferwaba.png';
+import galaxyImg from '../assets/partners/galaxy-hotel.png';
+import heavenImg from '../assets/partners/heaven.jpeg';
+import norrskenImg from '../assets/partners/norrsken.jpeg';
+import ecoImg from '../assets/partners/rwanda-eco-tours.png';
+import satguruImg from '../assets/partners/satguru.png';
+import victoriaImg from '../assets/partners/victoria.png';
+
 // Assets
 import heroBg from '../assets/hero_bg.png';
 import CrossBorderImage from '../assets/images/cross_border.webp';
@@ -60,7 +76,7 @@ function Hero() {
             Business integration infrastructure
           </div>
 
-          <h1 className="max-w-4xl text-[3.2rem] font-black leading-[0.9] tracking-tight text-[#13201c] sm:text-[4.2rem] lg:text-[5.8rem] text-center">
+          <h1 className="max-w-4xl text-[2.4rem] font-black leading-[1.0] tracking-tight text-[#13201c] sm:text-[3.4rem] lg:text-[4.5rem] text-center">
             Connect
             <span className="block font-serif font-normal italic text-[#1f6e5c] mt-2">
               Your Business.
@@ -68,7 +84,7 @@ function Hero() {
             <span className="block mt-2">With MoCard.</span>
           </h1>
 
-          <p className="mt-8 max-w-2xl text-base leading-7 text-black/50 sm:text-lg text-center font-light">
+          <p className="mt-6 max-w-2xl text-sm leading-6 text-black/50 sm:text-base text-center font-light">
             MoCard helps businesses connect their systems, applications,
             payment services and third-party platforms through secure,
             practical integrations.
@@ -163,6 +179,66 @@ function IntegrationNode({ icon, title, subtitle, active, dark }) {
   );
 }
 
+function PartnersMarquee() {
+  const partnerLogos = [
+    akageraImg,
+    atlasImg,
+    byizaImg,
+    choosekigaliImg,
+    cleoImg,
+    dguideImg,
+    everImg,
+    ferwabaImg,
+    galaxyImg,
+    heavenImg,
+    norrskenImg,
+    ecoImg,
+    satguruImg,
+    victoriaImg,
+  ];
+
+  return (
+    <section className="bg-white py-16 border-t border-b border-black/5 overflow-hidden">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 text-center">
+        <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#1f6e5c] mb-8 font-sans">
+          Trusted by businesses, hotels, and travel providers across Rwanda
+        </p>
+      </div>
+
+      <div className="relative flex overflow-hidden w-full py-6">
+        {/* Left & Right gradient blurs for premium transition */}
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
+
+        <div className="flex gap-24 animate-marquee whitespace-nowrap">
+          {partnerLogos.concat(partnerLogos).map((logo, idx) => (
+            <div
+              key={idx}
+              className="flex items-center justify-center h-24 w-56 shrink-0 transition duration-300 hover:scale-105"
+            >
+              <img
+                src={logo}
+                alt="Partner logo"
+                className="max-h-full max-w-full object-contain"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <style>{`
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+          animation: marquee 35s linear infinite;
+        }
+      `}</style>
+    </section>
+  );
+}
+
 function IntroSection() {
   return (
     <section className="bg-white py-20 sm:py-28">
@@ -172,7 +248,7 @@ function IntroSection() {
             <span className="text-xs font-bold uppercase tracking-wider text-[#1f6e5c]">
               The connectivity layer
             </span>
-            <h2 className="mt-3 max-w-4xl text-4xl font-black leading-[0.95] tracking-tight text-[#13201c] sm:text-5xl lg:text-6xl">
+            <h2 className="mt-3 max-w-4xl text-2xl font-black leading-[1.0] tracking-tight text-[#13201c] sm:text-3xl lg:text-4xl">
               Your business should not have to speak the language of every
               system.
             </h2>
@@ -258,9 +334,9 @@ function WhoUsesMocard() {
             <span className="text-xs font-bold uppercase tracking-wider text-[#1f6e5c]">
               What can you connect?
             </span>
-            <h2 className="mt-3 text-4xl font-black leading-[0.95] tracking-tight text-[#13201c] sm:text-5xl lg:text-6xl">
+            <h2 className="mt-3 text-2xl font-black leading-[1.0] tracking-tight text-[#13201c] sm:text-3xl lg:text-4xl">
               From one system
-              <span className="block font-serif font-normal italic text-[#1f6e5c]">
+              <span className="block font-serif font-normal italic text-[#1f6e5c] mt-1">
                 to an entire ecosystem.
               </span>
             </h2>
@@ -335,9 +411,9 @@ function IntegrationArchitecture() {
             <span className="text-xs font-bold uppercase tracking-wider text-[#1f6e5c]">
               How it fits
             </span>
-            <h2 className="mt-4 text-4xl font-black leading-[0.95] tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
+            <h2 className="mt-4 text-2xl font-black leading-[1.0] tracking-tight text-slate-950 sm:text-3xl lg:text-4xl">
               Your stack.
-              <span className="block font-serif font-normal italic text-[#1f6e5c]">
+              <span className="block font-serif font-normal italic text-[#1f6e5c] mt-1">
                 Connected.
               </span>
             </h2>
@@ -634,9 +710,9 @@ function ActionBanner() {
                 <Send size={13} />
                 Start a conversation
               </span>
-              <h2 className="mt-4 max-w-3xl text-4xl font-black leading-[0.92] tracking-tight sm:text-5xl lg:text-6xl">
+              <h2 className="mt-4 max-w-3xl text-2xl font-black leading-[1.0] tracking-tight sm:text-3xl lg:text-4xl">
                 Have a system
-                <span className="block font-serif font-normal italic text-[#e4d09b]">
+                <span className="block font-serif font-normal italic text-[#e4d09b] mt-1">
                   you need connected?
                 </span>
               </h2>
@@ -749,6 +825,7 @@ export default function Home() {
       <WhoUsesMocard />
       <IntegrationArchitecture />
       <GetStartedSection />
+      <PartnersMarquee />
       <ActionBanner />
       <FooterBridge />
       <Footer />

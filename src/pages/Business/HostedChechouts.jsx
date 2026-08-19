@@ -103,257 +103,72 @@ export default function HostedChechouts() {
     <div className="min-h-screen bg-[#f8faf9] text-slate-950 font-sans overflow-x-hidden antialiased">
       <Navbar />
 
-      {/* =========================================================
-          HERO
-      ========================================================= */}
+      {/* HERO */}
       <section className="relative overflow-hidden bg-[#f8faf9] pt-28 pb-16 lg:pb-20">
-        {/* Decorative background */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute -top-40 -right-40 h-[520px] w-[520px] rounded-full bg-[#1f6e5c]/10 blur-3xl" />
-          <div className="absolute top-1/3 -left-48 h-[420px] w-[420px] rounded-full bg-emerald-100/40 blur-3xl" />
+        <div className="relative z-10 max-w-5xl mx-auto px-5 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center flex flex-col items-center justify-center w-full">
+            
+            <div className="inline-flex items-center gap-2 border border-[#1f6e5c]/15 bg-white/80 backdrop-blur px-3.5 py-2 shadow-sm mb-5">
+              <span className="flex h-6 w-6 items-center justify-center bg-[#1f6e5c]/10">
+                <Sparkles className="w-3.5 h-3.5 text-[#1f6e5c]" />
+              </span>
 
-          <div
-            className="absolute inset-0 opacity-[0.035]"
-            style={{
-              backgroundImage:
-                'linear-gradient(#1f6e5c 1px, transparent 1px), linear-gradient(90deg, #1f6e5c 1px, transparent 1px)',
-              backgroundSize: '48px 48px',
-            }}
-          />
-        </div>
+              <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#1f6e5c]">
+                Hosted Checkout
+              </span>
+            </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            <h1 className="text-3xl sm:text-4xl lg:text-[45px] font-black tracking-tight leading-[1.0] text-slate-950 text-center">
+              Checkout that feels
+              <span className="block text-[#1f6e5c] mt-2">
+                built for your brand.
+              </span>
+            </h1>
 
-            {/* Hero copy */}
-            <div className="lg:col-span-6 text-left">
-              <div className="inline-flex items-center gap-2 border border-[#1f6e5c]/15 bg-white/80 backdrop-blur px-3.5 py-2 shadow-sm">
-                <span className="flex h-6 w-6 items-center justify-center bg-[#1f6e5c]/10">
-                  <Sparkles className="w-3.5 h-3.5 text-[#1f6e5c]" />
-                </span>
+            <p className="mt-6 max-w-2xl text-sm sm:text-base text-slate-655 leading-relaxed text-center font-light">
+              Give your customers a professional, secure payment experience
+              without building the entire payment infrastructure yourself.
+              Connect MoCard to your website, online store, or custom
+              application and start accepting payments through a hosted
+              checkout.
+            </p>
 
-                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#1f6e5c]">
-                  Hosted Checkout
-                </span>
+            <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center w-full sm:w-auto">
+              <Link
+                to="/contact"
+                className="group inline-flex items-center justify-center gap-2 bg-[#1f6e5c] px-7 py-3.5 text-sm font-bold text-white shadow-md transition-all duration-300 hover:bg-[#135244]"
+              >
+                Talk to our team
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+
+              <a
+                href="#platforms"
+                className="inline-flex items-center justify-center gap-2 border border-slate-200 bg-white px-7 py-3.5 text-sm font-bold text-slate-800 shadow-sm transition hover:border-[#1f6e5c]/30 hover:bg-slate-50"
+              >
+                Explore integrations
+                <ChevronRight className="w-4 h-4" />
+              </a>
+            </div>
+
+            {/* Trust indicators */}
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs text-slate-500">
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-[#1f6e5c]" />
+                Secure checkout
               </div>
 
-              <h1 className="mt-7 text-[44px] sm:text-5xl lg:text-[64px] font-black tracking-tight leading-[0.98] text-slate-950">
-                Checkout that feels
-                <span className="block text-[#1f6e5c]">
-                  built for your brand.
-                </span>
-              </h1>
-
-              <p className="mt-7 max-w-xl text-sm sm:text-base lg:text-lg leading-7 text-slate-655 font-light">
-                Give your customers a professional, secure payment experience
-                without building the entire payment infrastructure yourself.
-                Connect MoCard to your website, online store, or custom
-                application and start accepting payments through a hosted
-                checkout.
-              </p>
-
-              <div className="mt-8 flex flex-col sm:flex-row gap-3">
-                <Link
-                  to="/contact"
-                  className="group inline-flex items-center justify-center gap-2 bg-[#1f6e5c] px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#1f6e5c]/20 transition-all duration-300 hover:bg-[#135244]"
-                >
-                  Talk to our team
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-
-                <a
-                  href="#platforms"
-                  className="inline-flex items-center justify-center gap-2 border border-slate-200 bg-white px-7 py-3.5 text-sm font-bold text-slate-800 shadow-sm transition hover:border-[#1f6e5c]/30 hover:bg-slate-50"
-                >
-                  Explore integrations
-                  <ChevronRight className="w-4 h-4" />
-                </a>
+              <div className="flex items-center gap-2">
+                <MonitorSmartphone className="w-4 h-4 text-[#1f6e5c]" />
+                Mobile ready
               </div>
 
-              {/* Trust indicators */}
-              <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs text-slate-500">
-                <div className="flex items-center gap-2">
-                  <ShieldCheck className="w-4 h-4 text-[#1f6e5c]" />
-                  Secure checkout
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <MonitorSmartphone className="w-4 h-4 text-[#1f6e5c]" />
-                  Mobile ready
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <Code2 className="w-4 h-4 text-[#1f6e5c]" />
-                  API ready
-                </div>
+              <div className="flex items-center gap-2">
+                <Code2 className="w-4 h-4 text-[#1f6e5c]" />
+                API ready
               </div>
             </div>
 
-            {/* Checkout visual */}
-            <div className="lg:col-span-6 relative">
-              <div className="relative mx-auto max-w-[540px]">
-
-                {/* Glow */}
-                <div className="absolute inset-8 bg-[#1f6e5c]/20 blur-3xl pointer-events-none" />
-
-                {/* Main browser frame */}
-                <div className="relative border border-white/80 bg-white p-2 shadow-[0_30px_90px_rgba(15,23,42,0.15)]">
-                  <div className="overflow-hidden border border-slate-100 bg-[#f8faf9]">
-
-                    {/* Browser top */}
-                    <div className="flex items-center justify-between border-b border-slate-100 bg-white px-5 py-3">
-                      <div className="flex gap-1.5">
-                        <span className="h-2.5 w-2.5 bg-slate-200" />
-                        <span className="h-2.5 w-2.5 bg-slate-200" />
-                        <span className="h-2.5 w-2.5 bg-slate-200" />
-                      </div>
-
-                      <div className="bg-slate-50 px-4 py-1 text-[8px] font-medium text-slate-400">
-                        checkout.mocard.rw
-                      </div>
-
-                      <LockKeyhole className="w-3.5 h-3.5 text-[#1f6e5c]" />
-                    </div>
-
-                    {/* Checkout content */}
-                    <div className="grid md:grid-cols-2">
-
-                      {/* Order summary */}
-                      <div className="bg-[#1f6e5c] p-7 sm:p-8 text-white text-left">
-                        <div className="flex items-center gap-2">
-                          <div className="flex h-8 w-8 items-center justify-center bg-white/15">
-                            <CreditCard className="w-4 h-4" />
-                          </div>
-
-                          <span className="text-sm font-black">
-                            MoCard
-                          </span>
-                        </div>
-
-                        <div className="mt-12">
-                          <p className="text-[10px] uppercase tracking-wider text-white/60 font-bold">
-                            Order summary
-                          </p>
-
-                          <h3 className="mt-2 text-xl font-bold">
-                            Premium Package
-                          </h3>
-
-                          <p className="mt-2 text-xs leading-5 text-white/65">
-                            Secure online purchase through hosted checkout.
-                          </p>
-
-                          <div className="mt-8 border-t border-white/15 pt-5">
-                            <div className="flex items-center justify-between">
-                              <span className="text-xs text-white/60">
-                                Total
-                              </span>
-
-                              <span className="text-2xl font-black">
-                                45,000
-                              </span>
-                            </div>
-
-                            <span className="mt-1 block text-right text-[9px] text-white/50">
-                              RWF
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Payment form */}
-                      <div className="bg-white p-7 sm:p-8 text-left">
-                        <div className="flex items-center justify-between">
-                          <div>
-                            <p className="text-[9px] uppercase tracking-wider text-slate-400 font-bold">
-                              Payment
-                            </p>
-                            <h3 className="mt-1 text-lg font-black text-slate-900">
-                              Complete purchase
-                            </h3>
-                          </div>
-
-                          <div className="flex h-8 w-8 items-center justify-center bg-emerald-50">
-                            <LockKeyhole className="w-3.5 h-3.5 text-[#1f6e5c]" />
-                          </div>
-                        </div>
-
-                        <div className="mt-6 space-y-3">
-                          <div>
-                            <label className="text-[9px] font-bold text-slate-500">
-                              Customer email
-                            </label>
-
-                            <div className="mt-1.5 h-9 border border-slate-200 bg-slate-50" />
-                          </div>
-
-                          <div>
-                            <label className="text-[9px] font-bold text-slate-500">
-                              Payment method
-                            </label>
-
-                            <div className="mt-1.5 grid grid-cols-2 gap-2">
-                              <div className="h-9 border-2 border-[#1f6e5c]/20 bg-[#1f6e5c]/5" />
-                              <div className="h-9 border border-slate-200 bg-slate-50" />
-                            </div>
-                          </div>
-
-                          <div className="pt-2">
-                            <div className="flex h-10 items-center justify-center bg-[#1f6e5c] text-[11px] font-bold text-white">
-                              Pay 45,000 RWF
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className="mt-5 flex items-center justify-center gap-1.5 text-[8px] text-slate-400">
-                          <ShieldCheck className="w-3 h-3 text-[#1f6e5c]" />
-                          Protected checkout
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Floating integration card */}
-                <div className="absolute -bottom-7 -left-5 sm:-left-10 border border-white bg-white p-4 shadow-xl text-left">
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center bg-[#1f6e5c]/10">
-                      <PlugZap className="w-5 h-5 text-[#1f6e5c]" />
-                    </div>
-
-                    <div>
-                      <p className="text-[9px] font-bold uppercase tracking-wider text-slate-400">
-                        Integration
-                      </p>
-                      <p className="mt-0.5 text-xs font-black text-slate-900">
-                        Ready to connect
-                      </p>
-                    </div>
-
-                    <Check className="ml-2 w-4 h-4 text-[#1f6e5c]" />
-                  </div>
-                </div>
-
-                {/* Floating API card */}
-                <div className="absolute -right-4 -top-5 hidden sm:block border border-white bg-slate-950 p-4 text-white shadow-xl text-left">
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-9 w-9 items-center justify-center bg-white/10">
-                      <Code2 className="w-4 h-4 text-emerald-300" />
-                    </div>
-
-                    <div>
-                      <p className="text-[8px] uppercase tracking-wider text-white/40">
-                        API
-                      </p>
-                      <p className="mt-0.5 text-[11px] font-bold">
-                        Simple integration
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
           </div>
         </div>
       </section>

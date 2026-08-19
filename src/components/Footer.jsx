@@ -14,10 +14,10 @@ export default function Footer() {
         <div className="grid lg:grid-cols-12 gap-12 pb-12 border-b border-slate-200">
           
           {/* Brand Info */}
-          <div className="lg:col-span-4 space-y-5">
+          <div className="lg:col-span-4 space-y-5 text-left">
             <Link to="/" className="flex items-center space-x-2 group">
               <img src={logo} alt="MoCard" className="h-6 md:h-7 object-contain group-hover:scale-[1.01] transition-transform duration-200" />
-              <span className="text-lg font-bold font-outfit text-pp-black group-hover:text-pp-blue transition-colors duration-300 ml-1">
+              <span className="text-lg font-bold font-outfit text-pp-black group-hover:text-pp-brand transition-colors duration-300 ml-1">
                 MoCard
               </span>
             </Link>
@@ -25,53 +25,50 @@ export default function Footer() {
               Mocard is an API integrator providing software solutions that help businesses connect international credit networks with local mobile wallets and banks. Settle instantly, scale globally.
             </p>
             <div className="flex items-center space-x-3 text-slate-650 font-mono text-sm group/mail">
-              <Mail className="w-4 h-4 text-slate-400 group-hover/mail:text-pp-blue transition-colors duration-300" />
-              <a href="mailto:business@mocard.rw" className="hover:text-pp-black transition duration-200">
+              <Mail className="w-4 h-4 text-slate-400 group-hover/mail:text-pp-brand transition-colors duration-300" />
+              <a href="mailto:business@mocard.rw" className="hover:text-pp-brand transition duration-200">
                 business@mocard.rw
               </a>
             </div>
           </div>
 
           {/* Navigation Columns */}
-          <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-8 font-sans">
+          <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-8 font-sans text-left">
             
-            {/* Column 1: Products */}
+            {/* Column 1: Individual */}
             <div className="space-y-4">
               <h4 className="text-xs font-bold uppercase tracking-wider text-pp-black font-outfit">
-                Technology
+                Individual Solutions
               </h4>
               <ul className="space-y-2.5 text-sm">
-                <li><Link to="/features" className="hover:text-pp-blue transition-colors">API Engine</Link></li>
-                <li><Link to="/features" className="hover:text-pp-blue transition-colors">Webhooks</Link></li>
-                <li><Link to="/solutions" className="hover:text-pp-blue transition-colors">Corridors</Link></li>
-                <li><Link to="/developers" className="hover:text-pp-blue transition-colors">Developer Portal</Link></li>
+                <li><Link to="/individual/shop-pay" className="hover:text-pp-brand transition-colors font-medium">Shop &amp; Pay Online</Link></li>
+                <li><Link to="/individual/holidays-flights" className="hover:text-pp-brand transition-colors font-medium">Holidays &amp; Flights</Link></li>
+                <li><Link to="/contact" className="hover:text-pp-brand transition-colors font-medium">Contact Support</Link></li>
               </ul>
             </div>
 
-            {/* Column 2: Company */}
+            {/* Column 2: Business */}
             <div className="space-y-4">
               <h4 className="text-xs font-bold uppercase tracking-wider text-pp-black font-outfit">
-                Company
+                Business Solutions
               </h4>
               <ul className="space-y-2.5 text-sm">
-                <li><Link to="/company" className="hover:text-pp-blue transition-colors">About Us</Link></li>
-                <li><Link to="/company" className="hover:text-pp-blue transition-colors">Offices</Link></li>
-                <li><Link to="/company" className="hover:text-pp-blue transition-colors">Careers</Link></li>
-                <li><Link to="/contact" className="hover:text-pp-blue transition-colors">Contact Sales</Link></li>
+                <li><Link to="/business/payment-links" className="hover:text-pp-brand transition-colors font-medium">Payment Links</Link></li>
+                <li><Link to="/business/hosted-checkouts" className="hover:text-pp-brand transition-colors font-medium">Hosted Checkouts</Link></li>
+                <li><Link to="/business/donations" className="hover:text-pp-brand transition-colors font-medium">Donations &amp; Payments</Link></li>
+                <li><Link to="/dashboard" className="hover:text-pp-brand transition-colors font-medium">Integration Dashboard</Link></li>
               </ul>
             </div>
 
-            {/* Column 3: Resources */}
+            {/* Column 3: Platform Resources */}
             <div className="space-y-4">
               <h4 className="text-xs font-bold uppercase tracking-wider text-pp-black font-outfit">
-                Resources
+                Developers &amp; Tools
               </h4>
               <ul className="space-y-2.5 text-sm">
-                <li><Link to="/pricing" className="hover:text-pp-blue transition-colors">Pricing Calculator</Link></li>
-                <li><Link to="/reporting-tools" className="hover:text-pp-blue transition-colors">Business Reporting Tools</Link></li>
-                <li><Link to="/sandbox" className="hover:text-pp-blue transition-colors">Interactive Sandbox</Link></li>
-                <li><Link to="/contact" className="hover:text-pp-blue transition-colors">Support Center</Link></li>
-                <li><Link to="/sandbox" className="hover:text-pp-blue transition-colors">Demo Merchant Console</Link></li>
+                <li><Link to="/developers" className="hover:text-pp-brand transition-colors font-medium">Developer Documentation</Link></li>
+                <li><Link to="/reporting-tools" className="hover:text-pp-brand transition-colors font-medium">Reporting &amp; Ledger Tools</Link></li>
+                <li><Link to="/contact" className="hover:text-pp-brand transition-colors font-medium">Request API Access</Link></li>
               </ul>
             </div>
 
@@ -85,11 +82,11 @@ export default function Footer() {
           </div>
           
           <div className="flex flex-wrap items-center gap-4 text-xs text-slate-500">
-            <span className="flex items-center space-x-1.5 bg-white border border-slate-200 px-3 py-1 rounded-full shadow-sm">
+            <span className="flex items-center space-x-1.5 bg-white border border-slate-200 px-3 py-1 shadow-sm">
               <MapPin className="w-3.5 h-3.5 text-slate-400" />
               <span>HQ: Kigali Heights, Rwanda</span>
             </span>
-            <span className="flex items-center space-x-1.5 bg-white border border-slate-200 px-3 py-1 rounded-full shadow-sm">
+            <span className="flex items-center space-x-1.5 bg-white border border-slate-200 px-3 py-1 shadow-sm">
               <Globe className="w-3.5 h-3.5 text-slate-400" />
               <span>Footprint: Global Rails</span>
             </span>

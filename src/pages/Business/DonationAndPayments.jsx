@@ -52,227 +52,59 @@ export default function DonationAndPayments() {
     <div className="min-h-screen bg-[#f8faf9] text-slate-950 font-sans overflow-x-hidden antialiased">
       <Navbar />
 
-      {/* =========================================================
-          HERO
-      ========================================================= */}
+      {/* HERO */}
       <section className="relative overflow-hidden pt-28 pb-16 lg:pb-20">
-        {/* Background decoration */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute -top-40 -right-40 w-[550px] h-[550px] rounded-full bg-[#1f6e5c]/10 blur-3xl" />
-          <div className="absolute top-40 -left-40 w-[420px] h-[420px] rounded-full bg-emerald-100/50 blur-3xl" />
-
-          <div
-            className="absolute inset-0 opacity-[0.035]"
-            style={{
-              backgroundImage:
-                'linear-gradient(#0f172a 1px, transparent 1px), linear-gradient(90deg, #0f172a 1px, transparent 1px)',
-              backgroundSize: '45px 45px',
-            }}
-          />
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-
-            {/* LEFT */}
-            <div className="lg:col-span-6 text-left">
-              <div className="inline-flex items-center gap-2 px-3.5 py-2 border border-[#1f6e5c]/15 text-[#1f6e5c] text-[11px] font-bold uppercase tracking-wider mb-6 bg-[#1f6e5c]/5">
-                <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500/20" />
-                Donations &amp; Giving
-              </div>
-
-              <h1 className="text-4xl sm:text-5xl lg:text-[64px] font-black tracking-tight leading-[0.98]">
-                Make giving
-                <span className="block text-[#1f6e5c]">
-                  simple &amp; accessible.
-                </span>
-              </h1>
-
-              <p className="mt-7 max-w-xl text-base sm:text-lg text-slate-600 leading-relaxed">
-                Empower NGOs, charities, foundations, and community organizations with dedicated donation pages and secure online payment solutions.
-              </p>
-
-              <div className="mt-8 flex flex-col sm:flex-row gap-3">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-slate-950 text-white text-sm font-bold hover:bg-[#1f6e5c] transition-all duration-300 shadow-lg shadow-slate-950/10"
-                >
-                  Get API Access
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-
-                <a
-                  href="#how-it-works"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white border border-slate-200 text-slate-700 text-sm font-bold hover:border-[#1f6e5c]/40 hover:text-[#1f6e5c] transition-all"
-                >
-                  Explore Features
-                </a>
-              </div>
-
-              {/* Trust */}
-              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs text-slate-500">
-                <div className="flex items-center gap-2">
-                  <ShieldCheck className="w-4 h-4 text-[#1f6e5c]" />
-                  Secure transactions
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <Zap className="w-4 h-4 text-[#1f6e5c]" />
-                  Instant payouts
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <MonitorSmartphone className="w-4 h-4 text-[#1f6e5c]" />
-                  Responsive donor page
-                </div>
-              </div>
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center flex flex-col items-center justify-center w-full">
+            
+            <div className="inline-flex items-center gap-2 px-3.5 py-2 border border-[#1f6e5c]/15 text-[#1f6e5c] text-[10px] font-bold uppercase tracking-wider mb-6 bg-[#1f6e5c]/5">
+              <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500/20" />
+              Donations &amp; Giving
             </div>
 
-            {/* RIGHT VISUAL */}
-            <div className="lg:col-span-6 relative">
-              <div className="relative max-w-[560px] mx-auto">
+            <h1 className="text-3xl sm:text-4xl lg:text-[45px] font-black tracking-tight leading-[1.0] text-center">
+              Make giving
+              <span className="block text-[#1f6e5c] mt-2">
+                simple &amp; accessible.
+              </span>
+            </h1>
 
-                {/* Glow */}
-                <div className="absolute inset-10 bg-[#1f6e5c]/20 blur-3xl pointer-events-none" />
+            <p className="mt-6 max-w-2xl text-sm sm:text-base text-slate-600 leading-relaxed text-center font-light">
+              Empower NGOs, charities, foundations, and community organizations with dedicated donation pages and secure online payment solutions.
+            </p>
 
-                {/* Main browser frame */}
-                <div className="relative border border-white/85 bg-white p-2 shadow-[0_30px_90px_rgba(15,23,42,0.15)]">
-                  <div className="overflow-hidden border border-slate-100 bg-[#f8faf9]">
+            <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center w-full sm:w-auto">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-slate-950 text-white text-sm font-bold hover:bg-[#1f6e5c] transition-all duration-300 shadow-md shadow-slate-950/5"
+              >
+                Get API Access
+                <ArrowRight className="w-4 h-4" />
+              </Link>
 
-                    {/* Browser top */}
-                    <div className="flex items-center justify-between border-b border-slate-100 bg-white px-5 py-3">
-                      <div className="flex gap-1.5">
-                        <span className="h-2.5 w-2.5 bg-slate-200" />
-                        <span className="h-2.5 w-2.5 bg-slate-200" />
-                        <span className="h-2.5 w-2.5 bg-slate-200" />
-                      </div>
+              <a
+                href="#how-it-works"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white border border-slate-200 text-slate-700 text-sm font-bold hover:border-[#1f6e5c]/40 hover:text-[#1f6e5c] transition-all"
+              >
+                Explore Features
+              </a>
+            </div>
 
-                      <div className="bg-slate-50 px-4 py-1 text-[8px] font-medium text-slate-450">
-                        donate.mocard.rw/hope-foundation
-                      </div>
+            {/* Trust */}
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs text-slate-500">
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-[#1f6e5c]" />
+                Secure transactions
+              </div>
 
-                      <LockKeyhole className="w-3.5 h-3.5 text-[#1f6e5c]" />
-                    </div>
+              <div className="flex items-center gap-2">
+                <Zap className="w-4 h-4 text-[#1f6e5c]" />
+                Instant payouts
+              </div>
 
-                    {/* Checkout content */}
-                    <div className="grid md:grid-cols-2">
-
-                      {/* Order summary */}
-                      <div className="bg-[#1f6e5c] p-7 sm:p-8 text-white text-left">
-                        <div className="flex items-center gap-2">
-                          <div className="flex h-8 w-8 items-center justify-center bg-white/15">
-                            <Heart className="w-4 h-4 text-rose-350 fill-rose-350" />
-                          </div>
-
-                          <span className="text-sm font-black">
-                            Donate
-                          </span>
-                        </div>
-
-                        <div className="mt-12 text-left">
-                          <p className="text-[10px] uppercase tracking-wider text-white/60 font-bold">
-                            Partner Campaign
-                          </p>
-
-                          <h3 className="mt-2 text-xl font-bold">
-                            Hope Foundation
-                          </h3>
-
-                          <p className="mt-2 text-xs leading-5 text-white/65">
-                            Clean Water Project Initiative.
-                          </p>
-
-                          <div className="mt-8 border-t border-white/15 pt-5">
-                            <div className="flex items-center justify-between">
-                              <span className="text-xs text-white/60">
-                                Donation
-                              </span>
-
-                              <span className="text-2xl font-black">
-                                50,000
-                              </span>
-                            </div>
-
-                            <span className="mt-1 block text-right text-[9px] text-white/50">
-                              RWF
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Payment form */}
-                      <div className="bg-white p-7 sm:p-8 text-left">
-                        <div className="flex items-center justify-between">
-                          <div>
-                            <p className="text-[9px] uppercase tracking-wider text-slate-400 font-bold">
-                              Contribution
-                            </p>
-                            <h3 className="mt-1 text-lg font-black text-slate-900">
-                              Choose amount
-                            </h3>
-                          </div>
-                        </div>
-
-                        <div className="mt-6 space-y-3">
-                          <div className="grid grid-cols-3 gap-1.5">
-                            <div className="h-8 border border-slate-200 bg-slate-50 flex items-center justify-center text-[10px] font-bold text-slate-650">
-                              10K
-                            </div>
-                            <div className="h-8 border border-slate-200 bg-slate-50 flex items-center justify-center text-[10px] font-bold text-slate-650">
-                              25K
-                            </div>
-                            <div className="h-8 border-2 border-[#1f6e5c]/20 bg-[#1f6e5c]/5 flex items-center justify-center text-[10px] font-bold text-[#1f6e5c]">
-                              50K
-                            </div>
-                          </div>
-
-                          <div>
-                            <label className="text-[9px] font-bold text-slate-500">
-                              Donor email
-                            </label>
-                            <div className="mt-1 h-9 border border-slate-200 bg-slate-50" />
-                          </div>
-
-                          <div className="pt-2">
-                            <div className="flex h-10 items-center justify-center bg-[#1f6e5c] text-[11px] font-bold text-white">
-                              Donate 50,000 RWF
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className="mt-4 flex items-center justify-center gap-1.5 text-[8px] text-slate-400">
-                          <ShieldCheck className="w-3 h-3 text-[#1f6e5c]" />
-                          Tax-deductible receipt ready
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Floating donation received */}
-                <div className="absolute -left-5 sm:-left-10 bottom-10 bg-white border border-slate-200 shadow-xl p-4 flex items-center gap-3 animate-[float_5s_ease-in-out_infinite]">
-                  <div className="w-9 h-9 bg-rose-50 flex items-center justify-center">
-                    <Heart className="w-5 h-5 text-rose-500 fill-rose-500" />
-                  </div>
-
-                  <div className="text-left">
-                    <p className="text-[9px] uppercase tracking-wider font-bold text-slate-400">
-                      Gift received
-                    </p>
-                    <p className="text-sm font-black text-slate-900">
-                      +50,000 RWF
-                    </p>
-                  </div>
-                </div>
-
-                {/* Floating badge */}
-                <div className="absolute -right-4 sm:-right-8 top-16 bg-slate-950 text-white shadow-xl p-4 w-28 text-left">
-                  <Gift className="w-7 h-7 mb-2 text-emerald-350" />
-                  <p className="text-[9px] font-bold leading-tight">
-                    100% Secure Charity Processing
-                  </p>
-                </div>
-
+              <div className="flex items-center gap-2">
+                <MonitorSmartphone className="w-4 h-4 text-[#1f6e5c]" />
+                Responsive donor page
               </div>
             </div>
 

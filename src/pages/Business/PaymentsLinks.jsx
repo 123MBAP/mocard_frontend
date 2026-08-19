@@ -34,188 +34,61 @@ export default function PaymentsLinks() {
       <Navbar />
 
       {/* HERO */}
-      <section className="relative overflow-hidden pt-24 pb-16 lg:pb-20">
-        {/* Background decoration - reduced */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute -top-40 -right-40 w-[550px] h-[550px] bg-[#1b6b58]/10 blur-3xl" />
-          <div className="absolute top-40 -left-40 w-[420px] h-[420px] bg-emerald-100/50 blur-3xl" />
-
-          <div
-            className="absolute inset-0 opacity-[0.025]"
-            style={{
-              backgroundImage:
-                'linear-gradient(#0f172a 1px, transparent 1px), linear-gradient(90deg, #0f172a 1px, transparent 1px)',
-              backgroundSize: '45px 45px',
-            }}
-          />
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-
-            {/* LEFT */}
-            <div className="lg:col-span-6 text-left">
-              <div className="inline-flex items-center gap-2 px-3.5 py-2 text-[#1b6b58] text-[11px] font-bold uppercase tracking-wider mb-5">
-              
-                Payment Links
-              </div>
-
-              <h1 className="text-4xl sm:text-5xl lg:text-[64px] xl:text-[70px] font-black tracking-tight leading-[0.98]">
-                Get paid with
-                <span className="block text-[#1b6b58]">
-                  one simple link.
-                </span>
-              </h1>
-
-              <p className="mt-6 max-w-xl text-base sm:text-lg text-slate-600 leading-relaxed">
-                Turn any product, service, invoice, or payment request into a
-                beautiful checkout experience your customers can access from
-                anywhere.
-              </p>
-
-              <div className="mt-7 flex flex-col sm:flex-row gap-3">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#1b3b33] text-white text-sm font-bold hover:bg-[#1b6b58] transition-all duration-300 shadow-lg shadow-slate-950/10"
-                >
-                  Start accepting payments
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-
-                <a
-                  href="#how-it-works"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white border border-slate-200 text-slate-700 text-sm font-bold hover:border-[#1b6b58]/40 hover:text-[#1b6b58] transition-all"
-                >
-                  See how it works
-                </a>
-              </div>
-
-              {/* Trust */}
-              <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs text-slate-500">
-                <div className="flex items-center gap-2">
-                  <ShieldCheck className="w-4 h-4 text-[#1b6b58]" />
-                  Secure checkout
-                </div>
-                <div className="flex items-center gap-2">
-                  <Zap className="w-4 h-4 text-[#1b6b58]" />
-                  Fast setup
-                </div>
-                <div className="flex items-center gap-2">
-                  <Smartphone className="w-4 h-4 text-[#1b6b58]" />
-                  Mobile friendly
-                </div>
-              </div>
+      <section className="relative overflow-hidden pt-28 pb-16 lg:pb-20">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center flex flex-col items-center justify-center w-full">
+            
+            <div className="inline-flex items-center gap-2 border border-[#1b6b58]/10 bg-white/70 px-4 py-2 text-[#1b6b58] text-[10px] font-bold uppercase tracking-wider mb-5">
+              <span className="h-1.5 w-1.5 bg-[#1b6b58]" />
+              Payment Links
             </div>
 
-            {/* RIGHT VISUAL */}
-            <div className="lg:col-span-6 relative">
-              <div className="relative max-w-[560px] mx-auto">
+            <h1 className="text-3xl sm:text-4xl lg:text-[45px] font-black tracking-tight leading-[1.0] text-center">
+              Get paid with
+              <span className="block text-[#1b6b58] mt-2">
+                one simple link.
+              </span>
+            </h1>
 
-                {/* Glow - reduced */}
-                <div className="absolute inset-10 bg-[#1b6b58]/20 blur-3xl pointer-events-none" />
+            <p className="mt-6 max-w-2xl text-sm sm:text-base text-slate-600 leading-relaxed text-center font-light">
+              Turn any product, service, invoice, or payment request into a
+              beautiful checkout experience your customers can access from
+              anywhere.
+            </p>
 
-                {/* Main checkout mockup */}
-                <div className="relative bg-white border border-slate-200 shadow-[0_20px_60px_rgba(15,23,42,0.10)] overflow-hidden">
+            <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center w-full sm:w-auto">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#1b3b33] text-white text-sm font-bold hover:bg-[#1b6b58] transition-all duration-300 shadow-md shadow-slate-950/5"
+              >
+                Start accepting payments
+                <ArrowRight className="w-4 h-4" />
+              </Link>
 
-                  {/* Browser header */}
-                  <div className="h-12 border-b border-slate-100 flex items-center px-5 gap-2">
-                    <span className="w-2.5 h-2.5 bg-slate-200" />
-                    <span className="w-2.5 h-2.5 bg-slate-200" />
-                    <span className="w-2.5 h-2.5 bg-slate-200" />
-
-                    <div className="ml-4 flex-1 h-7 bg-slate-50 flex items-center px-3">
-                      <Link2 className="w-3 h-3 text-slate-400 mr-2" />
-                      <span className="text-[9px] text-slate-400">
-                        pay.mocard.rw/checkout
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="p-6 sm:p-8 text-left">
-                    {/* Merchant */}
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-[#1b6b58]/10 flex items-center justify-center">
-                        <CreditCard className="w-5 h-5 text-[#1b6b58]" />
-                      </div>
-                      <div>
-                        <p className="text-[10px] uppercase tracking-wider text-slate-400 font-bold">
-                          Secure checkout
-                        </p>
-                        <p className="text-sm font-bold text-slate-900">
-                          Your Business
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* Product */}
-                    <div className="mt-6 p-4 bg-slate-50 border border-slate-100">
-                      <div className="flex items-center gap-4">
-                        <div className="w-16 h-16 bg-white border border-slate-200 overflow-hidden">
-                          <img
-                            src={createLinkImage}
-                            alt="Payment product"
-                            onError={handleImgError}
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <div className="flex-1">
-                          <p className="text-sm font-bold text-slate-900">
-                            Premium Service
-                          </p>
-                          <p className="text-xs text-slate-400 mt-1">
-                            Secure online payment
-                          </p>
-                        </div>
-                        <div className="text-right">
-                          <p className="text-lg font-black text-slate-950">
-                            25,000
-                          </p>
-                          <p className="text-[10px] text-slate-400">RWF</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Payment form */}
-                    <div className="mt-5 space-y-3">
-                      <div className="h-11 border border-slate-200 px-4 flex items-center text-xs text-slate-400">
-                        Customer email
-                      </div>
-                      <div className="h-11 border border-slate-200 px-4 flex items-center text-xs text-slate-400">
-                        Mobile number
-                      </div>
-                      <button className="w-full h-12 bg-[#1b6b58] text-white text-sm font-bold">
-                        Pay 25,000 RWF
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Floating card - payment received */}
-                <div className="absolute -left-5 sm:-left-10 bottom-10 bg-white border border-slate-200 shadow-xl p-4 flex items-center gap-3 animate-[float_5s_ease-in-out_infinite]">
-                  <div className="w-9 h-9 bg-emerald-100 flex items-center justify-center">
-                    <Check className="w-5 h-5 text-emerald-600" />
-                  </div>
-                  <div>
-                    <p className="text-[9px] uppercase tracking-wider font-bold text-slate-400">
-                      Payment received
-                    </p>
-                    <p className="text-sm font-black text-slate-900">
-                      +25,000 RWF
-                    </p>
-                  </div>
-                </div>
-
-                {/* Floating QR */}
-                <div className="absolute -right-4 sm:-right-8 top-16 bg-[#1b3b33] text-white shadow-xl p-4 w-28">
-                  <QrCode className="w-7 h-7 mb-2" />
-                  <p className="text-[9px] font-bold leading-tight">
-                    Share your link or QR
-                  </p>
-                </div>
-
-              </div>
+              <a
+                href="#how-it-works"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white border border-slate-200 text-slate-700 text-sm font-bold hover:border-[#1b6b58]/40 hover:text-[#1b6b58] transition-all"
+              >
+                See how it works
+              </a>
             </div>
 
+            {/* Trust */}
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs text-slate-500">
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-[#1b6b58]" />
+                Secure checkout
+              </div>
+              <div className="flex items-center gap-2">
+                <Zap className="w-4 h-4 text-[#1b6b58]" />
+                Fast setup
+              </div>
+              <div className="flex items-center gap-2">
+                <Smartphone className="w-4 h-4 text-[#1b6b58]" />
+                Mobile friendly
+              </div>
+            </div>
+            
           </div>
         </div>
       </section>
