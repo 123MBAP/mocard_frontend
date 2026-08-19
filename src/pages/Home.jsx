@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import {
   ArrowRight,
   ArrowUpRight,
   Check,
   CheckCircle2,
+  ChevronLeft,
   ChevronRight,
   Copy,
   Globe2,
@@ -51,78 +52,86 @@ const greenLight = '#1f6e5c';
 const cream = '#f3efe5';
 const gold = '#e4d09b';
 
-function Hero() {
-  return (
-    <section className="relative min-h-[88vh] flex items-center overflow-hidden bg-[#f7f6f2]">
-      {/* Background image */}
-      <div className="absolute inset-0">
-        <img
-          src={heroBg}
-          alt=""
-          className="h-full w-full object-cover opacity-[0.15]"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#f7f6f2]/20 via-transparent to-[#f7f6f2]" />
-      </div>
+function Hero({ profile, setProfile }) {
+  const navigate = useNavigate();
 
-      {/* Decorative geometry - reduced/centered blurs */}
-      <div className="absolute -left-40 top-24 h-[600px] w-[600px] rounded-full border border-[#123c32]/5 pointer-events-none" />
-      <div className="absolute -right-40 top-24 h-[600px] w-[600px] rounded-full border border-[#123c32]/5 pointer-events-none" />
+  return (
+    <section className="relative min-h-[88vh] flex items-center overflow-hidden bg-[#123c32]">
+      {/* Decorative geometry - reduced/centered white lines for dark theme */}
+      <div className="absolute -left-40 top-24 h-[600px] w-[600px] rounded-full border border-white/5 pointer-events-none" />
+      <div className="absolute -right-40 top-24 h-[600px] w-[600px] rounded-full border border-white/5 pointer-events-none" />
 
       <div className="relative z-10 mx-auto flex min-h-[88vh] max-w-5xl items-center px-5 pb-16 pt-28 sm:px-8 lg:px-10">
         <div className="text-center flex flex-col items-center justify-center w-full">
-          
-          <div className="mb-6 inline-flex items-center gap-2 border border-[#123c32]/10 bg-white/70 px-4 py-2 text-[10px] font-bold uppercase tracking-wider text-[#1f6e5c] backdrop-blur-md">
-            <span className="h-1.5 w-1.5 bg-[#1f6e5c]" />
-            Business integration infrastructure
+
+          {/* Toggle Button */}
+          <div className="mb-16 inline-flex border border-white/10 bg-white/10 p-1 backdrop-blur-md rounded-full">
+            <button
+              onClick={() => setProfile('individual')}
+              className={`px-8 py-3 text-xs font-bold uppercase tracking-widest transition duration-300 font-sans rounded-full ${profile === 'individual'
+                ? 'bg-white text-[#123c32] shadow-sm font-black'
+                : 'text-white/60 hover:text-white font-semibold'
+                }`}
+            >
+              Individual
+            </button>
+            <button
+              onClick={() => {
+                setProfile('business');
+                navigate('/business/payment-links');
+              }}
+              className={`px-8 py-3 text-xs font-bold uppercase tracking-widest transition duration-300 font-sans rounded-full ${profile === 'business'
+                ? 'bg-white text-[#123c32] shadow-sm font-black'
+                : 'text-white/60 hover:text-white font-semibold'
+                }`}
+            >
+              Business
+            </button>
           </div>
 
-          <h1 className="max-w-4xl text-[2.4rem] font-black leading-[1.0] tracking-tight text-[#13201c] sm:text-[3.4rem] lg:text-[4.5rem] text-center">
+          <h1 className="max-w-4xl text-[2.4rem] font-black leading-[1.0] tracking-tight text-white sm:text-[3.4rem] lg:text-[4.5rem] text-center">
             Connect
-            <span className="block font-serif font-normal italic text-[#1f6e5c] mt-2">
+            <span className="block font-serif font-normal italic text-[#e4d09b] mt-2">
               Your Business.
             </span>
             <span className="block mt-2">With MoCard.</span>
           </h1>
 
-          <p className="mt-6 max-w-2xl text-sm leading-6 text-black/50 sm:text-base text-center font-light">
-            MoCard helps businesses connect their systems, applications,
-            payment services and third-party platforms through secure,
-            practical integrations.
-          </p>
+          {profile === 'business' && (
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row justify-center w-full sm:w-auto">
+              <Link
+                to="/contact"
+                className="group inline-flex items-center justify-center gap-3 bg-white px-7 py-4 text-sm font-bold text-[#123c32] transition hover:bg-[#e4d09b]"
+              >
+                Request API access
+                <ArrowRight
+                  size={17}
+                  className="transition-transform group-hover:translate-x-1"
+                />
+              </Link>
 
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row justify-center w-full sm:w-auto">
-            <Link
-              to="/contact"
-              className="group inline-flex items-center justify-center gap-3 bg-[#123c32] px-7 py-4 text-sm font-bold text-white transition hover:bg-[#1f6e5c]"
-            >
-              Request API access
-              <ArrowRight
-                size={17}
-                className="transition-transform group-hover:translate-x-1"
-              />
-            </Link>
-
-            <Link
-              to="/developers"
-              className="group inline-flex items-center justify-center gap-3 border border-black/10 bg-white px-7 py-4 text-sm font-bold text-[#123c32] transition hover:border-[#123c32]/30"
-            >
-              Explore developer docs
-              <ArrowUpRight
-                size={16}
-                className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-              />
-            </Link>
-          </div>
+              <Link
+                to="/developers"
+                className="group inline-flex items-center justify-center gap-3 border border-white/20 bg-white/5 px-7 py-4 text-sm font-bold text-white transition hover:bg-white/10"
+              >
+                Explore developer docs
+                <ArrowUpRight
+                  size={16}
+                  className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                />
+              </Link>
+            </div>
+          )}
 
           {/* Trust line */}
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs font-medium text-black/40">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs font-medium text-white/50">
             <div className="flex items-center gap-2">
-              <ShieldCheck size={16} className="text-[#1f6e5c]" />
+              <ShieldCheck size={16} className="text-[#e4d09b]" />
               Secure API connectivity
             </div>
-            <div className="h-1 w-1 bg-black/20" />
+            <div className="h-1 w-1 bg-white/20" />
             <div className="flex items-center gap-2">
-              <Globe2 size={16} className="text-[#1f6e5c]" />
+              <Globe2 size={16} className="text-[#e4d09b]" />
               Built for connected businesses
             </div>
           </div>
@@ -130,21 +139,7 @@ function Hero() {
         </div>
       </div>
 
-      {/* Bottom statement */}
-      <div className="absolute bottom-0 left-0 right-0 z-20 border-t border-black/5 bg-white/50 backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-10">
-          <span className="text-[10px] font-bold uppercase tracking-wider text-black/35">
-            One integration layer
-          </span>
-          <div className="hidden items-center gap-2 text-xs font-semibold text-[#123c32] sm:flex">
-          
-            Built to simplify connected commerce
-          </div>
-          <span className="text-[10px] font-bold uppercase tracking-wider text-black/35">
-            Multiple systems
-          </span>
-        </div>
-      </div>
+
     </section>
   );
 }
@@ -152,20 +147,18 @@ function Hero() {
 function IntegrationNode({ icon, title, subtitle, active, dark }) {
   return (
     <div
-      className={`flex items-center gap-4 border p-4 ${
-        dark
-          ? 'border-[#123c32] bg-[#123c32] text-white'
-          : 'border-black/5 bg-[#f8f7f3]'
-      }`}
+      className={`flex items-center gap-4 border p-4 ${dark
+        ? 'border-[#123c32] bg-[#123c32] text-white'
+        : 'border-black/5 bg-[#f8f7f3]'
+        }`}
     >
       <div
-        className={`flex h-10 w-10 items-center justify-center ${
-          dark
-            ? 'bg-white/10 text-[#e4d09b]'
-            : active
-              ? 'bg-[#123c32] text-white'
-              : 'bg-white text-[#1f6e5c]'
-        }`}
+        className={`flex h-10 w-10 items-center justify-center ${dark
+          ? 'bg-white/10 text-[#e4d09b]'
+          : active
+            ? 'bg-[#123c32] text-white'
+            : 'bg-white text-[#1f6e5c]'
+          }`}
       >
         {icon}
       </div>
@@ -197,30 +190,44 @@ function PartnersMarquee() {
     victoriaImg,
   ];
 
+  const [isPaused, setIsPaused] = useState(false);
+
   return (
-    <section className="bg-white py-16 border-t border-b border-black/5 overflow-hidden">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 text-center">
-        <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#1f6e5c] mb-8 font-sans">
+    <section className="bg-white py-16 sm:py-20 border-t border-b border-black/5 overflow-hidden text-center relative">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 mb-8">
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#1f6e5c] font-sans">
           Trusted by businesses, hotels, and travel providers across Rwanda
         </p>
       </div>
 
-      <div className="relative flex overflow-hidden w-full py-6">
+      <div 
+        className="relative flex overflow-hidden w-full py-4 group cursor-pointer"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+        onTouchStart={() => setIsPaused(true)}
+        onTouchEnd={() => setIsPaused(false)}
+        onTouchCancel={() => setIsPaused(false)}
+      >
         {/* Left & Right gradient blurs for premium transition */}
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
 
-        <div className="flex gap-24 animate-marquee whitespace-nowrap">
+        <div 
+          className="flex gap-16 sm:gap-20 animate-marquee whitespace-nowrap"
+          style={{ animationPlayState: isPaused ? 'paused' : 'running' }}
+        >
           {partnerLogos.concat(partnerLogos).map((logo, idx) => (
             <div
               key={idx}
-              className="flex items-center justify-center h-24 w-56 shrink-0 transition duration-300 hover:scale-105"
+              className="flex items-center justify-center shrink-0 transition duration-300 hover:scale-105"
             >
-              <img
-                src={logo}
-                alt="Partner logo"
-                className="max-h-full max-w-full object-contain"
-              />
+              <div className="flex items-center justify-center h-36 sm:h-44 w-72 sm:w-80 bg-slate-50 border border-black/5 p-2 hover:border-[#123c32]/20 transition duration-300">
+                <img
+                  src={logo}
+                  alt="Partner logo"
+                  className="max-h-[90%] max-w-[90%] object-contain filter grayscale hover:grayscale-0 transition duration-300 scale-110 hover:scale-[1.2]"
+                />
+              </div>
             </div>
           ))}
         </div>
@@ -238,90 +245,189 @@ function PartnersMarquee() {
     </section>
   );
 }
+function useElementOnScreen(options) {
+  const [ref, setRef] = React.useState(null);
+  const [isIntersecting, setIsIntersecting] = React.useState(false);
 
-function IntroSection() {
+  React.useEffect(() => {
+    if (!ref) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setIsIntersecting(true);
+      }
+    }, options);
+    observer.observe(ref);
+    return () => observer.disconnect();
+  }, [ref, options]);
+
+  return [setRef, isIntersecting];
+}
+
+function ScrollSection({ user, index }) {
+  const [ref, isIntersecting] = useElementOnScreen({
+    threshold: 0.15,
+  });
+
   return (
-    <section className="bg-white py-20 sm:py-28">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-        <div className="grid gap-12 lg:grid-cols-12 lg:items-end">
-          <div className="lg:col-span-7">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#1f6e5c]">
-              The connectivity layer
-            </span>
-            <h2 className="mt-3 max-w-4xl text-2xl font-black leading-[1.0] tracking-tight text-[#13201c] sm:text-3xl lg:text-4xl">
-              Your business should not have to speak the language of every
-              system.
-            </h2>
-          </div>
-          <div className="lg:col-span-5">
-            <p className="text-base leading-7 text-black/50">
-              Modern businesses depend on payment providers, CRMs, databases,
-              booking platforms, commerce tools and other services. MoCard
-              provides an integration layer that helps bring these systems
-              together.
-            </p>
-            <div className="mt-6 flex items-center gap-3 text-sm font-bold text-[#123c32]">
-              <span className="h-px w-8 bg-[#1f6e5c]" />
-              Connect once. Build further.
-            </div>
-          </div>
+    <div
+      ref={ref}
+      className={`flex flex-col items-center text-center w-full max-w-5xl mx-auto py-8 transition-all duration-1000 transform ease-out ${
+        isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      } group`}
+    >
+      {/* Text Block at the top */}
+      <div className="max-w-3xl flex flex-col items-center px-4">
+        <span className="inline-block bg-[#123c32]/5 text-[#123c32] px-4 py-2 text-[10px] font-bold uppercase tracking-wider font-sans mb-4">
+          {user.tag}
+        </span>
+        <h3 className="text-3xl sm:text-4xl font-black tracking-tight text-[#13201c] font-sans">
+          {user.title}
+        </h3>
+        <p className="mt-4 text-sm sm:text-base leading-7 text-black/50 font-sans font-light max-w-2xl">
+          {user.description}
+        </p>
+        <div className="mt-6">
+          <Link
+            to={user.link}
+            className="group/btn inline-flex items-center gap-3 bg-[#123c32] hover:bg-[#1f6e5c] px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-white transition duration-300"
+          >
+            Learn more
+            <ArrowRight size={14} className="transition-transform group-hover/btn:translate-x-1" />
+          </Link>
         </div>
       </div>
-    </section>
+
+      {/* Image Block at the bottom */}
+      <div className="w-full mt-10 flex justify-center px-4">
+        <div className="relative w-full max-w-5xl h-[70vh] sm:h-[75vh] overflow-hidden border border-black/5 bg-white shadow-sm">
+          {Array.isArray(user.image) ? (
+            <div className="grid h-full grid-cols-2 gap-1 bg-[#f3f0e8]">
+              {user.image.map((img, i) => (
+                <img
+                  key={i}
+                  src={img}
+                  alt=""
+                  className={`h-full w-full object-cover ${user.crop || 'object-center'} transition duration-[1500ms] ease-out ${
+                    isIntersecting ? 'scale-100' : 'scale-110'
+                  } group-hover:scale-105`}
+                />
+              ))}
+            </div>
+          ) : (
+            <img
+              src={user.image}
+              alt=""
+              className={`h-full w-full object-cover ${user.crop || 'object-center'} transition duration-[1500ms] ease-out ${
+                isIntersecting ? 'scale-100' : 'scale-110'
+              } group-hover:scale-105`}
+            />
+          )}
+        </div>
+      </div>
+    </div>
   );
 }
 
-function WhoUsesMocard() {
-  const users = [
+function WhoUsesMocard({ profile }) {
+
+
+  const businessCards = [
     {
-      title: 'Cross-system connectors',
-      image: CrossBorderImage,
-      tag: 'System connectivity',
-      number: '01',
-      description:
-        'Connect existing business systems with modern cloud applications and move information between platforms without rebuilding everything from scratch.',
-    },
-    {
-      title: 'Enterprise syncing',
+      title: 'Payment Links',
       image: LocalBusinessImage,
-      tag: 'Data synchronization',
-      number: '02',
-      description:
-        'Synchronize information across databases, CRMs and operational platforms through structured integration workflows.',
+      tag: 'Payments',
+      number: '01',
+      description: 'Create and share checkout links in seconds to get paid via mobile wallets or credit cards.',
+      link: '/business/payment-links',
+      crop: 'object-center'
     },
     {
-      title: 'SaaS API hub',
+      title: 'Hosted Checkouts',
       image: Ecomerce_merchantsImage,
-      tag: 'SaaS connectivity',
-      number: '03',
-      description:
-        'Extend your application by connecting it to payment, marketing, customer-support and other third-party services.',
+      tag: 'E-commerce',
+      number: '02',
+      description: 'Pre-built, brand-aligned checkout portals for websites, WooCommerce, or Shopify.',
+      link: '/business/hosted-checkouts',
+      crop: 'object-center'
     },
     {
-      title: 'Real-time event triggers',
-      image: GigEconomyImage,
-      tag: 'Event automation',
-      number: '04',
-      description:
-        'Use webhooks and event-driven workflows to trigger actions when important business events happen.',
-    },
-    {
-      title: 'Travel & hospitality',
-      image: [TourismImage, HospitalityImage],
-      tag: 'Connected experiences',
-      number: '05',
-      description:
-        'Connect booking, customer, payment and operational systems to create smoother digital experiences for guests and travelers.',
-    },
-    {
-      title: 'Custom integrations',
+      title: 'Donations & Giving',
       image: IntegrationImage,
-      tag: 'Developer tools',
-      number: '06',
-      description:
-        'Build tailored integration flows around your business requirements using APIs, webhooks and custom automation.',
+      tag: 'Non-Profits',
+      number: '03',
+      description: 'Dedicated payment processing infrastructure for NGOs, charities, and community giving.',
+      link: '/business/donations',
+      crop: 'object-center'
     },
+    {
+      title: 'ERP & CRM Syncing',
+      image: CrossBorderImage,
+      tag: 'Infrastructure',
+      number: '04',
+      description: 'Synchronize real-time transaction information directly into your corporate CRM software.',
+      link: '/dashboard',
+      crop: 'object-center'
+    }
   ];
+
+  const individualCards = [
+    {
+      title: 'Global Travel Wallet',
+      image: HospitalityImage,
+      tag: 'Connectivity',
+      number: '01',
+      description: 'Connect international cards directly with local mobile money wallets for frictionless travel.',
+      link: '/contact',
+      crop: 'object-center'
+    },
+    {
+      title: 'Cross-Border Transacting',
+      image: CrossBorderImage,
+      tag: 'Remittances',
+      number: '02',
+      description: 'Send and receive money instantly to local mobile money wallets across borders.',
+      link: '/contact',
+      crop: 'object-center'
+    },
+    {
+      title: 'Secure Card Linking',
+      image: LocalBusinessImage,
+      tag: 'Security',
+      number: '03',
+      description: 'Safely link your international visa or mastercard to pay at local establishments.',
+      link: '/contact',
+      crop: 'object-center'
+    },
+    {
+      title: 'Peer-to-Peer Transfers',
+      image: GigEconomyImage,
+      tag: 'Remittances',
+      number: '04',
+      description: 'Send funds directly to friends and family across local and international credit lines instantly.',
+      link: '/contact',
+      crop: 'object-center'
+    },
+    {
+      title: 'Instant Bill Payments',
+      image: Ecomerce_merchantsImage,
+      tag: 'Payments',
+      number: '05',
+      description: 'Settle utilities, school fees, and subscription services directly from linked payment methods.',
+      link: '/contact',
+      crop: 'object-center'
+    },
+    {
+      title: 'Multi-Currency Balance',
+      image: IntegrationImage,
+      tag: 'Asset Management',
+      number: '06',
+      description: 'Hold, convert and manage balances in local and international currencies within a unified profile.',
+      link: '/contact',
+      crop: 'object-center'
+    }
+  ];
+
+  const activeCards = profile === 'business' ? businessCards : individualCards;
 
   return (
     <section
@@ -329,72 +435,27 @@ function WhoUsesMocard() {
       className="overflow-hidden bg-[#f3f0e8] py-20 sm:py-28"
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-        <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
-          <div className="lg:col-span-7">
+        <div className="grid gap-8 lg:grid-cols-12 lg:items-end mb-12">
+          <div className="lg:col-span-7 text-left">
             <span className="text-xs font-bold uppercase tracking-wider text-[#1f6e5c]">
               What can you connect?
             </span>
             <h2 className="mt-3 text-2xl font-black leading-[1.0] tracking-tight text-[#13201c] sm:text-3xl lg:text-4xl">
-              From one system
+              Solutions made for
               <span className="block font-serif font-normal italic text-[#1f6e5c] mt-1">
-                to an entire ecosystem.
+                every payment profile.
               </span>
             </h2>
           </div>
-          <div className="lg:col-span-5">
-            <p className="text-sm leading-6 text-black/50">
-              Different businesses have different integration challenges.
-              Explore some of the ways MoCard can fit into your technology
-              stack.
+          <div className="lg:col-span-5 text-left">
+            <p className="text-sm leading-6 text-black/50 font-sans">
+              Whether you are running a global e-commerce business or traveling internationally, MoCard provides the integration tools to support your payment needs.
             </p>
           </div>
         </div>
-
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {users.map((user, index) => (
-            <article
-              key={user.title}
-              className={`group relative overflow-hidden bg-white`}
-            >
-              <div className="relative h-56 overflow-hidden">
-                {Array.isArray(user.image) ? (
-                  <div className="grid h-full grid-cols-2 gap-1">
-                    {user.image.map((img, i) => (
-                      <div key={i} className="overflow-hidden">
-                        <img
-                          src={img}
-                          alt=""
-                          className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <img
-                    src={user.image}
-                    alt=""
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                  />
-                )}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#13201c]/50 via-transparent to-transparent" />
-                <span className="absolute left-5 top-5 bg-white/90 px-3 py-1.5 text-[9px] font-bold uppercase tracking-wider text-[#123c32] backdrop-blur">
-                  {user.tag}
-                </span>
-                <span className="absolute bottom-5 right-5 text-3xl font-black text-white/60">
-                  {user.number}
-                </span>
-              </div>
-
-              <div className="p-6 sm:p-7">
-                <h3 className="text-xl font-black tracking-tight text-[#13201c]">
-                  {user.title}
-                </h3>
-                <p className="mt-2 text-sm leading-6 text-black/45">
-                  {user.description}
-                </p>
-          
-              </div>
-            </article>
+        <div className="mt-12 space-y-12 sm:space-y-16">
+          {activeCards.map((user, index) => (
+            <ScrollSection key={user.title} user={user} index={index} />
           ))}
         </div>
       </div>
@@ -817,12 +878,13 @@ function FooterBridge() {
 }
 
 export default function Home() {
+  const [profile, setProfile] = useState('individual');
+
   return (
     <div className="min-h-screen overflow-x-hidden bg-white text-[#13201c] antialiased">
       <Navbar />
-      <Hero />
-      <IntroSection />
-      <WhoUsesMocard />
+      <Hero profile={profile} setProfile={setProfile} />
+      <WhoUsesMocard profile={profile} />
       <IntegrationArchitecture />
       <GetStartedSection />
       <PartnersMarquee />

@@ -10,6 +10,9 @@ export default function Navbar() {
   const [mobileSection, setMobileSection] = useState(null);
   const location = useLocation();
 
+  const isIndividualActive = location.pathname === '/' || location.pathname.startsWith('/individual');
+  const isBusinessActive = location.pathname.startsWith('/business') || location.pathname === '/solutions' || location.pathname === '/dashboard';
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -92,7 +95,7 @@ export default function Navbar() {
                 onClick={() => toggleDropdown(0)}
                 onMouseEnter={() => setActiveDropdown(0)}
                 className={`flex items-center space-x-1.5 px-4.5 py-2.5 transition-all duration-200 ${
-                  activeDropdown === 0 
+                  activeDropdown === 0 || (activeDropdown === null && isIndividualActive)
                     ? 'bg-pp-brand/10 text-pp-brand font-bold shadow-sm ring-1 ring-pp-brand/10' 
                     : 'hover:bg-slate-50 text-slate-700 hover:text-pp-brand'
                 }`}
@@ -106,7 +109,7 @@ export default function Navbar() {
                 onClick={() => toggleDropdown(1)}
                 onMouseEnter={() => setActiveDropdown(1)}
                 className={`flex items-center space-x-1.5 px-4.5 py-2.5 transition-all duration-200 ${
-                  activeDropdown === 1 
+                  activeDropdown === 1 || (activeDropdown === null && isBusinessActive)
                     ? 'bg-pp-brand/10 text-pp-brand font-bold shadow-sm ring-1 ring-pp-brand/10' 
                     : 'hover:bg-slate-50 text-slate-700 hover:text-pp-brand'
                 }`}
@@ -143,8 +146,22 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="lg:hidden">
+          {/* Mobile Actions + Hamburger Menu button */}
+          <div className="flex lg:hidden items-center space-x-3">
+            <Link 
+              to="/login" 
+              onClick={closeMenu}
+              className="text-xs font-bold text-slate-700 hover:text-pp-brand px-2 py-1.5 transition duration-200"
+            >
+              Log In
+            </Link>
+            <Link 
+              to="/contact" 
+              onClick={closeMenu}
+              className="px-4 py-2 bg-pp-brand text-xs font-bold text-white hover:brightness-110 transition duration-200"
+            >
+              Sign Up
+            </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 text-slate-500 hover:text-pp-black hover:bg-slate-100 focus:outline-none transition duration-200"

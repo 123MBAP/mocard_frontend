@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Globe, MapPin } from 'lucide-react';
+import { Mail, Globe, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="grid lg:grid-cols-12 gap-12 pb-12 border-b border-slate-200">
           
           {/* Brand Info */}
-          <div className="lg:col-span-4 space-y-5 text-left">
+          <div className="lg:col-span-4 space-y-4 text-left">
             <Link to="/" className="flex items-center space-x-2 group">
               <img src={logo} alt="MoCard" className="h-6 md:h-7 object-contain group-hover:scale-[1.01] transition-transform duration-200" />
               <span className="text-lg font-bold font-outfit text-pp-black group-hover:text-pp-brand transition-colors duration-300 ml-1">
@@ -24,11 +24,19 @@ export default function Footer() {
             <p className="text-slate-500 text-sm leading-relaxed max-w-sm font-light">
               Mocard is an API integrator providing software solutions that help businesses connect international credit networks with local mobile wallets and banks. Settle instantly, scale globally.
             </p>
-            <div className="flex items-center space-x-3 text-slate-650 font-mono text-sm group/mail">
-              <Mail className="w-4 h-4 text-slate-400 group-hover/mail:text-pp-brand transition-colors duration-300" />
-              <a href="mailto:business@mocard.rw" className="hover:text-pp-brand transition duration-200">
-                business@mocard.rw
-              </a>
+            <div className="space-y-2">
+              <div className="flex items-center space-x-3 text-slate-650 font-mono text-sm group/mail">
+                <Mail className="w-4 h-4 text-slate-400 group-hover/mail:text-pp-brand transition-colors duration-300" />
+                <a href="mailto:business@mocard.rw" className="hover:text-pp-brand transition duration-200">
+                  business@mocard.rw
+                </a>
+              </div>
+              <div className="flex items-center space-x-3 text-slate-650 font-mono text-sm group/phone">
+                <Phone className="w-4 h-4 text-slate-400 group-hover/phone:text-pp-brand transition-colors duration-300" />
+                <a href="tel:+250788307684" className="hover:text-pp-brand transition duration-200">
+                  +250 788 307 684
+                </a>
+              </div>
             </div>
           </div>
 
