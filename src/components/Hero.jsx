@@ -21,13 +21,7 @@ export default function Hero() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="max-w-3xl mx-auto text-center space-y-8 flex flex-col items-center">
-          
-          {/* Eyebrow Product Tag */}
-          <div className="inline-flex items-center space-x-2 bg-slate-50 border border-slate-200/80 rounded-lg px-3.5 py-1.5 text-xs font-semibold tracking-wide text-slate-700 font-outfit shadow-2xs">
-            <span className="w-1.5 h-1.5 rounded-full bg-pp-blue animate-pulse" />
-            <span>API INTEGRATION INFRASTRUCTURE</span>
-          </div>
-
+       
           {/* Title */}
           <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black font-outfit leading-[1.1] tracking-tight text-pp-black">
             Connect Your Business <span className="text-pp-blue">with Mocard</span>

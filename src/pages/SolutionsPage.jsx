@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import EverydayImpact from '../components/EverydayImpact';
 import { ArrowRight, CheckCircle2, Globe, Laptop, Users, Hotel, ShieldAlert } from 'lucide-react';
 
 // Imports of assets

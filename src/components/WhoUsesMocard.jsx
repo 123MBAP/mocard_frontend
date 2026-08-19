@@ -15,42 +15,36 @@ export default function WhoUsesMocard() {
       image: CrossBorderImage,
       tag: "Single Service Connect",
       description: "Connect legacy systems to modern cloud applications seamlessly. MoCard ensures data is synced instantly and securely between platforms.",
-      benefit: "Instant sync"
     },
     {
       title: "Enterprise Syncing",
       image: LocalBusinessImage,
       tag: "Bulk Data Sync",
       description: "Automate data syncing across databases, CRMs, and ERPs. Dispatch hundreds of updates with a single workflow execution.",
-      benefit: "Automated workflows"
     },
     {
       title: "SaaS API Hub",
       image: Ecomerce_merchantsImage,
       tag: "Global Online Sync",
       description: "Connect your SaaS application with major marketing, customer support, and analytics tools. Minimize pipeline downtime.",
-      benefit: "99.9% Integration Uptime"
     },
     {
       title: "Real-time Event Triggers",
       image: GigEconomyImage,
       tag: "On-Demand Sync",
       description: "Power event-driven applications with automated webhooks. Enable instantly triggered updates to remote databases 24/7.",
-      benefit: "24/7 event handling"
     },
     {
       title: "Multi-System Orchestration",
       image: [TourismImage, HospitalityImage],
       tag: "Direct Integration",
       description: "Connect and synchronize customer reservations, inventory management systems, and loyalty programs via secure API paths.",
-      benefit: "Unified bookings"
     },
     {
       title: "Custom Integrators",
       image: IntegrationImage,
       tag: "API & Webhook Sync",
       description: "Build custom automation pipelines, ETL data flows, or sync scripts. Developers can integrate our well-documented REST APIs and production-ready SDKs in minutes.",
-      benefit: "Developer sandbox"
     }
   ];
 
@@ -63,9 +57,6 @@ export default function WhoUsesMocard() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-2 group cursor-pointer">
-          <div className="inline-flex items-center space-x-2 bg-pp-blue/10 border border-pp-blue/20 rounded-full px-4 py-1.5 text-xs md:text-sm font-bold tracking-widest text-pp-blue uppercase font-outfit transition-colors duration-300">
-            <span>Ecosystem Fit</span>
-          </div>
           <h2 className="text-3xl md:text-4xl font-black font-outfit text-pp-black tracking-tight leading-tight">
             Who Uses MoCard?
           </h2>
@@ -106,13 +97,6 @@ export default function WhoUsesMocard() {
                   )}
                   {/* Subtle hover gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                </div>
-
-                {/* Top bar with tag benefit */}
-                <div className="flex justify-between items-center">
-                  <span className="text-[9px] font-bold bg-pp-blue/15 text-pp-blue px-2.5 py-1 rounded-lg uppercase tracking-wider font-outfit group-hover:bg-pp-blue/25 transition-colors border border-pp-blue/30">
-                    {user.benefit}
-                  </span>
                 </div>
 
                 {/* Typography content */}
