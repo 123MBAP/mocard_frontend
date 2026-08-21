@@ -86,45 +86,6 @@ export default function DonationAndPayments({ showToggle = false, setProfile }) 
                             </span>
                         </h1>
 
-                        <p className="mt-6 max-w-2xl text-sm sm:text-base text-slate-600 leading-relaxed text-center font-light">
-                            Empower NGOs, charities, foundations, and community organizations with dedicated donation pages and secure online payment solutions.
-                        </p>
-
-                        <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center w-full sm:w-auto">
-                            <Link
-                                to="/contact"
-                                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-slate-950 text-white text-sm font-bold hover:bg-[#1f6e5c] transition-all duration-300 shadow-md shadow-slate-950/5"
-                            >
-                                Get API Access
-                                <ArrowRight className="w-4 h-4" />
-                            </Link>
-
-                            <a
-                                href="#how-it-works"
-                                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white border border-slate-200 text-slate-700 text-sm font-bold hover:border-[#1f6e5c]/40 hover:text-[#1f6e5c] transition-all"
-                            >
-                                Explore Features
-                            </a>
-                        </div>
-
-                        {/* Trust */}
-                        <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs text-slate-500">
-                            <div className="flex items-center gap-2">
-                                <ShieldCheck className="w-4 h-4 text-[#1f6e5c]" />
-                                Secure transactions
-                            </div>
-
-                            <div className="flex items-center gap-2">
-                                <Zap className="w-4 h-4 text-[#1f6e5c]" />
-                                Instant payouts
-                            </div>
-
-                            <div className="flex items-center gap-2">
-                                <MonitorSmartphone className="w-4 h-4 text-[#1f6e5c]" />
-                                Responsive donor page
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </section>
