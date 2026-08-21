@@ -134,7 +134,7 @@ export default function DonationAndPayments({ showToggle = false, setProfile }) 
       ========================================================= */}
             <section className="relative z-20 -mt-3 pb-16">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="bg-slate-950 text-white p-6 sm:p-8 shadow-2xl shadow-slate-900/10">
+                    <div className="bg-[#123c32] text-white p-6 sm:p-8 shadow-2xl shadow-[#123c32]/10">
                         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
 
                             {[
