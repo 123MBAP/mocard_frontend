@@ -103,11 +103,6 @@ export default function Home() {
             </button>
           </div>
 
-          {/* Eyebrow Label */}
-          <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#1f6e5c] font-outfit">
-            Mocard — Payments Made Simple, Secure, and Seamless
-          </span>
-
           {/* Main Heading */}
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black tracking-tight leading-[1.05] font-outfit text-[#123c32] mt-4">
             Connect Your Business with Mocard
@@ -117,40 +112,6 @@ export default function Home() {
           <p className="text-sm sm:text-base font-extrabold text-[#1f6e5c] mt-4 font-outfit uppercase tracking-[0.2em]">
             Simple. Secure. Scalable.
           </p>
-
-          {/* Description Paragraph */}
-          <p className="mt-6 text-[15px] sm:text-[16px] text-black/70 font-sans font-light leading-relaxed max-w-2xl">
-            {profile === 'business' ? (
-              'Mocard simplifies payment integration by connecting your business to secure and reliable payment services through a single, streamlined solution. We handle the integration complexity, so you can focus on your customers and growing your business.'
-            ) : (
-              'Mocard simplifies personal payments by connecting your accounts and cards to secure and reliable wallets through a single, streamlined solution. We handle the complex connections, so you can pay and transfer money effortlessly.'
-            )}
-          </p>
-
-          {/* Centered Pill Buttons */}
-          <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
-            <Link
-              to="/contact"
-              className="px-8 py-3.5 rounded-full bg-[#123c32] hover:bg-[#1f6e5c] text-white font-bold text-[14px] transition duration-300 shadow-md shadow-[#123c32]/10"
-            >
-              Sign Up
-            </Link>
-            <Link
-              to="/contact"
-              className="px-8 py-3.5 rounded-full border border-black/20 bg-white text-black font-bold text-[14px] hover:bg-slate-50 transition duration-300"
-            >
-              Contact Sales
-            </Link>
-          </div>
-
-          {/* Footnote */}
-          <p className="text-xs text-slate-500 mt-6 font-sans">
-            Talk to our onboarding team to get started:{' '}
-            <a href="mailto:business@mocard.rw" className="font-semibold underline hover:text-[#1f6e5c]">
-              business@mocard.rw
-            </a>
-          </p>
-
         </div>
       </section>
 
