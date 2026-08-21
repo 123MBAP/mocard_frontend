@@ -75,10 +75,6 @@ export default function DonationAndPayments({ showToggle = false, setProfile }) 
                             </div>
                         )}
 
-                        <span className="text-xs font-bold uppercase tracking-widest text-[#1f6e5c] border border-[#1f6e5c]/20 px-3.5 py-1.5 bg-[#1f6e5c]/5 inline-block mb-6">
-                            Donations &amp; Giving
-                        </span>
-
                         <h1 className="text-3xl sm:text-4xl lg:text-[45px] font-black tracking-tight leading-[1.0] text-center">
                             Make giving
                             <span className="block text-[#1f6e5c] mt-2">
