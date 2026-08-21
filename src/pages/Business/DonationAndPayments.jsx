@@ -30,7 +30,7 @@ const handleImgError = (event) => {
     event.currentTarget.src = fallbackImage;
 };
 
-export default function DonationAndPayments() {
+export default function DonationAndPayments({ showToggle = false, setProfile }) {
     const navigate = useNavigate();
     const steps = [
         {
@@ -57,6 +57,23 @@ export default function DonationAndPayments() {
             <section className="relative overflow-hidden pt-28 pb-16 lg:pb-20">
                 <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-4xl mx-auto text-center flex flex-col items-center justify-center w-full">
+
+                        {showToggle && (
+                            <div className="inline-flex border border-black/10 bg-white p-1 rounded-full shadow-sm mb-12">
+                                <button
+                                    onClick={() => setProfile('individual')}
+                                    className="px-8 py-2.5 text-xs font-bold uppercase tracking-widest transition duration-300 font-outfit rounded-full text-slate-600 hover:text-slate-900 bg-transparent"
+                                >
+                                    Personal
+                                </button>
+                                <button
+                                    onClick={() => setProfile('business')}
+                                    className="px-8 py-2.5 text-xs font-bold uppercase tracking-widest transition duration-300 font-outfit rounded-full bg-[#123c32] text-white shadow-md"
+                                >
+                                    Business
+                                </button>
+                            </div>
+                        )}
 
                         <span className="text-xs font-bold uppercase tracking-widest text-[#1f6e5c] border border-[#1f6e5c]/20 px-3.5 py-1.5 bg-[#1f6e5c]/5 inline-block mb-6">
                             Donations &amp; Giving

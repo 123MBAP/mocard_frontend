@@ -10,6 +10,7 @@ import {
 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import DonationAndPayments from './Business/DonationAndPayments';
 
 // Partner images
 import akageraImg from '../assets/partners/akageraaviation.png';
@@ -65,6 +66,10 @@ export default function Home() {
     satguruImg,
     victoriaImg,
   ];
+
+  if (profile === 'business') {
+    return <DonationAndPayments showToggle={true} setProfile={setProfile} />;
+  }
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-white text-[#13201c] antialiased">
