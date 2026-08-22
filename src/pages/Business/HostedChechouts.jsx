@@ -3,13 +3,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import {
     ArrowRight,
     Check,
-    ChevronRight,
     Code2,
     CreditCard,
     Globe2,
     Layers3,
     LockKeyhole,
-    MonitorSmartphone,
     PlugZap,
     ShieldCheck,
     ShoppingBag,
@@ -136,32 +134,6 @@ export default function HostedChechouts() {
                                 Talk to our team
                                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                             </Link>
-
-                            <a
-                                href="#platforms"
-                                className="inline-flex items-center justify-center gap-2 border border-slate-200 bg-white px-7 py-3.5 text-sm font-bold text-slate-800 shadow-sm transition hover:border-[#1f6e5c]/30 hover:bg-slate-50"
-                            >
-                                Explore integrations
-                                <ChevronRight className="w-4 h-4" />
-                            </a>
-                        </div>
-
-                        {/* Trust indicators */}
-                        <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs text-slate-500">
-                            <div className="flex items-center gap-2">
-                                <ShieldCheck className="w-4 h-4 text-[#1f6e5c]" />
-                                Secure checkout
-                            </div>
-
-                            <div className="flex items-center gap-2">
-                                <MonitorSmartphone className="w-4 h-4 text-[#1f6e5c]" />
-                                Mobile ready
-                            </div>
-
-                            <div className="flex items-center gap-2">
-                                <Code2 className="w-4 h-4 text-[#1f6e5c]" />
-                                API ready
-                            </div>
                         </div>
 
                     </div>

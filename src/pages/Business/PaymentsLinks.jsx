@@ -85,22 +85,6 @@ export default function PaymentsLinks() {
                             </a>
                         </div>
 
-                        {/* Trust */}
-                        <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs text-slate-500">
-                            <div className="flex items-center gap-2">
-                                <ShieldCheck className="w-4 h-4 text-[#1b6b58]" />
-                                Secure checkout
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <Zap className="w-4 h-4 text-[#1b6b58]" />
-                                Fast setup
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <Smartphone className="w-4 h-4 text-[#1b6b58]" />
-                                Mobile friendly
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </section>
